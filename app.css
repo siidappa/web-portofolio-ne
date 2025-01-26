@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IN&display=swap');
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #FBFBFB;
+    font-family: "Poppins";
+    margin-inline: 4rem;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);     
+    background: #666;    
+}
+::-webkit-scrollbar-thumb {
+    background: #c91435;
+    border-radius: 5px;
+}
+
+/* Home */
+section#myhome {
+    margin-block: 3.4rem;
+}
+
+.container {
+    display: flex;
+    /* margin-block: 55px; */
+    justify-content: center;
+    align-items: center;
+    color: #333;
+}
+/* Left Content */
+.left-content > .content-name {
+    font-size: 3.1em;
+}
+.left-content > p.salam {
+    font-size: 20px;
+    font-family: "Playwrite IN", serif;
+}
+.left-content > .subtitle {
+    font-size: 1.2rem;
+    line-height: 50px;
+    color: #00bceb;
+}
+
+.subtitle > span {
+    color: #c91435;
+}
+
+p.about-content {
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.get-in-touch {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.get-in-touch p {
+    color: black;
+    font-weight: 600;
+}
+
+.get-in-touch img {
+    width: 25px;
+}
+/* Right Content */
+.content-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-content > img {
+    width: 500px;
+}
+
+/* Section About */
+section#about-me {
+    border-radius: 20px;
+    padding: 35px;
+    margin-block: 3rem;
+    border: 1px solid black;
+}
+
+.tag {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.container-about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 35px;
+    gap: 50px;
+}
+
+.left-about-content > .img-about-content img {
+    width: 400px;
+}
+
+.right-about-content > h2 {
+    font-family: "Playwrite IN", serif;
+    line-height: 1.2em;
+}
+
+.right-about-content h1.myname {
+    font-size: 3rem;
+    color: #c91435;
+}
+
+.right-about-content .about-text {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.right-about-content .icon-sosmed{
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon-sosmed a {
+    font-size: 28px;
+    background-color: #00bceb;
+    display: inline-block;
+    padding: 7px;
+    color: white;
+    text-align: center;
+    border-radius: 55px;
+}
+
+.icon-sosmed a:hover {
+    background-color: #c91435;
+    color: white;
+    transition: ease-in-out 0.3s;
+}
+
+/* Skills */
+section#skills {
+    margin-block: 100px;
+}
+
+section#skills .information-skills h2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+section#skills .information-skills p {
+    text-align: center;
+}
+
+.information-skills{
+    margin-bottom: 20px;
+}
+
+.container-skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.skills-content img{
+    width: 240px;
+    padding: 10px;
+}
+
+/* Certification */
+section#certf {
+    margin-bottom: 50px;
+}
+
+section#certf .information-certf h2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+section#certf .information-certf p {
+    text-align: center;
+}
+
+.information-certf{
+    margin-bottom: 20px;
+}
+
+.container-certf {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.certf-content img{
+    width: 300px;
+    padding-top: 18px;
+}
+
+.container-certf .wrapping-content-certif:hover {
+    transition: ease-in-out .2s;
+    cursor: pointer;
+    background-color: transparent;
+    box-shadow: unset 0 0 11px rgba(33,33,33,.2);
+    transform: scale(1.2);
+}
+
+.wrapping-content-certif h3 {
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Responsivve */
+@media (min-width: 320px) {
+    body {
+        margin-inline: 2rem;
+    }
+
+    .container {
+        max-width: 500px;
+    }
+    .left-content h1.content-name {
+        font-size: 35px;     
+    }
+
+    .left-content h3.subtitle {
+        font-size: 14px;
+        line-height: 1.1rem;
+    }
+
+    .left-content p.about-content {
+        font-size: 15px;
+    }
+
+    .content-right .img-content img {
+        width: 330px;
+    }
+
+    .left-about-content .img-about-content img{
+        width: 250px;
+    }
+
+    .left-content .get-in-touch {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+    }
+    
+    .get-in-touch p {
+        color: black;
+        font-weight: 600;
+    }
+
+    .container-about {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .right-about-content h1{
+        line-height: 2.4rem;
+        padding-block: 10px;
+    }
+
+    .skills-content img{
+        width: 200px;
+        padding: 10px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 960px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container-about {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .right-about-content h2 {
+        font-size: 20px;
+    }
+    .right-about-content h1.myname {
+        font-size: 2.5rem;
+    }
+    .right-about-content .about-text {
+        font-size: 17px;
+    }
+    .icon-sosmed a {
+        font-size: 25px;
+        height: 1.8em;
+    }
+    .icon-sosmed a:hover {
+        background-color: #c91435;
+        color: white;
+        transition: ease-in-out 0.3s;
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        margin-inline: 3.5rem;
+    }
+
+    .container {
+        max-width: 1140px;
+        display: flex;
+        gap: 40px;
+        padding: 50px;
+    }
+
+    .left-content h1.content-name {
+        font-size: 3.1em;     
+    }
+
+    .left-content h3.subtitle {
+        font-size: 1.2rem;
+        line-height: 50px;
+    }
+
+    .left-content p.about-content {
+        font-size: 1rem;
+    }
+
+    .content-right .img-content img {
+        width: 478px;
+    }
+
+    .container-about {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        padding: 30px;
+        gap: 50px;
+    }
+    
+    .left-about-content > .img-about-content img {
+        width: 400px;
+    }
+
+    
+    .right-about-content {
+        line-height: 1.7em;
+    }
+    
+    .right-about-content > h2 {
+        font-family: "Playwrite IN", serif;
+        margin-bottom: 10px;
+    }
+    
+    .right-about-content h1.myname {
+        font-size: 3rem;
+        color: #c91435;
+    }
+    
+    .right-about-content .about-text {
+        font-size: 18px;
+        font-weight: 600;
+    }
+    
+    .right-about-content .icon-sosmed{
+        display: flex;
+        margin-top: 20px;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .skills-content img{
+        width: 235px;
+    }
+
+    .icon-sosmed a {
+        width: 45px;
+        height: 1.5em;
+    }
+
+    section#certf, section#skills {
+        margin-block: 10em;
+    }
+}
