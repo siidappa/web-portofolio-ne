@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+IN&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 * {
     box-sizing: border-box;
@@ -33,7 +34,6 @@ section#myhome {
 
 .container {
     display: flex;
-    /* margin-block: 55px; */
     justify-content: center;
     align-items: center;
     color: #333;
@@ -61,21 +61,6 @@ p.about-content {
     font-weight: 500;
 }
 
-.get-in-touch {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    margin-top: 10px;
-}
-
-.get-in-touch p {
-    color: black;
-    font-weight: 600;
-}
-
-.get-in-touch img {
-    width: 25px;
-}
 /* Right Content */
 .content-right {
     display: flex;
@@ -89,22 +74,13 @@ p.about-content {
 /* Section About */
 section#about-me {
     border-radius: 20px;
-    padding: 35px;
+    padding: 25px;
     margin-block: 3rem;
-    border: 1px solid black;
 }
 
 .tag {
     display: inline-block;
     margin-bottom: 20px;
-}
-
-.container-about {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 35px;
-    gap: 50px;
 }
 
 .left-about-content > .img-about-content img {
@@ -146,7 +122,7 @@ section#about-me {
 .icon-sosmed a:hover {
     background-color: #c91435;
     color: white;
-    transition: ease-in-out 0.3s;
+    outline: none;
 }
 
 /* Skills */
@@ -211,7 +187,7 @@ section#certf .information-certf p {
 }
 
 .container-certf .wrapping-content-certif:hover {
-    transition: ease-in-out .2s;
+    transition: ease-in-out .5s;
     cursor: pointer;
     background-color: transparent;
     box-shadow: unset 0 0 11px rgba(33,33,33,.2);
@@ -219,6 +195,7 @@ section#certf .information-certf p {
 }
 
 .wrapping-content-certif h3 {
+    margin-top: 5px;
     font-size: 14px;
     text-align: center;
 }
@@ -294,7 +271,6 @@ section#certf .information-certf p {
         flex-direction: row;
         align-items: center;
         flex-wrap: wrap;
-
     }
 
     .wrapper-img-certf img {
@@ -308,6 +284,22 @@ section#certf .information-certf p {
         gap: 35px;
         padding: 35px;
         border-radius: 10px 10px 0 0;
+    }
+    
+    .get-in-touch {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    .get-in-touch p {
+        color: black;
+        font-weight: 600;
+    }
+
+    .get-in-touch img {
+        width: 25px;
     }
     
     a.get-in-touch{
@@ -338,7 +330,6 @@ section#certf .information-certf p {
     }
     .content-footer .wrapper-content-ft1 h2 {
         font-size: 17px;
-        /* background-color: red; */
     }
 
     .wrapper-content-ft1 ul li,
@@ -455,7 +446,9 @@ section#certf .information-certf p {
             justify-content: center;
             align-items: center;
             flex-direction: row;
-            padding: 30px;
+            padding: 35px;
+            border: 2px dashed #c91435;
+            border-radius: 10px;
             gap: 50px;
         }
         
