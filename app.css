@@ -237,12 +237,12 @@ section#certf .information-certf p {
     }
 
     .left-content h3.subtitle {
-        font-size: 14px;
-        line-height: 1.1rem;
+        font-size: 12px;
+        line-height: 1.7rem;
     }
 
     .left-content p.about-content {
-        font-size: 15px;
+        font-size: 13px;
     }
 
     .content-right .img-content img {
@@ -258,10 +258,9 @@ section#certf .information-certf p {
         align-items: center;
         margin-top: 10px;
     }
-    
-    .get-in-touch p {
-        color: black;
-        font-weight: 600;
+
+    .left-content {
+        padding-bottom: 35px;
     }
 
     .container-about {
@@ -278,6 +277,74 @@ section#certf .information-certf p {
     .skills-content img{
         width: 200px;
         padding: 10px;
+    }
+
+    .footer-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .image-certification {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+
+    }
+
+    .wrapper-img-certf img {
+        width: 50px;
+    }
+
+    .footer-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border: 2px dashed black;
+        gap: 35px;
+        padding: 35px;
+        border-radius: 10px 10px 0 0;
+    }
+    
+    a.get-in-touch{
+        margin-top: 10px;
+        background-color: #c91435;
+        font-weight: 600;
+        padding-inline: 20px;
+        font-size: 15px;
+        color: white;
+        border-radius: 5px;
+        text-decoration: none;
+        width: 60%;
+        text-align: center;
+    }
+    a.get-in-touch ion-icon{
+        opacity: 1;
+        font-size: 1.5rem;
+        margin-left: 10px;
+    }
+    a.get-in-touch:hover {
+        background-color: #00bceb;
+        transform: scale(1.1);
+        transition: ease-in-out .2s;
+    }
+
+    .wrapper-content-ft1 ul li,
+    .wrapper-content-ft1 ul li a{
+        list-style-type: none;
+        color: #333;
+        text-decoration: none;
+
+    }
+
+    .wrapper-content-ft1 ul li a:hover {
+        font-weight: 700;
+    }
+
+    .Copyright {
+        margin-block: 10px;
+        font-size: 9px;
+        font-family: "Playwrite IN", serif;
     }
 }
 
@@ -323,14 +390,14 @@ section#certf .information-certf p {
 
 @media (min-width: 1200px) {
     body {
-        margin-inline: 3.5rem;
+        margin-inline: 3.3rem;
     }
 
     .container {
         max-width: 1140px;
         display: flex;
         gap: 40px;
-        padding: 50px;
+        padding: 35px;
     }
 
     .left-content h1.content-name {
@@ -347,7 +414,7 @@ section#certf .information-certf p {
     }
 
     .content-right .img-content img {
-        width: 478px;
+        width: 468px;
     }
 
     .container-about {
@@ -363,7 +430,28 @@ section#certf .information-certf p {
         width: 400px;
     }
 
-    
+    a.get-in-touch{
+        margin-top: 10px;
+        background-color: #c91435;
+        font-weight: 600;
+        padding: 10px;
+        color: white;
+        border-radius: 5px;
+        font-size: 15px;
+        text-decoration: none;
+        width: 29%;
+    }
+    a.get-in-touch ion-icon {
+        opacity: 1;
+        margin-left: 10px;
+        font-size: 1.5rem;
+    }
+    a.get-in-touch:hover {
+        background-color: #00bceb;
+        transform: scale(1.1);
+        transition: ease-in-out .2s;
+    }
+
     .right-about-content {
         line-height: 1.7em;
     }
@@ -401,5 +489,45 @@ section#certf .information-certf p {
 
     section#certf, section#skills {
         margin-block: 10em;
+    }
+
+    .footer-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border: 2px dashed black;
+        padding: 35px;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .image-certification {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .wrapper-img-certf img {
+        width: 80px;
+    }
+
+    .footer-wrapper .wrapper-content-ft1 ul li,
+    .wrapper-content-ft1 ul li a {
+        text-decoration: none;
+        text-decoration: none;
+        list-style-type: none;
+        color: #333;
+    }
+    .wrapper-content-ft1 ul li a:hover {
+        font-weight: 700;
+    }
+
+    .wrapper-content-ft1 h2 {
+        font-size: 14px;
+    }
+
+    .Copyright {
+        margin-block: 10px;
+        font-size: 14px;
+        font-family: "Playwrite IN", serif;
     }
 }
