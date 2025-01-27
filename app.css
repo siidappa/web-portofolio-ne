@@ -300,7 +300,7 @@ section#certf .information-certf p {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        border: 2px dashed black;
+        /* border: 2px dashed black; */
         gap: 35px;
         padding: 35px;
         border-radius: 10px 10px 0 0;
@@ -346,7 +346,21 @@ section#certf .information-certf p {
         font-size: 9px;
         font-family: "Playwrite IN", serif;
     }
-}
+
+    .wrapper-main {
+        border: 2px dashed black;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .wrapper-main .Copyright {
+        padding-inline: 35px;
+    }
+
+    .wrapper-main .Copyright {
+        margin-bottom: 20px;
+        font-size: 11px;
+        text-align: center;
+    }
 
 @media (min-width: 768px) {
     .container {
@@ -491,15 +505,6 @@ section#certf .information-certf p {
         margin-block: 10em;
     }
 
-    .footer-wrapper {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        border: 2px dashed black;
-        padding: 35px;
-        border-radius: 10px 10px 0 0;
-    }
-
     .image-certification {
         display: flex;
         flex-direction: row;
@@ -508,6 +513,37 @@ section#certf .information-certf p {
 
     .wrapper-img-certf img {
         width: 80px;
+    }
+
+    .wrapper-main {
+        border: 2px dashed black;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .wrapper-main .Copyright {
+        padding-inline: 35px;
+    }
+
+    .footer-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 30px;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .footer-wrapper > .content-footer {
+        display: flex;
+        gap: 90px;
+    }
+
+    .wrapper-content-ft1 {
+        gap: 10px;
+    }
+
+    .wrapper-main .Copyright .copy {
+        font-size: 16px;
+        margin-bottom: 15px;
     }
 
     .footer-wrapper .wrapper-content-ft1 ul li,
@@ -527,7 +563,7 @@ section#certf .information-certf p {
 
     .Copyright {
         margin-block: 10px;
-        font-size: 14px;
         font-family: "Playwrite IN", serif;
+    }
     }
 }
