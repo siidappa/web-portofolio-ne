@@ -22,14 +22,12 @@ main {
 :root {
     /* Font */
     --playwrite-in: "Playwrite IN", serif;
-    --roboto-condensed: "Roboto Condensed", serif;
-    --rubik: "Rubik", serif; 
-    --nunito: "Nunito", serif;
     --poppins: "Poppins", serif;
     
     /* Color */
     --c91435: #c91435;
     --c00bceb: #00bceb; 
+    --c0084d1: #0084d1;
 }
 
 ::-webkit-scrollbar {
@@ -450,6 +448,75 @@ section#certf .information-certf p {
         text-align: center;
     }
 
+        #form-message {
+            padding: 60px;
+            margin-block: 55px;
+        }
+
+        .form-headline h2{
+            font-size: 30px;
+            text-align:center;
+        }
+        .wrapper-form-content #form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .wrapper-form-main {
+            margin-top: 35px;
+        }
+
+        #form label {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        #form input {
+            padding: 10px;
+            border-radius: 10px;
+            border: 0.1px solid black;
+            outline: none;
+            font-family: var(--poppins);
+            color: var(--c91435);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        #form input:focus {
+            border: 0;
+            box-shadow: 0 2px 5px black;
+        }
+
+        #form textarea {
+            height: 150px;
+            font-family: var(--poppins);
+            padding: 10px;
+            outline: none;
+            border: 0.1px solid black;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .wrapper-form-content .buttonSend {
+            margin-top: 15px;
+            padding: 10px;
+            width: 100%;
+            background-color: var(--c00bceb);
+            border: 0;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            font-family: var(--poppins);
+            font-weight: 600;
+        }
+
+        .buttonSend:hover {
+            cursor: pointer;
+            background-color: var(--c0084d1);
+        }
+
 @media (min-width: 768px) {
     .container {
         max-width: 700px;
@@ -739,6 +806,74 @@ section#certf .information-certf p {
 
         .info .link ion-icon {
             font-size: 1.4rem;
+        }
+
+        #form-message {
+            padding: 60px;
+            margin-block: 55px;
+        }
+        #form-headline h2{
+            font-size: 30px;
+            text-align:center;
+        }
+        .wrapper-form-content #form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .wrapper-form-main {
+            margin-top: 35px;
+        }
+
+        #form label {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        #form input {
+            padding: 10px;
+            border-radius: 10px;
+            border: 0.1px solid black;
+            outline: none;
+            font-family: var(--poppins);
+            color: var(--c91435);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        #form input:focus {
+            border: 0;
+            box-shadow: 0 2px 5px black;
+        }
+
+        #form textarea {
+            height: 150px;
+            font-family: var(--poppins);
+            padding: 10px;
+            outline: none;
+            border: 0.1px solid black;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .wrapper-form-content .buttonSend {
+            margin-top: 15px;
+            padding: 10px;
+            width: 100%;
+            background-color: var(--c00bceb);
+            border: 0;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            font-family: var(--poppins);
+            font-weight: 600;
+        }
+
+        .buttonSend:hover {
+            cursor: pointer;
+            background-color: var(--c0084d1);
         }
     }
 }

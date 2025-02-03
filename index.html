@@ -6,6 +6,17 @@
     <title>Dapp | NE Internetworking Expert</title>
     <link rel="stylesheet" href="app.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "JCOSPRPNBpWRfEklw",
+        });
+    })();
+    </script>
 </head>
 <body>
     <main>
@@ -87,6 +98,12 @@
                         <h3>Network Security Certification</h3>
                     </div>
                 </div>
+                <div class="certf-content" data-aos="fade-down" data-aos-duration="1000" data-aos-once="yes">
+                    <div class="wrapping-content-certif">
+                        <a href="https://www.coursera.org/account/accomplishments/verify/TXUTHT55QAKX" target="_blank"><img src="/image/Certifications/Fortiget Certification.jpeg" alt="Fortiget" title="FortiGet Administrator Certification from Cisco Learning and Certification"></a>
+                        <h3>FortiGet Administrator Certification</h3>
+                    </div>
+                </div>
                 <div class="certf-content" data-aos="fade-down" data-aos-duration="1300" data-aos-once="yes">
                     <div class="wrapping-content-certif">
                         <a href="https://ude.my/UC-fa5108cb-ad92-4a83-8062-c90bdea3d72d"><img src="/image/Certifications/CCNA.jpeg" alt="Cisco" title="Cisco CCNA 200-301 from Udemy Course"></a>
@@ -115,14 +132,6 @@
                         <img src="/image/Certifications/PHP Dasar.jpg" alt="PHP Dasar" title="PHP Dasar form Codepolitan">
                         </a>
                         <h3>PHP Dasar</h3>
-                    </div>
-                </div>
-                <div class="certf-content" data-aos="fade-down" data-aos-delay="20" data-aos-duration="1500" data-aos-once="yes">
-                    <div class="wrapping-content-certif">
-                        <a href="https://www.codepolitan.com/c/BSR8OGN/">
-                        <img src="/image/Certifications/PHP OOP.jpg" alt="PHP OOP" title="PHP OOP form Codepolitan">
-                        </a>
-                        <h3>PHP OOP</h3>
                     </div>
                 </div>
             </div>
@@ -217,6 +226,24 @@
                 </div>
             </div>
         </section>
+        <section id="form-message">
+            <div class="form-headline">
+                <h2>Get in Touch</h2>
+            </div>
+            <div class="wrapper-form-main">
+                <div class="wrapper-form-content">
+                    <div id="form">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Nama Kamu siapa ??"/>
+                        <label for="whareyourfrom">Where are you From</label>
+                        <input type="text" id="whereyourform" name="whareyourfrom" placeholder="Asal Kota ???">
+                        <label for="yourmessage">Your Message</label>
+                        <textarea name="yourmessage" id="yourmessage" placeholder="Silakan masukan pesan"></textarea>
+                        <button type="submit" class="buttonSend" onclick="sendMail()">Send</button>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     
     <footer>
@@ -273,6 +300,7 @@
         </div>
     </footer>
 
+    <script src="app.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
