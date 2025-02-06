@@ -17,10 +17,21 @@ function sendMail() {
             Swal.fire({
                 icon: 'success',
                 title: 'Success !!',
-                text: 'Message sended to Daffa 👌',
-                showConfirmButton: true,
-                timer: 1300
+                text: 'Yeyyy 🥳, Pesan kamu berhasil terkirim ke Daffa',
+                showConfirmButton: false,
+                timer: 1500
             })
         }
-    ).catch((err) => console.log(err))
+    ).catch((err) =>
+        {
+            console.log(err);
+            Swal.fire({ 
+                icon: 'error',
+                title: 'ERRORRRR',
+                text: 'Yahhhh 😔, Pesan kamu gagal ke kirim 😭',
+                showConfirmButton: false,
+                timer: 1400
+            })
+        }
+    )
 }

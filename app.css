@@ -224,8 +224,8 @@ section#certf .information-certf p {
     }
 
     .left-content h3.subtitle {
-        font-size: 12px;
-        line-height: 1.7rem;
+        font-size: 11.4px;
+        line-height: 1.5rem;
     }
 
     .left-content p.about-content {
@@ -492,6 +492,7 @@ section#certf .information-certf p {
         font-family: var(--poppins);
         padding: 10px;
         outline: none;
+        color: var(--c91435);
         border: 0.1px solid black;
         border-radius: 10px;
         font-size: 14px;
@@ -854,6 +855,7 @@ section#certf .information-certf p {
             border: 0.1px solid black;
             border-radius: 10px;
             font-size: 14px;
+            color: var(--c91435);
             font-weight: 600;
             margin-bottom: 15px;
         }
