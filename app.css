@@ -566,10 +566,16 @@ section#certf .information-certf p {
         }
 
         .container {
-            max-width: 1140px;
+            max-width: 100%;
             display: flex;
             gap: 40px;
             padding: 35px;
+        }
+
+        .left-content .content-right {
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .left-content h1.content-name {
