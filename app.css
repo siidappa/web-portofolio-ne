@@ -422,6 +422,7 @@ section#certf .information-certf p {
 
     .info h3 {
         font-size: 15px;
+        font-family: var(--ssn);
     }
 
     .info a {
