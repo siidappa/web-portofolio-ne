@@ -11,7 +11,7 @@
 
 body {
     background-color: #FBFBFB;
-    font-family:  "poppins", sans-serif;    
+    font-family:  var(--ssn);    
 }
 
 main {
