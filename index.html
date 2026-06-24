@@ -19,6 +19,27 @@
     </script>
 </head>
 <body>
+    <header class="navbar">
+        <div class="navbar-container">
+            <a class="nav-logo" href="#myhome">Daffa</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#myhome">Home</a></li>
+                    <li><a href="#about-me">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#certf">Certificate</a></li>
+                    <li><a href="#project">Project</a></li>
+                    <li><a href="#form-message">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
     <main>
         <section id="myhome">
             <div class="container">
@@ -77,62 +98,191 @@
                 </div>
             </div>
         </section>
+        <section id="experience">
+            <div class="information-experience">
+                <h2>Work Experience</h2>
+                <p># Professional Journey #</p>
+            </div>
+            <div class="container-experience">
+                <div class="experience-card" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="experience-header">
+                        <div class="experience-title">
+                            <h3>IT Head of Project Manager</h3>
+                            <p class="company-name">PT Multiusaha Prioritas Bersama</p>
+                            <p class="work-period">Desember 2025 - April 2026</p>
+                        </div>
+                        <div class="experience-badge">
+                            <img src="/image/Experience/logo.webp" alt="PT Multiusaha Prioritas Bersama Logo">
+                        </div>
+                    </div>
+                    <p class="experience-description">
+                        Memimpin tim IT dalam mengelola dan mengeksekusi proyek-proyek strategis. Bertanggung jawab atas perencanaan infrastruktur jaringan, koordinasi implementasi, dan monitoring performance sistem untuk memastikan business continuity.
+                    </p>
+                    <div class="experience-skills">
+                        <span class="skill-tag">Project Management</span>
+                        <span class="skill-tag">Team Leadership</span>
+                        <span class="skill-tag">System Integration</span>
+                    </div>
+                </div>
+
+                <div class="experience-card" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="experience-header">
+                        <div class="experience-title">
+                            <h3>IT Support Specialist</h3>
+                            <p class="company-name">PT Gamila Buana Nusantara</p>
+                            <p class="work-period">April 2026 - Sekarang</p>
+                        </div>
+                        <div class="experience-badge">
+                            <img src="/image/Experience/Logo_Gamila-removebg-preview.png" alt="PT Multiusaha Prioritas Bersama Logo">
+                        </div>
+                    </div>
+                    <p class="experience-description">
+                        Memberikan dukungan teknis komprehensif untuk infrastruktur jaringan dan sistem IT. Menangani troubleshooting, maintenance, user support, dan dokumentasi teknis. Berkontribusi dalam optimasi network performance dan keamanan sistem.
+                    </p>
+                    <div class="experience-skills">
+                        <span class="skill-tag">Network Support</span>
+                        <span class="skill-tag">Troubleshooting</span>
+                        <span class="skill-tag">User Support</span>
+                        <span class="skill-tag">Network Infrastructure</span>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section id="certf">
             <div class="information-certf">
                 <h2>My Certification</h2>
                 <p># Go to Professional #</p>
             </div>
+            <div class="certf-tabs">
+                <button class="certf-tab active" type="button" data-cert-page="all">All</button>
+                <button class="certf-tab" type="button" data-cert-page="1">MikroTik</button>
+                <button class="certf-tab" type="button" data-cert-page="2">Cisco</button>
+            </div>
             <div class="container-certf">
-                <div class="certf-content" data-aos="fade-down" data-aos-delay="20" data-aos-duration="1000" >
-                    <div class="wrapping-content-certif">
-                        <a href="https://drive.google.com/file/d/1s3uzPNuQjca1z6QfcTqJPnrVhVQ7W-cy/view?usp=drive_link" target="_blank">
-                            <img src="/image/Certifications/Network Fundamental.jpg" alt="Network Fundamental" title="Network Fundamental from AgunaCourse">
-                        </a>
-                        <h3>Network Fundamental</h3>
+                <div class="certf-page" data-page="1">
+                    <div class="certf-content" data-aos="fade-down" data-aos-duration="1500">
+                        <div class="wrapping-content-certif">
+                            <a href="https://drive.google.com/file/d/1FbbgLJbeeJZpNhWRkI6zY68ufU8_DNAr/view?usp=drive_link" target="_blank">
+                                <img src="/image/Certifications/Mikrotik Adm.jpeg" alt="Mikrotik Adm" title="Mikrotik Administration from AgunaCourse">
+                            </a>
+                            <h3>Mikrotik Administration</h3>
+                        </div>
+                    </div>
+                    <div class="certf-content" data-aos="fade-down" data-aos-duration="1000">
+                        <div class="wrapping-content-certif">
+                            <a href="https://drive.google.com/file/d/18f6lHLU2CsGQQkEDvCk58JgXO8hEEvZ1/view?usp=drive_link" target="_blank"><img src="/image/Certifications/Bootcamp MikroTik.jpg" alt="Bootcamp MikroTik" title="Bootcamp Online MikroTik by Id Networkers"></a>
+                            <h3>Bootcamp MikroTik by IDN</h3>
+                        </div>
                     </div>
                 </div>
-                <div class="certf-content" data-aos="fade-down" data-aos-duration="1500" >
-                    <div class="wrapping-content-certif">
-                        <a href="https://drive.google.com/file/d/1FbbgLJbeeJZpNhWRkI6zY68ufU8_DNAr/view?usp=drive_link" target="_blank">
-                            <img src="/image/Certifications/Mikrotik Adm.jpeg" alt="Mikrotik Adm" title="Mikrotik Administration from AgunaCourse">
-                        </a>
-                        <h3>Mikrotik Administration</h3>
+                <div class="certf-page certf-page--active" data-page="all">
+                    <div class="certf-content" data-aos="fade-down" data-aos-delay="20" data-aos-duration="1000">
+                        <div class="wrapping-content-certif">
+                            <a href="https://drive.google.com/file/d/1s3uzPNuQjca1z6QfcTqJPnrVhVQ7W-cy/view?usp=drive_link" target="_blank">
+                                <img src="/image/Certifications/Network Fundamental.jpg" alt="Network Fundamental" title="Network Fundamental from AgunaCourse">
+                            </a>
+                            <h3>Network Fundamental</h3>
+                        </div>
+                    </div>
+                    <div class="certf-content" data-aos="fade-down" data-aos-duration="1500">
+                        <div class="wrapping-content-certif">
+                            <a href="https://drive.google.com/file/d/1FbbgLJbeeJZpNhWRkI6zY68ufU8_DNAr/view?usp=drive_link" target="_blank">
+                                <img src="/image/Certifications/Mikrotik Adm.jpeg" alt="Mikrotik Adm" title="Mikrotik Administration from AgunaCourse">
+                            </a>
+                            <h3>Mikrotik Administration</h3>
+                        </div>
+                    </div>
+                    <div class="certf-content" data-aos="fade-down" data-aos-duration="1300">
+                        <div class="wrapping-content-certif">
+                            <a href="https://drive.google.com/file/d/125JmDfNEPqCcjLLAeNU1bGoFqA4H2jJB/view?usp=drive_link" target="_blank"><img src="/image/Certifications/CCNA.jpeg" alt="Cisco" title="Cisco CCNA 200-301 from Udemy Course"></a>
+                            <h3>Cisco CCNA 200-301</h3>
+                        </div>
+                    </div>
+                    <div class="certf-content" data-aos="fade-down" data-aos-duration="1000">
+                        <div class="wrapping-content-certif">
+                            <a href="https://drive.google.com/file/d/1WU6z4QeohDSalW91Wv0c6ryhevir2o4L/view?usp=drive_link" target="_blank"><img src="/image/Certifications/Routing Advance EIGRP, OSPF, IS-IS.jpg" alt="Fortiget" title="FortiGet Administrator Certification from Fortinet Institude"></a>
+                            <h3>Cisco Routing EIGRP, OSPF, IS-IS</h3>
+                        </div>
+                    </div>
+                    <div class="certf-content" data-aos="fade-down" data-aos-duration="1000">
+                        <div class="wrapping-content-certif">
+                            <a href="https://drive.google.com/file/d/18f6lHLU2CsGQQkEDvCk58JgXO8hEEvZ1/view?usp=drive_link" target="_blank"><img src="/image/Certifications/Bootcamp MikroTik.jpg" alt="Bootcamp MikroTik" title="Bootcamp Online MikroTik by Id Networkers"></a>
+                            <h3>Bootcamp MikroTik by ID Networkers</h3>
+                        </div>
+                    </div>
+                    <div class="certf-content" data-aos="fade-down" data-aos-duration="1000">
+                        <div class="wrapping-content-certif">
+                            <a href="https://drive.google.com/file/d/12kMOiofP8zVxLfs4J2vI1HBBNuW-I3eK/view?usp=drive_link" target="_blank"><img src="/image/Certifications/Network Security.jpeg" alt="Network Security" title="Network Security Certification from Cisco Learning and Certification"></a>
+                            <h3>Network Security</h3>
+                        </div>
+                    </div>
+                    <div class="certf-content" data-aos="fade-down" data-aos-duration="1000">
+                        <div class="wrapping-content-certif">
+                            <a href="https://drive.google.com/file/d/1z_nQ_8FteUXFMvm7YDb1XJHhZG8ahaal/view?usp=drive_link" target="_blank"><img src="/image/Certifications/Fortiget Certification.jpeg" alt="Fortiget Administrator" title="Fortigate Administrator Certificate by coursera"></a>
+                            <h3>Fortigate Administrator</h3>
+                        </div>
+                    </div>
+                    <div class="certf-content" data-aos="fade-down" data-aos-duration="1000">
+                        <div class="wrapping-content-certif">
+                            <a href="https://drive.google.com/file/d/12kMOiofP8zVxLfs4J2vI1HBBNuW-I3eK/view?usp=drive_link" target="_blank"><img src="/image/Certifications/CCNA-_Switching-_Routing-_and_Wireless_Essentials_certificate_dappipv6-gmail-com_8579f9ac-65b0-4201-a03f-4d9439e614ac_page-0001.jpg" alt="Network Security" title="Cisco CCNA: Routing, Switching, and Wireless Essentials"></a>
+                            <h3>Cisco CCNA: Routing, Switching, and Wireless Essentials</h3>
+                        </div>
+                    </div>
+                    <div class="certf-content" data-aos="fade-down" data-aos-duration="1000">
+                        <div class="wrapping-content-certif">
+                            <a href="https://drive.google.com/file/d/12kMOiofP8zVxLfs4J2vI1HBBNuW-I3eK/view?usp=drive_link" target="_blank"><img src="/image/Certifications/CCNA-_Enterprise_Networking-_Security-_and_Automation_certificate_dappsssxyz-gmail-com_b8d0ae7c-3a8d-4235-aebd-b723f16bed57_page-0001.jpg" alt="Network Security" title="Cisco CCNA: Enterprise Networking, Security, and Automation"></a>
+                            <h3>Cisco CCNA: Enterprise Networking, Security, and Automation</h3>
+                        </div>
+                    </div>
+                    <div class="certf-content" data-aos="fade-down" data-aos-duration="1000">
+                        <div class="wrapping-content-certif">
+                            <a href="https://drive.google.com/file/d/12kMOiofP8zVxLfs4J2vI1HBBNuW-I3eK/view?usp=drive_link" target="_blank"><img src="/image/Certifications/Cisco CCNP Enterprise Core Networking.jpeg" alt="Network Security" title="Cisco CCNP: Enterprise Core Networking"></a>
+                            <h3>Cisco CCNP Enterprise: Core Networking</h3>
+                        </div>
                     </div>
                 </div>
-                <div class="certf-content" data-aos="fade-down" data-aos-duration="1300" >
-                    <div class="wrapping-content-certif">
-                        <a href="https://drive.google.com/file/d/125JmDfNEPqCcjLLAeNU1bGoFqA4H2jJB/view?usp=drive_link" target="_blank"><img src="/image/Certifications/CCNA.jpeg" alt="Cisco" title="Cisco CCNA 200-301 from Udemy Course"></a>
-                        <h3>Cisco CCNA 200-301</h3>
+                <div class="certf-page" data-page="2">
+                    <div class="certf-content" data-aos="fade-down" data-aos-duration="1300">
+                        <div class="wrapping-content-certif">
+                            <a href="https://drive.google.com/file/d/125JmDfNEPqCcjLLAeNU1bGoFqA4H2jJB/view?usp=drive_link" target="_blank"><img src="/image/Certifications/Network Fundamental.jpg" alt="Cisco" title="Cisco CCNA 200-301 from Udemy Course"></a>
+                            <h3>Network Fundamental</h3>
+                        </div>
                     </div>
-                </div>
-                <div class="certf-content" data-aos="fade-down" data-aos-duration="1000" >
-                    <div class="wrapping-content-certif">
-                        <a href="https://drive.google.com/file/d/1WU6z4QeohDSalW91Wv0c6ryhevir2o4L/view?usp=drive_link" target="_blank"><img src="/image/Certifications/Routing Advance EIGRP, OSPF, IS-IS.jpg" alt="Fortiget" title="FortiGet Administrator Certification from Fortinet Institude"></a>
-                        <h3>Cisco Routing EIGRP, OSPF, IS-IS</h3>
+                    <div class="certf-content" data-aos="fade-down" data-aos-duration="1300">
+                        <div class="wrapping-content-certif">
+                            <a href="https://drive.google.com/file/d/125JmDfNEPqCcjLLAeNU1bGoFqA4H2jJB/view?usp=drive_link" target="_blank"><img src="/image/Certifications/CCNA.jpeg" alt="Cisco" title="Cisco CCNA 200-301 from Udemy Course"></a>
+                            <h3>Cisco CCNA 200-301</h3>
+                        </div>
                     </div>
-                </div>
-                <div class="certf-content" data-aos="fade-down" data-aos-duration="1000" >
-                    <div class="wrapping-content-certif">
-                        <a href="https://drive.google.com/file/d/1OHnb_d2RUWHb6uXGr7nm8huRMX2g6EOy/view?usp=sharing" target="_blank"><img src="/image/Certifications/Cisco CCNP Enterprise Core Networking.jpeg" alt="Mikrotik" title="Network Security Certification from Cisco Learning and Certification"></a>
-                        <h3>Cisco CCNP Enterprise: Core Networking</h3>
+                    <div class="certf-content" data-aos="fade-down" data-aos-duration="1000">
+                        <div class="wrapping-content-certif">
+                            <a href="https://drive.google.com/file/d/1WU6z4QeohDSalW91Wv0c6ryhevir2o4L/view?usp=drive_link" target="_blank"><img src="/image/Certifications/Routing Advance EIGRP, OSPF, IS-IS.jpg" alt="Fortiget" title="FortiGet Administrator Certification from Fortinet Institude"></a>
+                            <h3>Cisco Routing EIGRP, OSPF, IS-IS</h3>
+                        </div>
                     </div>
-                </div>
-                <div class="certf-content" data-aos="fade-down" data-aos-duration="1000" >
-                    <div class="wrapping-content-certif">
-                        <a href="https://drive.google.com/file/d/18f6lHLU2CsGQQkEDvCk58JgXO8hEEvZ1/view?usp=drive_link" target="_blank"><img src="/image/Certifications/Bootcamp MikroTik.jpg" alt="Mikrotik" title="Bootcamp Online MikroTik by Id Networkers"></a>
-                        <h3>Bootcamp MikroTik by ID Networkers</h3>
+                    <div class="certf-content" data-aos="fade-down" data-aos-duration="1000">
+                        <div class="wrapping-content-certif">
+                            <a href="https://drive.google.com/file/d/12kMOiofP8zVxLfs4J2vI1HBBNuW-I3eK/view?usp=drive_link" target="_blank"><img src="/image/Certifications/Network Security.jpeg" alt="Network Security" title="Network Security Certification from Cisco Learning and Certification"></a>
+                            <h3>Network Security</h3>
+                        </div>
                     </div>
-                </div>
-                <div class="certf-content" data-aos="fade-down" data-aos-duration="1000" >
-                    <div class="wrapping-content-certif">
-                        <a href="https://drive.google.com/file/d/12kMOiofP8zVxLfs4J2vI1HBBNuW-I3eK/view?usp=drive_link" target="_blank"><img src="/image/Certifications/Network Security.jpeg" alt="Mikrotik" title="Network Security Certification from Cisco Learning and Certification"></a>
-                        <h3>Network Security</h3>
+                    <div class="certf-content" data-aos="fade-down" data-aos-duration="1000">
+                        <div class="wrapping-content-certif">
+                            <a href="https://drive.google.com/file/d/12kMOiofP8zVxLfs4J2vI1HBBNuW-I3eK/view?usp=drive_link" target="_blank"><img src="/image/Certifications/CCNA-_Switching-_Routing-_and_Wireless_Essentials_certificate_dappipv6-gmail-com_8579f9ac-65b0-4201-a03f-4d9439e614ac_page-0001.jpg" alt="Network Security" title="Cisco CCNA: Routing, Switching, and Wireless Essentials"></a>
+                            <h3>Cisco CCNA: Routing, Switching, and Wireless Essentials</h3>
+                        </div>
                     </div>
-                </div>
-                <div class="certf-content" data-aos="fade-down" data-aos-duration="1000" >
-                    <div class="wrapping-content-certif">
-                        <a href="https://drive.google.com/file/d/1z_nQ_8FteUXFMvm7YDb1XJHhZG8ahaal/view?usp=drive_link" target="_blank"><img src="/image/Certifications/Fortiget Certification.jpeg" alt="Mikrotik" title="Fortigate Administrator Certificate by coursera"></a>
-                        <h3>Fortigate Administrator</h3>
+                    <div class="certf-content" data-aos="fade-down" data-aos-duration="1000">
+                        <div class="wrapping-content-certif">
+                            <a href="https://drive.google.com/file/d/12kMOiofP8zVxLfs4J2vI1HBBNuW-I3eK/view?usp=drive_link" target="_blank"><img src="/image/Certifications/CCNA-_Enterprise_Networking-_Security-_and_Automation_certificate_dappsssxyz-gmail-com_b8d0ae7c-3a8d-4235-aebd-b723f16bed57_page-0001.jpg" alt="Network Security" title="Cisco CCNA: Enterprise Networking, Security, and Automation"></a>
+                            <h3>Cisco CCNA: Enterprise Networking, Security, and Automation</h3>
+                        </div>
+                    </div>
+                    <div class="certf-content" data-aos="fade-down" data-aos-duration="1000">
+                        <div class="wrapping-content-certif">
+                            <a href="https://drive.google.com/file/d/12kMOiofP8zVxLfs4J2vI1HBBNuW-I3eK/view?usp=drive_link" target="_blank"><img src="/image/Certifications/Cisco CCNP Enterprise Core Networking.jpeg" alt="Network Security" title="Cisco CCNP: Enterprise Core Networking"></a>
+                            <h3>Cisco CCNP Enterprise: Core Networking</h3>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -142,83 +292,89 @@
                 <h2>My Project</h2>
                 <p># Learning by doing #</p>
             </div>
-            <div class="wrapper-project">
-                <div class="wrapper-content-project">
-                    <div class="wrapper-content-info" data-aos="fade-down" data-aos-duration="1000">
-                        <div class="img-project-content">
-                            <img src="./image/Project/MariCoding.png" alt="My Project">
-                            <div class="info">
-                                <h3>MariCoding.com</h2>
-                                <div class="link">
+            <div class="project-tabs">
+                <button class="project-tab active" type="button" data-project-page="1">Page 1</button>
+                <button class="project-tab" type="button" data-project-page="2">Page 2</button>
+            </div>
+            <div class="container-project">
+                <div class="project-page project-page--active" data-page="1">
+                    <div class="project-card" data-aos="fade-down" data-aos-delay="20" data-aos-duration="1000">
+                        <div class="project-card-inner">
+                            <img src="./image/Project/MariCoding.png" alt="MariCoding.com">
+                            <div class="project-info">
+                                <h3>MariCoding.com</h3>
+                                <div class="project-links">
                                     <a href="https://github.com/siidappa/IDCAMP" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
                                     <a href="https://siidappa.github.io/IDCAMP/" target="_blank"><ion-icon name="link-outline"></ion-icon></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="wrapper-content-info">
-                        <div class="img-project-content" data-aos="fade-down" data-aos-delay="50" data-aos-duration="1000">
-                            <img src="./image/Project/Pengelolaan Buku.png" alt="My Project">
-                            <div class="info">
-                                <h3>Web Pengelolaan Buku</h2>
-                                <div class="link">
+                    <div class="project-card" data-aos="fade-down" data-aos-duration="1500">
+                        <div class="project-card-inner">
+                            <img src="./image/Project/Pengelolaan Buku.png" alt="Web Pengelolaan Buku">
+                            <div class="project-info">
+                                <h3>Web Pengelolaan Buku</h3>
+                                <div class="project-links">
                                     <a href="https://github.com/siidappa/pengelolaan-buku" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
                                     <a href="https://pengelolaan-buku.vercel.app/" target="_blank"><ion-icon name="link-outline"></ion-icon></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="wrapper-content-info">
-                        <div class="img-project-content" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000">
-                            <img src="./image/Project/Dappa Note.png" alt="My Project">
-                            <div class="info">
-                                <h3>Dappa Note</h2>
-                                <div class="link">
+                    <div class="project-card" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000">
+                        <div class="project-card-inner">
+                            <img src="./image/Project/Dappa Note.png" alt="Dappa Note">
+                            <div class="project-info">
+                                <h3>Dappa Note</h3>
+                                <div class="project-links">
                                     <a href="https://github.com/siidappa/pengelolaan-buku" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
                                     <a href="https://pengelolaan-buku.vercel.app/" target="_blank"><ion-icon name="link-outline"></ion-icon></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="wrapper-content-info">
-                        <div class="img-project-content" data-aos="fade-down" data-aos-duration="1000">
-                            <img src="./image/Project/OSPF-IA.png" alt="My Project">
-                            <div class="info">
-                                <h3>OSPF IA + Static</h2>
-                                <div class="link">
+                    <div class="project-card" data-aos="fade-down" data-aos-duration="1000">
+                        <div class="project-card-inner">
+                            <img src="./image/Project/OSPF-IA.png" alt="OSPF IA + Static">
+                            <div class="project-info">
+                                <h3>OSPF IA + Static</h3>
+                                <div class="project-links">
                                     <a href="https://siidappa.github.io/IDCAMP/" target="_blank"><ion-icon name="link-outline"></ion-icon></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="wrapper-content-info">
-                        <div class="img-project-content" data-aos="fade-down" data-aos-delay="50" data-aos-duration="1000">
-                            <img src="./image/Project/Reditribute.png" alt="My Project">
-                            <div class="info">
-                                <h3>Routing Redistribute</h2>
-                                <div class="link">
+                </div>
+                <div class="project-page" data-page="2">
+                    <div class="project-card" data-aos="fade-down" data-aos-duration="1000">
+                        <div class="project-card-inner">
+                            <img src="./image/Project/Reditribute.png" alt="Routing Redistribute">
+                            <div class="project-info">
+                                <h3>Routing Redistribute</h3>
+                                <div class="project-links">
                                     <a href="https://pengelolaan-buku.vercel.app/" target="_blank"><ion-icon name="link-outline"></ion-icon></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="wrapper-content-info">
-                        <div class="img-project-content" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000">
-                            <img src="./image/Project/BGP & Static Routing.png" alt="My Project">
-                            <div class="info">
-                                <h3>Lab BGP + Static</h2>
-                                <div class="link">
+                    <div class="project-card" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000">
+                        <div class="project-card-inner">
+                            <img src="./image/Project/BGP & Static Routing.png" alt="Lab BGP + Static">
+                            <div class="project-info">
+                                <h3>Lab BGP + Static</h3>
+                                <div class="project-links">
                                     <a href="https://pengelolaan-buku.vercel.app/" target="_blank"><ion-icon name="link-outline"></ion-icon></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="wrapper-content-info">
-                        <div class="img-project-content" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000">
-                            <img src="./image/Project/Routing-dan-Switching.jpeg" alt="My Project">
-                            <div class="info">
-                                <h3>Superlab Cisco X Mikrotik</h2>
-                                <div class="link">
+                    <div class="project-card" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000">
+                        <div class="project-card-inner">
+                            <img src="./image/Project/Routing-dan-Switching.jpeg" alt="Superlab Cisco X Mikrotik">
+                            <div class="project-info">
+                                <h3>Superlab Cisco X Mikrotik</h3>
+                                <div class="project-links">
                                     <a href="https://pengelolaan-buku.vercel.app/" target="_blank"><ion-icon name="link-outline"></ion-icon></a>
                                 </div>
                             </div>
@@ -248,56 +404,66 @@
     </main>
     
     <footer>
-        <div class="wrapper-main">
-            <div class="footer-wrapper">
-                <div class="content-footer">
-                    <div class="information-footer">
-                        <h2>Daffa Naufal Fachrezi -
-                        </h2>
-                        <p>Pemula yang bercita-cita menjadi Senior Network Engineer dan berkomitmen meraih sertifikasi internasional</p>
-                        <div class="image-certification">
-                            <div class="wrapper-img-certf">
-                                <img src="./image/Certifications/cisco_ccna.png" alt="">
-                            </div>
-                            <div class="wrapper-img-certf">
-                                <img src="./image/Certifications/cisco_ccnp.png" alt="">
-                            </div>
-                            <div class="wrapper-img-certf">
-                                <img src="./image/Certifications/cisco_ccie_serviceprovider.png" alt="">
-                            </div>
-                            <div class="wrapper-img-certf">
-                                <img src="./image/Certifications/MTCNA.png" alt="">
-                            </div>
-                            <div class="wrapper-img-certf">
-                                <img src="./image/Certifications/MTCRE.png" alt="">
-                            </div>
-                            <div class="wrapper-img-certf">
-                                <img src="./image/Certifications/MTCINE.png" alt="">
-                            </div>
+        <div class="footer-container">
+            <div class="footer-content">
+                <!-- About Section -->
+                <div class="footer-section footer-about">
+                    <h3>Daffa Naufal Fachrezi</h3>
+                    <p>Network Engineer berpengalaman dengan passion dalam network design dan architecture. Terus belajar dan berinovasi untuk mencapai excellence.</p>
+                    
+                    <!-- Certification Badges -->
+                    <div class="footer-badges">
+                        <div class="badge-item" title="Cisco CCNA: Routing, Switching, and Wireless Essentials">
+                            <img src="./image/Certifications/CCNASRWE__1_.png" alt="CCNA SRWE Badge">
+                        </div>
+                        <div class="badge-item" title="Cisco CCNA: Enterprise Networking, Security, and Automation">
+                            <img src="./image/Certifications/CCNAENSA__1_.png" alt="CCNA ENSA Badge">
+                        </div>
+                        <div class="badge-item" title="Cisco CCNP: Enterprise Core Networking">
+                            <img src="./image/Certifications/CCNPENCOR__1_.png" alt="CCNP Core Badge">
                         </div>
                     </div>
-                    <div class="wrapper-content-ft1">
-                        <h2>Recently Link</h2>
-                        <ul>
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#about-me">About</a></li>
-                            <li><a href="#skills">Skills</a></li>
-                            <li><a href="#certf">Certificate</a></li>
-                        </ul>
-                    </div>
-                    <div class="wrapper-content-ft1">
-                        <h2>Social Media</h2>
-                        <ul>
-                            <li><a href="https://instagram.com/itsdappa_" target="_blank">Instagram</a></li>
-                            <li><a href="https://www.tiktok.com/@dappasukangemil">Tiktok</a></li>
-                            <li><a href="https://github.com/siidappa">Github</a></li>
-                        </ul>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="#myhome">Home</a></li>
+                        <li><a href="#about-me">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#certf">Certificates</a></li>
+                        <li><a href="#project">Projects</a></li>
+                    </ul>
+                </div>
+
+                <!-- Connect Section -->
+                <div class="footer-section">
+                    <h4>Connect With Me</h4>
+                    <div class="social-links">
+                        <a href="https://instagram.com/theonlydappp" target="_blank" title="Instagram" class="social-icon">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                        <a href="https://github.com/siidappa" target="_blank" title="GitHub" class="social-icon">
+                            <ion-icon name="logo-github"></ion-icon>
+                        </a>
+                        <a href="https://www.tiktok.com/@lookingfordapp" target="_blank" title="TikTok" class="social-icon">
+                            <ion-icon name="logo-tiktok"></ion-icon>
+                        </a>
+                        <a href="#form-message" title="Contact" class="social-icon">
+                            <ion-icon name="mail-outline"></ion-icon>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="Copyright">
-                <p class="copy-desktop">&copy; Nov 2025 - Created with ❤️ by Daffa Naufal Fachrezi</p>
-                <p class="copy-mobile">Created with ❤️ by Daffa</p>
+
+            <!-- Copyright Bar -->
+            <div class="footer-bottom">
+                <p class="copyright-text">
+                    <span class="desktop-only">&copy; 2025 Daffa Naufal Fachrezi | Network Engineer | Created with <span class="heart">❤️</span> by Daffa</span>
+                    <span class="mobile-only">&copy; 2025 | Created with <span class="heart">❤️</span> | Daffa</span>
+                </p>
             </div>
         </div>
     </footer>
