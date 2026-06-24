@@ -4,8 +4,8 @@ function sendMail() {
         city: document.getElementById('whereyourform').value,
         message: document.getElementById('yourmessage').value
     }
-    const serviceId = 'service_mvrf1u9';
-    const tempId = 'template_juvuocq';
+    const serviceId = 'service_tq5n9ae';
+    const tempId = 'template_bjaeiac';
     
     emailjs.send(serviceId, tempId, params).then(
         (res) => {
