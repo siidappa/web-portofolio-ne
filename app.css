@@ -1502,6 +1502,10 @@ section#form-message .information-contact p {
 }
 
 @media (max-width: 992px) {
+    section#myhome {
+        margin-top: 0.5rem !important;
+    }
+
     .contact-wrapper {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -1554,6 +1558,10 @@ section#form-message .information-contact p {
 }
 
 @media (max-width: 576px) {
+    section#myhome {
+        margin-top: 1rem !important;
+    }
+
     .container-home {
         padding: 0 1.2rem;
     }
@@ -2261,6 +2269,10 @@ footer::before {
 }
 
 @media (max-width: 400px) {
+    section#myhome {
+        margin-top: 1.5rem !important;
+    }
+
     .container-home {
         padding: 0 0.8rem;
     }
