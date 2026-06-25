@@ -57,16 +57,45 @@ const certTabs = document.querySelectorAll('.certf-tab');
 const certPages = document.querySelectorAll('.certf-page');
 const projectTabs = document.querySelectorAll('.project-tab');
 const projectPages = document.querySelectorAll('.project-page');
+const certDropdownLinks = document.querySelectorAll('.dropdown-menu [data-cert-tab]');
+const projectDropdownLinks = document.querySelectorAll('.dropdown-menu [data-project-tab]');
+
+function updateCertificates(selectedPage) {
+    // Update active tab button
+    certTabs.forEach((tab) => {
+        tab.classList.toggle('active', tab.dataset.certPage === selectedPage);
+    });
+    // Show selected certificate page
+    certPages.forEach((page) => {
+        page.classList.toggle('certf-page--active', page.dataset.page === selectedPage);
+    });
+}
+
+function updateProjects(selectedPage) {
+    // Update active tab button
+    projectTabs.forEach((tab) => {
+        tab.classList.toggle('active', tab.dataset.projectPage === selectedPage);
+    });
+    // Show selected project page
+    projectPages.forEach((page) => {
+        page.classList.toggle('project-page--active', page.dataset.page === selectedPage);
+    });
+}
 
 if (certTabs.length && certPages.length) {
     certTabs.forEach((tab) => {
         tab.addEventListener('click', () => {
             const selectedPage = tab.dataset.certPage;
+            updateCertificates(selectedPage);
+        });
+    });
+}
 
-            certTabs.forEach((item) => item.classList.toggle('active', item === tab));
-            certPages.forEach((page) => {
-                page.classList.toggle('certf-page--active', page.dataset.page === selectedPage);
-            });
+if (certDropdownLinks.length) {
+    certDropdownLinks.forEach((link) => {
+        link.addEventListener('click', (e) => {
+            const selectedPage = link.dataset.certTab;
+            updateCertificates(selectedPage);
         });
     });
 }
@@ -75,11 +104,87 @@ if (projectTabs.length && projectPages.length) {
     projectTabs.forEach((tab) => {
         tab.addEventListener('click', () => {
             const selectedPage = tab.dataset.projectPage;
-
-            projectTabs.forEach((item) => item.classList.toggle('active', item === tab));
-            projectPages.forEach((page) => {
-                page.classList.toggle('project-page--active', page.dataset.page === selectedPage);
-            });
+            updateProjects(selectedPage);
         });
     });
 }
+
+if (projectDropdownLinks.length) {
+    projectDropdownLinks.forEach((link) => {
+        link.addEventListener('click', (e) => {
+            const selectedPage = link.dataset.projectTab;
+            updateProjects(selectedPage);
+        });
+    });
+}
+
+// Animated subtitle text rotation
+document.addEventListener('DOMContentLoaded', function() {
+    const animatedTexts = document.querySelectorAll('.animated-text');
+    let currentIndex = 0;
+    
+    function showNextText() {
+        // Remove active class from current text
+        animatedTexts[currentIndex].classList.remove('active');
+        
+        // Move to next index
+        currentIndex = (currentIndex + 1) % animatedTexts.length;
+        
+        // Add active class to next text
+        animatedTexts[currentIndex].classList.add('active');
+    }
+    
+    // Change text every 2.5 seconds
+    setInterval(showNextText, 2500);
+});
+
+// Back to Top Button
+const backToTopBtn = document.getElementById('backToTop');
+
+if (backToTopBtn) {
+    // Show/hide button when scrolling
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) { // Show after scrolling 300px
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
+        }
+    });
+
+    // Scroll to top when clicked
+    backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+
+// Change timeline animations for mobile
+function updateTimelineAnimations() {
+    const isMobile = window.innerWidth <= 992;
+    const firstTimelineItem = document.querySelector('.timeline-left');
+    const secondTimelineItem = document.querySelector('.timeline-right');
+
+    if (firstTimelineItem) {
+        if (isMobile) {
+            firstTimelineItem.setAttribute('data-aos', 'fade-up');
+        } else {
+            firstTimelineItem.setAttribute('data-aos', 'fade-up');
+        }
+    }
+
+    if (secondTimelineItem) {
+        if (isMobile) {
+            secondTimelineItem.setAttribute('data-aos', 'fade-up');
+        } else {
+            secondTimelineItem.setAttribute('data-aos', 'fade-up');
+        }
+    }
+}
+
+// Initial check
+document.addEventListener('DOMContentLoaded', updateTimelineAnimations);
+
+// Check on resize
+window.addEventListener('resize', updateTimelineAnimations);
