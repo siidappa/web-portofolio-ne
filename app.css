@@ -190,7 +190,6 @@ section#myhome {
 .home-buttons {
     display: flex;
     gap: 1rem;
-    margin-top: 0.5rem;
     align-items: center;
 }
 
@@ -198,7 +197,7 @@ section#myhome {
     display: inline-flex;
     align-items: center;
     gap: 0.8rem;
-    padding: 1.1rem 2.5rem;
+    padding: 1rem 2rem;
     background: linear-gradient(135deg, var(--c91435), #e02849);
     color: #fff;
     text-decoration: none;
@@ -592,6 +591,7 @@ section#about-me {
 
 .left-about-content > .img-about-content img {
     width: 400px;
+    border-radius: 20px;
 }
 
 .right-about-content > h2 {
