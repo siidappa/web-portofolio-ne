@@ -1,4 +1,28 @@
+// Inisialisasi EmailJS ketika library sudah ter-load
+(function initEmailJS() {
+    if (typeof emailjs !== 'undefined') {
+        emailjs.init({
+            publicKey: "4lzUcZNbb01M2PW9S",
+        });
+    } else {
+        // Coba lagi jika emailjs belum ready
+        setTimeout(initEmailJS, 100);
+    }
+})();
+
 function sendMail() {
+    // Pastikan emailjs sudah siap
+    if (typeof emailjs === 'undefined') {
+        Swal.fire({
+            icon: "error",
+            title: "ERROR",
+            text: "Layanan email belum siap, coba lagi sebentar!",
+            showConfirmButton: !1,
+            timer: 1400,
+        });
+        return;
+    }
+    
     var params = {
         name: document.getElementById("name").value,
         city: document.getElementById("whereyourform").value,

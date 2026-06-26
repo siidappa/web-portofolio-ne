@@ -1,0 +1,16 @@
+{
+  "name": "Daffa Naufal Fachrezi - Portfolio",
+  "short_name": "Daffa Portfolio",
+  "description": "Portfolio Network Engineer Daffa Naufal Fachrezi",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#c91435",
+  "icons": [
+    {
+      "src": "./image/me/ME.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
