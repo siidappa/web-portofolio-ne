@@ -188,3 +188,59 @@ document.addEventListener('DOMContentLoaded', updateTimelineAnimations);
 
 // Check on resize
 window.addEventListener('resize', updateTimelineAnimations);
+
+// Lightbox for certificate images
+(function(){
+    const overlay = document.createElement('div');
+    overlay.className = 'lightbox-overlay';
+    overlay.innerHTML = `
+        <div class="lightbox-content">
+            <button class="lightbox-close" aria-label="Close">&times;</button>
+            <img class="lightbox-img" src="" alt="" />
+            <div class="lightbox-caption"></div>
+        </div>
+    `;
+    document.body.appendChild(overlay);
+
+    const imgEl = overlay.querySelector('.lightbox-img');
+    const captionEl = overlay.querySelector('.lightbox-caption');
+    const closeBtn = overlay.querySelector('.lightbox-close');
+
+    function openLightbox(src, alt) {
+        imgEl.src = src;
+        imgEl.alt = alt || '';
+        captionEl.textContent = alt || '';
+        overlay.classList.add('show');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+        overlay.classList.remove('show');
+        document.body.style.overflow = '';
+        // clear src after transition to avoid keeping large images in memory
+        setTimeout(() => { imgEl.src = ''; imgEl.alt = ''; captionEl.textContent = ''; }, 300);
+    }
+
+    overlay.addEventListener('click', function(e){
+        if (e.target === overlay) closeLightbox();
+    });
+
+    closeBtn.addEventListener('click', closeLightbox);
+
+    document.addEventListener('keydown', function(e){
+        if (e.key === 'Escape' && overlay.classList.contains('show')) closeLightbox();
+    });
+
+    // Delegate clicks on certificate icon links
+    document.addEventListener('click', function(e){
+        const a = e.target.closest('.certf-links a');
+        if (!a) return;
+        // Prevent following external link; show focused image instead
+        e.preventDefault();
+        const card = a.closest('.certf-card-inner');
+        if (!card) return;
+        const img = card.querySelector('img');
+        if (!img) return;
+        openLightbox(img.src, img.alt || 'Certificate');
+    });
+})();
