@@ -201,7 +201,11 @@ window.addEventListener("resize", updateTimelineAnimations);
     overlay.addEventListener("click", function (e) {
         if (e.target === overlay) closeLightbox();
     });
+    overlay.addEventListener("touchstart", function (e) {
+        if (e.target === overlay) closeLightbox();
+    });
     closeBtn.addEventListener("click", closeLightbox);
+    closeBtn.addEventListener("touchstart", closeLightbox);
     document.addEventListener("keydown", function (e) {
         if (e.key === "Escape" && overlay.classList.contains("show")) closeLightbox();
     });
@@ -214,5 +218,21 @@ window.addEventListener("resize", updateTimelineAnimations);
         const img = card.querySelector("img");
         if (!img) return;
         openLightbox(img.src, img.alt || "Certificate");
+    });
+    document.addEventListener("click", function (e) {
+        const badgeItem = e.target.closest(".badge-item");
+        if (!badgeItem) return;
+        e.preventDefault();
+        const img = badgeItem.querySelector("img");
+        if (!img) return;
+        openLightbox(img.src, img.alt || "Badge");
+    });
+    document.addEventListener("touchstart", function (e) {
+        const badgeItem = e.target.closest(".badge-item");
+        if (!badgeItem) return;
+        e.preventDefault();
+        const img = badgeItem.querySelector("img");
+        if (!img) return;
+        openLightbox(img.src, img.alt || "Badge");
     });
 })();

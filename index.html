@@ -22,12 +22,12 @@
     </noscript>
     
     <!-- Preload Critical Resources -->
-    <link rel="preload" href="./image/me/ME.png" as="image">
+    <link rel="preload" href="./image/me/Me.webp" as="image">
     <link rel="preload" href="app.css" as="style">
     
     <!-- Favicon & PWA -->
-    <link rel="icon" type="image/png" href="./image/me/ME.png">
-    <link rel="apple-touch-icon" href="./image/me/ME.png">
+    <link rel="icon" type="image/png" href="./image/me/Tanpa judul - June 27, 2026 at 11.30.51 (1) (1).png">
+    <link rel="apple-touch-icon" href="./image/me/Logo.png">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#c91435">
     
@@ -36,14 +36,14 @@
     <meta property="og:url" content="">
     <meta property="og:title" content="Daffa Naufal Fachrezi | Network Engineer">
     <meta property="og:description" content="Network Engineer profesional dengan pengalaman mengelola infrastruktur jaringan. Portofolio, sertifikat Cisco & MikroTik.">
-    <meta property="og:image" content="./image/me/ME.png">
+    <meta property="og:image" content="./image/me/Me.webp">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="">
     <meta property="twitter:title" content="Daffa Naufal Fachrezi | Network Engineer">
     <meta property="twitter:description" content="Network Engineer profesional dengan pengalaman mengelola infrastruktur jaringan. Portofolio, sertifikat Cisco & MikroTik.">
-    <meta property="twitter:image" content="./image/me/ME.png">
+    <meta property="twitter:image" content="./image/me/Me.webp">
     
     <!-- Canonical Link -->
     <link rel="canonical" href="">
@@ -61,9 +61,26 @@
     </noscript>
 </head>
 <body>
+    <!-- Popup Selamat Datang -->
+    <div class="welcome-popup-overlay" id="welcomePopup">
+        <div class="welcome-popup">
+            <div class="welcome-popup-ornament ornament-1"></div>
+            <div class="welcome-popup-ornament ornament-2"></div>
+            <div class="welcome-popup-ornament ornament-3"></div>
+            <div class="welcome-popup-ornament ornament-4"></div>
+            <div class="welcome-popup-content">
+                <div class="welcome-icon">👋</div>
+                <h2 class="welcome-title">Selamat Datang Di</h2>
+                <p class="welcome-subtitle">Website Portolio ku</p>
+                <p class="welcome-text">Enjoy your visit! 🤗🤩</p>
+            </div>
+        </div>
+    </div>
+    <!-- Akhir Popup Selamat Datang -->
+
     <header class="navbar">
         <div class="navbar-container">
-            <a class="nav-logo" href="#myhome">Daffa</a>
+            <a class="nav-logo" href="#myhome"><img src="./image/me/Tanpa judul - June 27, 2026 at 11.30.51 (1) (1).png" alt="My Logo" style="width: 95px;"></a>
             <button class="nav-toggle" aria-label="Toggle navigation">
                 <span></span>
                 <span></span>
@@ -120,7 +137,7 @@
                         </a>
                     </div>
                     <div class="home-socials">
-                        <a href="https://instagram.com/itsdappa_" target="_blank" title="Instagram">
+                        <a href="https://instagram.com/theonlydappp" target="_blank" title="Instagram">
                             <ion-icon name="logo-instagram"></ion-icon>
                         </a>
                         <a href="https://github.com/siidappa" target="_blank" title="GitHub">
@@ -133,7 +150,7 @@
                 </div>
                 <div class="home-right" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                     <div class="home-image-wrapper">
-                        <img src="./image/me/ME.png" alt="Daffa Naufal Fachrezi" loading="eager" fetchpriority="high">
+                        <img src="./image/me/Me.webp" alt="Daffa Naufal Fachrezi" loading="eager" fetchpriority="high">
                     </div>
                 </div>
             </div>
@@ -150,16 +167,25 @@
                     <h1 class="myname" data-aos="fade-up" data-aos-duration="500" >Daffa Naufal Fachrezi</h1>
                     <p class="about-text" data-aos="fade-up" data-aos-duration="700">Saya lulusan SMK jurusan TKJ dengan keahlian di bidang IT Networking, mampu mengelola dan mengonfigurasi perangkat jaringan berbagai vendor seperti Mikrotik, Cisco, dan TP-Link. Berpengalaman merancang dan membangun jaringan dari LAN hingga MAN dengan manajemen yang efisien
                     </p>
-                    <div class="footer-section">
-                        <div class="footer-badges">
+                    <div class="about-badges-section">
+                        <div class="about-badges">
                             <div class="badge-item" title="Cisco CCNA: Routing, Switching, and Wireless Essentials" data-aos="fade-up" data-aos-duration="500">
-                                <img loading="lazy" src="./image/Certifications/CCNASRWE__1_.webp" alt="CCNA SRWE Badge">
+                                <img loading="lazy" src="./image/Certifications/CCNASRWE__1_.webp" alt="CCNA: Switching, Routing and Wireless Essentials Badge">
+                                <div class="badge-overlay">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </div>
                             </div>
                             <div class="badge-item" title="Cisco CCNA: Enterprise Networking, Security, and Automation" data-aos="fade-up" data-aos-duration="700">
-                                <img loading="lazy" src="./image/Certifications/CCNAENSA__1_.webp" alt="CCNA ENSA Badge">
+                                <img loading="lazy" src="./image/Certifications/CCNAENSA__1_.webp" alt="CCNA: Enterprise Networking, Security, and Automation Badge">
+                                <div class="badge-overlay">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </div>
                             </div>
                             <div class="badge-item" title="Cisco CCNP: Enterprise Core Networking" data-aos="fade-up" data-aos-duration="900">
-                                <img loading="lazy" src="./image/Certifications/CCNPENCOR__1_.webp" alt="CCNP CorNet Badge">
+                                <img loading="lazy" src="./image/Certifications/CCNPENCOR__1_.webp" alt="CCNP Enterprise: Core Networking Badge">
+                                <div class="badge-overlay">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -196,7 +222,7 @@
             </div>
             <div class="container-experience">
                 <!-- Timeline Item 1 - Kiri -->
-                <div class="timeline-item timeline-left" data-aos="fade-right" data-aos-duration="1000">
+                <div class="timeline-item timeline-left" data-aos="fade-up" data-aos-duration="1000">
                     <div class="timeline-content">
                         <div class="timeline-card">
                             <div class="experience-header">
@@ -210,7 +236,7 @@
                                 </div>
                             </div>
                             <p class="experience-description">
-                                Sebagai intern IT Network, saya mendapatkan pengalaman berharga dalam membantu tim mengimplementasi dan memonitoring infrastruktur jaringan kantor.
+                                Sebagai IT Head of Project Manager, saya mendapatkan peran penting bagi kelancaran Tim Development untuk membuat, merancang, dan mengimplementasi proyek IT.
                             </p>
                             <div class="experience-skills">
                                 <span class="skill-tag">Project Management</span>
@@ -222,7 +248,7 @@
                     <div class="timeline-dot"></div>
                 </div>
                 <!-- Timeline Item 2 - Kanan -->
-                <div class="timeline-item timeline-right" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                <div class="timeline-item timeline-right" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                     <div class="timeline-content">
                         <div class="timeline-card">
                             <div class="experience-header">
@@ -773,22 +799,7 @@
                         <li><a href="#project">Proyek</a></li>
                     </ul>
                 </div>
-
-                <!-- Certifications Section -->
-                <!-- <div class="footer-section">
-                    <h4>Badge Credly</h4>
-                    <div class="footer-badges">
-                        <div class="badge-item" title="Cisco CCNA: Routing, Switching, and Wireless Essentials">
-                            <img loading="lazy" src="./image/Certifications/CCNASRWE__1_.png" alt="CCNA SRWE Badge">
-                        </div>
-                        <div class="badge-item" title="Cisco CCNA: Enterprise Networking, Security, and Automation">
-                            <img loading="lazy" src="./image/Certifications/CCNAENSA__1_.png" alt="CCNA ENSA Badge">
-                        </div>
-                        <div class="badge-item" title="Cisco CCNP: Enterprise Core Networking">
-                            <img loading="lazy" src="./image/Certifications/CCNPENCOR__1_.png" alt="CCNP Core Badge">
-                        </div>
-                    </div>
-                </div> -->
+                
                 <div class="social-links">
                         <a href="https://instagram.com/theonlydappp" target="_blank" title="Instagram" class="social-icon">
                             <ion-icon name="logo-instagram"></ion-icon>
@@ -827,9 +838,19 @@
         window.addEventListener('load', function() {
             if (typeof AOS !== 'undefined') {
                 AOS.init({
-                    once: true
+                    once: false
                 });
             }
+            
+            // Logika Popup Selamat Datang
+            const welcomePopup = document.getElementById('welcomePopup');
+            setTimeout(() => {
+                welcomePopup.classList.add('hide');
+                // Opsional: Hapus dari DOM setelah animasi selesai
+                setTimeout(() => {
+                    welcomePopup.remove();
+                }, 600);
+            }, 2000); // 2,5 detik
         });
     </script>
     <!-- Structured Data / Schema.org -->

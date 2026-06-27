@@ -4,6 +4,152 @@
     margin: 0;
     padding: 0;
 }
+.welcome-popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+    transition:
+        opacity 0.6s ease,
+        visibility 0.6s ease;
+}
+.welcome-popup-overlay.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+.welcome-popup {
+    position: relative;
+    background: #fff;
+    padding: 4rem 3rem;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 25px 80px rgb(0 0 0 / 0.3);
+    max-width: 90%;
+    width: 500px;
+    overflow: hidden;
+    animation: popupSlideIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+@keyframes popupSlideIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.7) translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+.welcome-popup-ornament {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.15;
+    pointer-events: none;
+}
+.ornament-1 {
+    width: 200px;
+    height: 200px;
+    background: #c91435;
+    top: -100px;
+    right: -100px;
+    animation: floatOrnament 4s ease-in-out infinite;
+}
+.ornament-2 {
+    width: 150px;
+    height: 150px;
+    background: #00bceb;
+    bottom: -75px;
+    left: -75px;
+    animation: floatOrnament 5s ease-in-out infinite reverse;
+}
+.ornament-3 {
+    width: 80px;
+    height: 80px;
+    background: #c91435;
+    top: 30px;
+    left: 30px;
+    animation: spinOrnament 6s linear infinite;
+}
+.ornament-4 {
+    width: 60px;
+    height: 60px;
+    background: #00bceb;
+    bottom: 40px;
+    right: 40px;
+    animation: spinOrnament 7s linear infinite reverse;
+}
+@keyframes floatOrnament {
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(10deg);
+    }
+}
+@keyframes spinOrnament {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.welcome-icon {
+    font-size: 5rem;
+    margin-bottom: 1.5rem;
+    animation: waveHand 1s ease-in-out infinite;
+}
+@keyframes waveHand {
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(15deg);
+    }
+    75% {
+        transform: rotate(-15deg);
+    }
+}
+.welcome-title {
+    font-family: var(--ssn);
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+}
+.welcome-subtitle {
+    font-family: var(--ssn);
+    font-size: 1.4rem;
+    background: linear-gradient(135deg, #c91435, #00bceb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #fff0;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+.welcome-text {
+    font-family: var(--poppins);
+    font-size: 1rem;
+    color: #666;
+}
+@media (max-width: 576px) {
+    .welcome-popup {
+        padding: 3rem 2rem;
+        width: 95%;
+    }
+    .welcome-title {
+        font-size: 2rem;
+    }
+    .welcome-subtitle {
+        font-size: 1.2rem;
+    }
+    .welcome-icon {
+        font-size: 4rem;
+    }
+}
 .btn-back-to-top {
     position: fixed;
     bottom: 30px;
@@ -542,6 +688,15 @@ section#about-me {
     background-color: var(--c91435);
     color: #fff;
     outline: none;
+}
+.about-badges-section {
+    margin-top: 1.5rem;
+}
+.about-badges {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
 }
 section#skills {
     margin-block: 100px;
@@ -1412,6 +1567,15 @@ section#form-message .information-contact p {
     text-align: center;
     font-weight: 600;
 }
+@media (max-width: 1024px) {
+    .lightbox-content {
+        max-width: 92vw;
+        padding: 14px;
+    }
+    .lightbox-img {
+        border-radius: 12px;
+    }
+}
 @media (max-width: 820px) {
     .lightbox-overlay {
         background: rgb(0 0 0 / 0.92);
@@ -1419,11 +1583,11 @@ section#form-message .information-contact p {
     }
     .lightbox-content {
         max-width: 96vw;
-        max-height: 86vh;
+        max-height: 88vh;
         padding: 12px;
     }
     .lightbox-img {
-        max-height: calc(86vh - 72px);
+        max-height: calc(88vh - 72px);
         border-radius: 8px;
     }
     .lightbox-close {
@@ -1439,13 +1603,17 @@ section#form-message .information-contact p {
     }
 }
 @media (max-width: 480px) {
+    .lightbox-overlay {
+        padding: 4px;
+    }
     .lightbox-content {
-        max-width: 100vw;
-        max-height: 80vh;
+        max-width: 98vw;
+        max-height: 92vh;
         padding: 8px;
     }
     .lightbox-img {
-        max-height: calc(80vh - 56px);
+        max-width: 100%;
+        max-height: calc(92vh - 60px);
         border-radius: 6px;
     }
     .lightbox-close {
@@ -1456,6 +1624,7 @@ section#form-message .information-contact p {
         font-size: 1.2rem;
     }
     .lightbox-caption {
+        margin-top: 8px;
         font-size: 0.9rem;
     }
 }
@@ -1844,6 +2013,7 @@ footer::before {
     align-items: center;
 }
 .badge-item {
+    position: relative;
     width: 80px;
     height: 80px;
     display: flex;
@@ -1867,6 +2037,75 @@ footer::before {
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+.badge-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0 0 0 / 0.5);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.badge-item:hover .badge-overlay {
+    opacity: 1;
+}
+.badge-overlay ion-icon {
+    font-size: 2rem;
+    color: #fff;
+}
+@media (max-width: 1024px) {
+    .badge-item {
+        width: 75px;
+        height: 75px;
+        border-radius: 14px;
+    }
+    .badge-overlay {
+        border-radius: 14px;
+    }
+    .badge-overlay ion-icon {
+        font-size: 1.8rem;
+    }
+}
+@media (max-width: 820px) {
+    .badge-item {
+        width: 70px;
+        height: 70px;
+        border-radius: 12px;
+    }
+    .badge-overlay {
+        border-radius: 12px;
+        opacity: 1 !important;
+        background: rgb(0 0 0 / 0.2);
+    }
+    .badge-overlay ion-icon {
+        font-size: 1.6rem;
+        color: rgb(255 255 255 / 0.8);
+    }
+    .badge-item:hover .badge-overlay {
+        background: rgb(0 0 0 / 0.5);
+    }
+    .badge-item:hover .badge-overlay ion-icon {
+        color: #fff;
+    }
+}
+@media (max-width: 480px) {
+    .badge-item {
+        width: 65px;
+        height: 65px;
+        border-radius: 10px;
+    }
+    .badge-overlay {
+        border-radius: 10px;
+    }
+    .badge-overlay ion-icon {
+        font-size: 1.5rem;
+    }
 }
 .footer-links {
     list-style: none;
@@ -1962,6 +2201,9 @@ footer::before {
     .footer-section p {
         font-size: 0.9rem;
     }
+    .about-badges {
+        gap: 0.9rem;
+    }
     .badge-item {
         width: 70px;
         height: 70px;
@@ -1981,7 +2223,8 @@ footer::before {
     .footer-about {
         grid-column: 1 / -1;
     }
-    .footer-badges {
+    .footer-badges,
+    .about-badges {
         gap: 0.8rem;
     }
     .badge-item {
@@ -2018,6 +2261,9 @@ footer::before {
     .footer-section p {
         font-size: 0.85rem;
         margin-bottom: 1rem;
+    }
+    .about-badges {
+        gap: 0.6rem;
     }
     .badge-item {
         width: 60px;
@@ -2079,5 +2325,53 @@ footer::before {
     }
     section#myhome {
         margin-top: -2rem;
+    }
+}
+@media (max-width: 1024px) {
+    .badge-item {
+        width: 75px !important;
+        height: 75px !important;
+        border-radius: 14px !important;
+    }
+    .badge-overlay {
+        border-radius: 14px !important;
+    }
+    .badge-overlay ion-icon {
+        font-size: 1.8rem !important;
+    }
+}
+@media (max-width: 820px) {
+    .badge-item {
+        width: 70px !important;
+        height: 70px !important;
+        border-radius: 12px !important;
+    }
+    .badge-overlay {
+        border-radius: 12px !important;
+        opacity: 1 !important;
+        background: rgb(0 0 0 / 0.2) !important;
+    }
+    .badge-overlay ion-icon {
+        font-size: 1.6rem !important;
+        color: rgb(255 255 255 / 0.8) !important;
+    }
+    .badge-item:hover .badge-overlay {
+        background: rgb(0 0 0 / 0.5) !important;
+    }
+    .badge-item:hover .badge-overlay ion-icon {
+        color: #fff !important;
+    }
+}
+@media (max-width: 480px) {
+    .badge-item {
+        width: 65px !important;
+        height: 65px !important;
+        border-radius: 10px !important;
+    }
+    .badge-overlay {
+        border-radius: 10px !important;
+    }
+    .badge-overlay ion-icon {
+        font-size: 1.5rem !important;
     }
 }
