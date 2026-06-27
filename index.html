@@ -23,13 +23,12 @@
     
     <!-- Preload Critical Resources -->
     <link rel="preload" href="./image/me/Me.webp" as="image">
-    <link rel="preload" href="app.css" as="style">
     
     <!-- Favicon & PWA -->
-    <link rel="icon" type="image/png" href="./image/me/Tanpa judul - June 27, 2026 at 11.30.51 (1) (1).png">
+    <link rel="icon" type="image/png" href="./image/me/Favicon.png">
     <link rel="apple-touch-icon" href="./image/me/Logo.png">
     <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#c91435">
+    <meta name="theme-color" content="#004d70">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -54,7 +53,6 @@
     <link rel="stylesheet" href="app.css">
     
     <!-- Non-critical CSS - AOS -->
-    <link rel="preload" as="style" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" media="print" onload="this.media='all'">
     <noscript>
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
@@ -80,7 +78,7 @@
 
     <header class="navbar">
         <div class="navbar-container">
-            <a class="nav-logo" href="#myhome"><img src="./image/me/Tanpa judul - June 27, 2026 at 11.30.51 (1) (1).png" alt="My Logo" style="width: 95px;"></a>
+            <a class="nav-logo" href="#myhome">KaryaDaffa</a>
             <button class="nav-toggle" aria-label="Toggle navigation">
                 <span></span>
                 <span></span>
@@ -573,6 +571,9 @@
                             <img loading="lazy" src="./image/Project/BGP & Static Routing.webp" alt="BGP & Static Routing">
                             <div class="project-info">
                                 <h3>BGP & Static Routing</h3>
+                                <div class="project-links">
+                                    <a href="#" class="view-project-image" title="View Project Image"><ion-icon name="eye-outline"></ion-icon></a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -581,6 +582,9 @@
                             <img loading="lazy" src="./image/Project/OSPF-IA.webp" alt="OSPF-IA">
                             <div class="project-info">
                                 <h3>OSPF Inter-Area</h3>
+                                <div class="project-links">
+                                    <a href="#" class="view-project-image" title="View Project Image"><ion-icon name="eye-outline"></ion-icon></a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -589,6 +593,9 @@
                             <img loading="lazy" src="./image/Project/Redistribute.webp" alt="Redistribute">
                             <div class="project-info">
                                 <h3>Route Redistribution</h3>
+                                <div class="project-links">
+                                    <a href="#" class="view-project-image" title="View Project Image"><ion-icon name="eye-outline"></ion-icon></a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -597,6 +604,9 @@
                             <img loading="lazy" src="./image/Project/Routing-dan-Switching.webp" alt="Routing & Switching">
                             <div class="project-info">
                                 <h3>Enterprise Routing & Switching</h3>
+                                <div class="project-links">
+                                    <a href="#" class="view-project-image" title="View Project Image"><ion-icon name="eye-outline"></ion-icon></a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -609,6 +619,9 @@
                             <img loading="lazy" src="./image/Project/BGP & Static Routing.webp" alt="BGP & Static Routing">
                             <div class="project-info">
                                 <h3>BGP & Static Routing</h3>
+                                <div class="project-links">
+                                    <a href="#" class="view-project-image" title="View Project Image"><ion-icon name="eye-outline"></ion-icon></a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -617,6 +630,9 @@
                             <img loading="lazy" src="./image/Project/OSPF-IA.webp" alt="OSPF-IA">
                             <div class="project-info">
                                 <h3>OSPF Inter-Area</h3>
+                                <div class="project-links">
+                                    <a href="#" class="view-project-image" title="View Project Image"><ion-icon name="eye-outline"></ion-icon></a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -625,6 +641,9 @@
                             <img loading="lazy" src="./image/Project/Redistribute.webp"  alt="Redistribute">
                             <div class="project-info">
                                 <h3>Route Redistribution</h3>
+                                <div class="project-links">
+                                    <a href="#" class="view-project-image" title="View Project Image"><ion-icon name="eye-outline"></ion-icon></a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -633,6 +652,9 @@
                             <img loading="lazy" src="./image/Project/Routing-dan-Switching.webp" alt="Routing & Switching">
                             <div class="project-info">
                                 <h3>Enterprise Routing & Switching</h3>
+                                <div class="project-links">
+                                    <a href="#" class="view-project-image" title="View Project Image"><ion-icon name="eye-outline"></ion-icon></a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -838,7 +860,7 @@
         window.addEventListener('load', function() {
             if (typeof AOS !== 'undefined') {
                 AOS.init({
-                    once: false
+                    once: true,
                 });
             }
             
@@ -850,7 +872,7 @@
                 setTimeout(() => {
                     welcomePopup.remove();
                 }, 600);
-            }, 2000); // 2,5 detik
+            }, 1900);
         });
     </script>
     <!-- Structured Data / Schema.org -->
@@ -863,7 +885,7 @@
       "url": "",
       "image": "./image/me/ME.png",
       "sameAs": [
-        "https://instagram.com/itsdappa_",
+        "https://instagram.com/theonlydappp",
         "https://github.com/siidappa",
         "https://www.tiktok.com/@lookingfordapp",
         "https://linkedin.com/in/daffanaufal09"

@@ -235,4 +235,25 @@ window.addEventListener("resize", updateTimelineAnimations);
         if (!img) return;
         openLightbox(img.src, img.alt || "Badge");
     });
+    // Lightbox for project images
+    document.addEventListener("click", function (e) {
+        const projectLink = e.target.closest(".view-project-image");
+        if (!projectLink) return;
+        e.preventDefault();
+        const projectCard = projectLink.closest(".project-card-inner");
+        if (!projectCard) return;
+        const img = projectCard.querySelector("img");
+        if (!img) return;
+        openLightbox(img.src, img.alt || "Project");
+    });
+    document.addEventListener("touchstart", function (e) {
+        const projectLink = e.target.closest(".view-project-image");
+        if (!projectLink) return;
+        e.preventDefault();
+        const projectCard = projectLink.closest(".project-card-inner");
+        if (!projectCard) return;
+        const img = projectCard.querySelector("img");
+        if (!img) return;
+        openLightbox(img.src, img.alt || "Project");
+    });
 })();

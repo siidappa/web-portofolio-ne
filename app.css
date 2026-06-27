@@ -657,7 +657,7 @@ section#about-me {
     border-radius: 20px;
 }
 .right-about-content > h2 {
-    font-family: var(--playwrite-in);
+    font-family: var(--ssn);
     line-height: 1.2em;
 }
 .right-about-content h1.myname {
@@ -1742,7 +1742,7 @@ section#form-message .information-contact p {
         line-height: 1.7em;
     }
     .right-about-content > h2 {
-        font-family: var(--playwrite-in);
+        font-family: var(--ssn);
         margin-bottom: 10px;
     }
     .container-about .right-about-content h1.myname {
@@ -1824,7 +1824,7 @@ section#form-message .information-contact p {
     }
     .Copyright {
         margin-block: 10px;
-        font-family: var(--playwrite-in);
+        font-family: var(--ssn);
     }
     .info-project-title {
         text-align: center;
