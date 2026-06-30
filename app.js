@@ -1,3 +1,120 @@
+// Data Experience Details
+const experienceData = {
+    1: {
+        id: 1,
+        role: "IT Head of Project Manager",
+        company: "PT Multiusaha Prioritas Bersama",
+        period: "Desember 2023 - April 2024",
+        logo: "/image/Experience/logo.webp",
+        description: "Sebagai IT Head of Project Manager, saya mendapatkan peran penting bagi kelancaran Tim Development untuk membuat, merancang, dan mengimplementasi proyek IT. Saya bertanggung jawab atas seluruh siklus hidup proyek dari perencanaan hingga delivery.",
+        responsibilities: [
+            "Memimpin dan mengkoordinasi tim development dalam pengembangan proyek IT",
+            "Membuat perencanaan proyek, timeline, dan alokasi sumber daya",
+            "Berkomunikasi dengan stakeholder untuk memahami kebutuhan bisnis",
+            "Memastikan proyek selesai tepat waktu dan sesuai budget",
+            "Melakukan monitoring dan evaluasi kinerja proyek secara berkala",
+            "Menerapkan metodologi manajemen proyek yang efektif"
+        ],
+        achievements: [
+            "Berhasil menyelesaikan 3 proyek utama tepat waktu",
+            "Meningkatkan efisiensi tim sebesar 40% melalui penerapan workflow baru",
+            "Membangun sistem dokumentasi proyek yang terstruktur",
+            "Memperkenalkan tools kolaborasi yang meningkatkan produktivitas tim"
+        ],
+        skills: ["Project Management", "Team Leadership", "System Integration", "Agile Methodology", "Communication", "Problem Solving", "Risk Management"],
+        gallery: [
+            { src: "./image/Project/MariCoding.webp", alt: "MariCoding Project" },
+            { src: "./image/Project/Dappa Note.webp", alt: "Dappa Note Project" },
+            { src: "./image/Project/Ta Sekolah.webp", alt: "TA Website Sekolah" }
+        ]
+    },
+    2: {
+        id: 2,
+        role: "IT Support Specialist",
+        company: "PT Gamila Buana Nusantara",
+        period: "April 2024 - Sekarang",
+        logo: "/image/Experience/Logo_Gamila-removebg-preview.png",
+        description: "Memberikan dukungan teknis komprehensif untuk infrastruktur jaringan dan sistem IT. Menangani troubleshooting, maintenance, user support, dan dokumentasi teknis untuk memastikan kelancaran operasional perusahaan.",
+        responsibilities: [
+            "Menangani troubleshooting hardware dan software untuk semua karyawan",
+            "Memelihara dan mengkonfigurasi infrastruktur jaringan perusahaan",
+            "Melakukan maintenance rutin pada sistem dan perangkat IT",
+            "Menyediakan training dan dukungan kepada user mengenai penggunaan aplikasi",
+            "Membuat dan memperbarui dokumentasi teknis dan SOP",
+            "Memantau kinerja jaringan dan sistem untuk mengidentifikasi potensi masalah"
+        ],
+        achievements: [
+            "Berhasil mengurangi downtime jaringan sebesar 35% melalui optimisasi konfigurasi",
+            "Membuat knowledge base yang mengurangi tiket support berulang sebesar 50%",
+            "Mengimplementasikan sistem backup otomatis yang meningkatkan keamanan data",
+            "Berhasil menyelesaikan migrasi sistem email tanpa gangguan operasional"
+        ],
+        skills: ["Network Support", "Troubleshooting", "User Support", "MikroTik", "Cisco", "System Administration", "Documentation", "Technical Support"],
+        gallery: [
+            { src: "./image/Project/Routing-dan-Switching.webp", alt: "Routing & Switching" },
+            { src: "./image/Project/OSPF-IA.webp", alt: "OSPF Inter-Area" },
+            { src: "./image/Project/BGP & Static Routing.webp", alt: "BGP & Static Routing" }
+        ]
+    }
+};
+
+// Function to open and populate experience modal
+function openExperienceModal(experienceId) {
+    const exp = experienceData[experienceId];
+    if (!exp) return;
+
+    // Populate data
+    document.getElementById('modal-experience-logo').src = exp.logo;
+    document.getElementById('modal-experience-logo').alt = exp.company;
+    document.getElementById('modal-experience-role').textContent = exp.role;
+    document.getElementById('modal-experience-company').textContent = exp.company;
+    document.getElementById('modal-experience-period').textContent = exp.period;
+    document.getElementById('modal-experience-description').textContent = exp.description;
+
+    // Responsibilities
+    const responsibilitiesList = document.getElementById('modal-experience-responsibilities');
+    responsibilitiesList.innerHTML = exp.responsibilities.map(r => `<li>${r}</li>`).join('');
+
+    // Achievements
+    const achievementsList = document.getElementById('modal-experience-achievements');
+    achievementsList.innerHTML = exp.achievements.map(a => `<li>${a}</li>`).join('');
+
+    // Skills
+    const skillsGrid = document.getElementById('modal-experience-skills');
+    skillsGrid.innerHTML = exp.skills.map(skill => `<span class="skill-tag">${skill}</span>`).join('');
+
+    // Gallery
+    const galleryGrid = document.getElementById('modal-experience-gallery');
+    galleryGrid.innerHTML = exp.gallery.map(item => `
+        <div class="gallery-item">
+            <img src="${item.src}" alt="${item.alt}" loading="lazy">
+            <div class="gallery-overlay">
+                <ion-icon name="eye-outline"></ion-icon>
+            </div>
+        </div>
+    `).join('');
+
+    // Add lightbox listeners to gallery items
+    galleryGrid.querySelectorAll('.gallery-item').forEach(item => {
+        item.addEventListener('click', () => {
+            const img = item.querySelector('img');
+            openLightbox(img.src, img.alt);
+        });
+    });
+
+    // Show modal
+    const modal = document.getElementById('experienceModal');
+    modal.classList.add('show');
+    document.body.style.overflow = 'hidden';
+}
+
+// Function to close experience modal
+function closeExperienceModal() {
+    const modal = document.getElementById('experienceModal');
+    modal.classList.remove('show');
+    document.body.style.overflow = '';
+}
+
 // Inisialisasi EmailJS ketika library sudah ter-load
 (function initEmailJS() {
     if (typeof emailjs !== 'undefined') {
@@ -59,6 +176,17 @@ function sendMail() {
 const navbar = document.querySelector(".navbar");
 const navToggle = document.querySelector(".nav-toggle");
 const navMenu = document.getElementById("nav-menu");
+
+// Navbar scroll effect for all pages
+function handleNavbarScroll() {
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+}
+window.addEventListener("scroll", handleNavbarScroll);
+
 if (navToggle && navMenu) {
     navToggle.addEventListener("click", () => {
         navToggle.classList.toggle("open");
@@ -128,6 +256,39 @@ if (projectDropdownLinks.length) {
     });
 }
 document.addEventListener("DOMContentLoaded", function () {
+    // Handle view experience details buttons
+    const viewDetailButtons = document.querySelectorAll('.view-experience-details');
+    viewDetailButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const card = button.closest('.timeline-card');
+            const experienceId = card.dataset.experienceId;
+            openExperienceModal(experienceId);
+        });
+    });
+
+    // Handle close experience modal
+    const closeModalBtn = document.getElementById('closeExperienceModal');
+    const modalOverlay = document.getElementById('experienceModal');
+    
+    if (closeModalBtn) {
+        closeModalBtn.addEventListener('click', closeExperienceModal);
+    }
+    
+    if (modalOverlay) {
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) {
+                closeExperienceModal();
+            }
+        });
+    }
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeExperienceModal();
+        }
+    });
+    
     const animatedTexts = document.querySelectorAll(".animated-text");
     let currentIndex = 0;
     function showNextText() {
@@ -143,22 +304,12 @@ if (backToTopBtn) {
     window.addEventListener("scroll", function () {
         if (window.scrollY > 50) {
             backToTopBtn.classList.add("show");
-            if (navbar) navbar.classList.add("scrolled");
         } else {
             backToTopBtn.classList.remove("show");
-            if (navbar) navbar.classList.remove("scrolled");
         }
     });
     backToTopBtn.addEventListener("click", function () {
         window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-} else {
-    window.addEventListener("scroll", function () {
-        if (window.scrollY > 50) {
-            if (navbar) navbar.classList.add("scrolled");
-        } else {
-            if (navbar) navbar.classList.remove("scrolled");
-        }
     });
 }
 function updateTimelineAnimations() {
@@ -224,12 +375,10 @@ window.addEventListener("resize", updateTimelineAnimations);
         if (e.key === "Escape" && overlay.classList.contains("show")) closeLightbox();
     });
     document.addEventListener("click", function (e) {
-        const a = e.target.closest(".certf-links a");
-        if (!a) return;
+        const certWrapper = e.target.closest(".certf-image-wrapper");
+        if (!certWrapper) return;
         e.preventDefault();
-        const card = a.closest(".certf-card-inner");
-        if (!card) return;
-        const img = card.querySelector("img");
+        const img = certWrapper.querySelector("img");
         if (!img) return;
         openLightbox(img.src, img.alt || "Certificate");
     });
@@ -242,12 +391,20 @@ window.addEventListener("resize", updateTimelineAnimations);
         openLightbox(img.src, img.alt || "Badge");
     });
     document.addEventListener("touchstart", function (e) {
+        const certWrapper = e.target.closest(".certf-image-wrapper");
         const badgeItem = e.target.closest(".badge-item");
-        if (!badgeItem) return;
-        e.preventDefault();
-        const img = badgeItem.querySelector("img");
-        if (!img) return;
-        openLightbox(img.src, img.alt || "Badge");
+        
+        if (certWrapper) {
+            e.preventDefault();
+            const img = certWrapper.querySelector("img");
+            if (!img) return;
+            openLightbox(img.src, img.alt || "Certificate");
+        } else if (badgeItem) {
+            e.preventDefault();
+            const img = badgeItem.querySelector("img");
+            if (!img) return;
+            openLightbox(img.src, img.alt || "Badge");
+        }
     });
     // Lightbox for project images
     document.addEventListener("click", function (e) {
