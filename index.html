@@ -76,7 +76,7 @@
     </div>
     <!-- Akhir Popup Selamat Datang -->
 
-    <header class="navbar">
+    <header class="navbar" data-aos="fade-down" data-aos-duration="800" data-aos-offset="0" data-aos-anchor-placement="top-bottom" data-aos-once="true">
         <div class="navbar-container">
             <a class="nav-logo" href="#myhome">KaryaDaffa</a>
             <button class="nav-toggle" aria-label="Toggle navigation">
@@ -114,7 +114,7 @@
     <main>
         <section id="myhome">
             <div class="container-home">
-                <div class="home-left" data-aos="fade-right" data-aos-duration="800">
+                <div class="home-left" data-aos="fade-right" data-aos-duration="800" data-aos-offset="0" data-aos-anchor-placement="top-bottom" data-aos-once="true">
                     <p class="home-greeting">👋 Halo, saya</p>
                     <h1 class="home-name">Daffa Naufal Fachrezi</h1>
                     <h3 class="subtitle">
@@ -146,7 +146,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="home-right" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                <div class="home-right" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200" data-aos-offset="0" data-aos-anchor-placement="top-bottom" data-aos-once="true">
                     <div class="home-image-wrapper">
                         <img src="./image/me/Me.webp" alt="Daffa Naufal Fachrezi" loading="eager" fetchpriority="high">
                     </div>
@@ -858,16 +858,25 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script>
         window.addEventListener('load', function() {
-            if (typeof AOS !== 'undefined') {
-                AOS.init({
-                    once: true,
-                });
-            }
-            
             // Logika Popup Selamat Datang
             const welcomePopup = document.getElementById('welcomePopup');
             setTimeout(() => {
                 welcomePopup.classList.add('hide');
+                // Reset class AOS terlebih dahulu
+                document.querySelectorAll('[data-aos]').forEach(el => {
+                    el.classList.remove('aos-animate', 'aos-init');
+                });
+                // Inisialisasi AOS SETELAH popup selesai agar menghitung posisi elemen dengan benar
+                if (typeof AOS !== 'undefined') {
+                    AOS.init({
+                        once: true,
+                        offset: 50,
+                        duration: 800,
+                        easing: 'ease-out-cubic',
+                        startEvent: 'DOMContentLoaded'
+                    });
+                    AOS.refreshHard();
+                }
                 // Opsional: Hapus dari DOM setelah animasi selesai
                 setTimeout(() => {
                     welcomePopup.remove();

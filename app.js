@@ -56,17 +56,20 @@ function sendMail() {
             });
         });
 }
+const navbar = document.querySelector(".navbar");
 const navToggle = document.querySelector(".nav-toggle");
 const navMenu = document.getElementById("nav-menu");
 if (navToggle && navMenu) {
     navToggle.addEventListener("click", () => {
         navToggle.classList.toggle("open");
         navMenu.classList.toggle("open");
+        navbar.classList.toggle("menu-open");
     });
     document.querySelectorAll(".nav-links a").forEach((link) => {
         link.addEventListener("click", () => {
             navToggle.classList.remove("open");
             navMenu.classList.remove("open");
+            navbar.classList.remove("menu-open");
         });
     });
 }
@@ -135,16 +138,27 @@ document.addEventListener("DOMContentLoaded", function () {
     setInterval(showNextText, 2500);
 });
 const backToTopBtn = document.getElementById("backToTop");
+
 if (backToTopBtn) {
     window.addEventListener("scroll", function () {
-        if (window.scrollY > 300) {
+        if (window.scrollY > 50) {
             backToTopBtn.classList.add("show");
+            if (navbar) navbar.classList.add("scrolled");
         } else {
             backToTopBtn.classList.remove("show");
+            if (navbar) navbar.classList.remove("scrolled");
         }
     });
     backToTopBtn.addEventListener("click", function () {
         window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+} else {
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 50) {
+            if (navbar) navbar.classList.add("scrolled");
+        } else {
+            if (navbar) navbar.classList.remove("scrolled");
+        }
     });
 }
 function updateTimelineAnimations() {
