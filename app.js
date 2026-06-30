@@ -9,23 +9,21 @@ const experienceData = {
         description: "Sebagai IT Head of Project Manager, saya mendapatkan peran penting bagi kelancaran Tim Development untuk membuat, merancang, dan mengimplementasi proyek IT. Saya bertanggung jawab atas seluruh siklus hidup proyek dari perencanaan hingga delivery.",
         responsibilities: [
             "Memimpin dan mengkoordinasi tim development dalam pengembangan proyek IT",
-            "Membuat perencanaan proyek, timeline, dan alokasi sumber daya",
-            "Berkomunikasi dengan stakeholder untuk memahami kebutuhan bisnis",
-            "Memastikan proyek selesai tepat waktu dan sesuai budget",
-            "Melakukan monitoring dan evaluasi kinerja proyek secara berkala",
-            "Menerapkan metodologi manajemen proyek yang efektif"
+            "Menganalisis kebutuhan perusahaan, memastikan seluruh personel memiliki performa kerja yang unggul dan kompeten",
+            "Merancang konsep flowchart dan logic dari website perusahaan dan anak perusahaan serta merancang kerangka kerja backend untuk sistem payment",
+            "Menguji layanan pada sistem sesuai dengan konsep dan logic yang sudah dibuat serta memastikan layanan dapat terpenuhi dan berjalan dengan lancar di sisi client",
         ],
         achievements: [
-            "Berhasil menyelesaikan 3 proyek utama tepat waktu",
-            "Meningkatkan efisiensi tim sebesar 40% melalui penerapan workflow baru",
-            "Membangun sistem dokumentasi proyek yang terstruktur",
-            "Memperkenalkan tools kolaborasi yang meningkatkan produktivitas tim"
+            "Berhasil menyelesaikan 3 project website utama",
+            "Berhasil membuat project berupa website Company Profile dan anak usaha/brand dengan tim menggunakan teknologi React JS dan MySQL sebagai database yang digunakan",
+            "Berhasil membuat project berupa website E-Recruitment dengan tim menggunakan teknologi PHP dan MySQL sebagai database yang digunakan",
+            "Berhasil melakukan integrasi payment gateway pada website anak usaha untuk menerima pembayaran dari user"
         ],
-        skills: ["Project Management", "Team Leadership", "System Integration", "Agile Methodology", "Communication", "Problem Solving", "Risk Management"],
+        skills: ["Project Management", "Team Leadership", "System Integration", "Communication", "Problem Solving", "Risk Management", "Web Development"],
         gallery: [
-            { src: "./image/Project/MariCoding.webp", alt: "MariCoding Project" },
-            { src: "./image/Project/Dappa Note.webp", alt: "Dappa Note Project" },
-            { src: "./image/Project/Ta Sekolah.webp", alt: "TA Website Sekolah" }
+            { src: "./image/Project/Work_Experience/PTMPB/Compro_MPB_Project.webp", alt: "Company Profile PT MPB" },
+            { src: "./image/Project/Work_Experience/PTMPB/Erecruiment_MPB_Project.webp", alt: "E-Recruitment PT MPB" },
+            { src: "./image/Project/Work_Experience/PTMPB/Project_SMI.webp", alt: "Sekolah Mentor Indonesia Website" }
         ]
     },
     2: {
@@ -36,24 +34,21 @@ const experienceData = {
         logo: "/image/Experience/Logo_Gamila-removebg-preview.png",
         description: "Memberikan dukungan teknis komprehensif untuk infrastruktur jaringan dan sistem IT. Menangani troubleshooting, maintenance, user support, dan dokumentasi teknis untuk memastikan kelancaran operasional perusahaan.",
         responsibilities: [
-            "Menangani troubleshooting hardware dan software untuk semua karyawan",
-            "Memelihara dan mengkonfigurasi infrastruktur jaringan perusahaan",
-            "Melakukan maintenance rutin pada sistem dan perangkat IT",
-            "Menyediakan training dan dukungan kepada user mengenai penggunaan aplikasi",
-            "Membuat dan memperbarui dokumentasi teknis dan SOP",
+            "Menganalisis kebutuhan jaringan perusahaan, merancang infrastruktur jaringan kantor pada perusahan dan melakukan troubleshooting pada jaringan",
+            "Melakukan Maintenance dan Troubleshooting pada perangkat keras seperti Laptop,Komputer, Device Jaringan, Printer",
+            "Melakukan Cabling Management pada ruangan-ruangan pada headoffice",
             "Memantau kinerja jaringan dan sistem untuk mengidentifikasi potensi masalah"
         ],
         achievements: [
-            "Berhasil mengurangi downtime jaringan sebesar 35% melalui optimisasi konfigurasi",
-            "Membuat knowledge base yang mengurangi tiket support berulang sebesar 50%",
-            "Mengimplementasikan sistem backup otomatis yang meningkatkan keamanan data",
-            "Berhasil menyelesaikan migrasi sistem email tanpa gangguan operasional"
+            "Berhasil membuat project website perusahaan dan anak usaha menggunakan Wordpress dan membuat skema database pada MySQL",
+            "Berhasil melakukan integrasi payment gateway pada website anak usaha untuk mempermudah transaksi pembayaran",
+            "Berhasil melakukan managemen kabel dan jaringan untuk memastikan kestabilan jaringan dan koneksi"
         ],
-        skills: ["Network Support", "Troubleshooting", "User Support", "MikroTik", "Cisco", "System Administration", "Documentation", "Technical Support"],
+        skills: ["IT Support", "Troubleshooting", "User Support", "System Administration", "Web Development", "Wordpress", "Technical Support"],
         gallery: [
-            { src: "./image/Project/Routing-dan-Switching.webp", alt: "Routing & Switching" },
-            { src: "./image/Project/OSPF-IA.webp", alt: "OSPF Inter-Area" },
-            { src: "./image/Project/BGP & Static Routing.webp", alt: "BGP & Static Routing" }
+            { src: "./image/Project/Work_Experience/PTGBN/Compro_GBN.webp", alt: "Company Profile PT GBN" },
+            { src: "./image/Project/Work_Experience/PTGBN/CV_Tokowadah.webp", alt: "CV Tokowadah" },
+            { src: "./image/Project/Work_Experience/PTGBN/JMM Store.webp", alt: "JMM Store" }
         ]
     }
 };
@@ -94,13 +89,7 @@ function openExperienceModal(experienceId) {
         </div>
     `).join('');
 
-    // Add lightbox listeners to gallery items
-    galleryGrid.querySelectorAll('.gallery-item').forEach(item => {
-        item.addEventListener('click', () => {
-            const img = item.querySelector('img');
-            openLightbox(img.src, img.alt);
-        });
-    });
+    // Lightbox listeners will be added globally later
 
     // Show modal
     const modal = document.getElementById('experienceModal');
@@ -256,6 +245,13 @@ if (projectDropdownLinks.length) {
     });
 }
 document.addEventListener("DOMContentLoaded", function () {
+    // Set dynamic copyright year
+    const currentYear = new Date().getFullYear();
+    const yearDesktop = document.getElementById('currentYearDesktop');
+    const yearMobile = document.getElementById('currentYearMobile');
+    if (yearDesktop) yearDesktop.textContent = currentYear;
+    if (yearMobile) yearMobile.textContent = currentYear;
+    
     // Handle view experience details buttons
     const viewDetailButtons = document.querySelectorAll('.view-experience-details');
     viewDetailButtons.forEach(button => {
@@ -376,11 +372,19 @@ window.addEventListener("resize", updateTimelineAnimations);
     });
     document.addEventListener("click", function (e) {
         const certWrapper = e.target.closest(".certf-image-wrapper");
-        if (!certWrapper) return;
-        e.preventDefault();
-        const img = certWrapper.querySelector("img");
-        if (!img) return;
-        openLightbox(img.src, img.alt || "Certificate");
+        const galleryItem = e.target.closest(".gallery-item");
+        
+        if (certWrapper) {
+            e.preventDefault();
+            const img = certWrapper.querySelector("img");
+            if (!img) return;
+            openLightbox(img.src, img.alt || "Certificate");
+        } else if (galleryItem) {
+            e.preventDefault();
+            const img = galleryItem.querySelector("img");
+            if (!img) return;
+            openLightbox(img.src, img.alt || "Project");
+        }
     });
     document.addEventListener("click", function (e) {
         const badgeItem = e.target.closest(".badge-item");
@@ -392,6 +396,7 @@ window.addEventListener("resize", updateTimelineAnimations);
     });
     document.addEventListener("touchstart", function (e) {
         const certWrapper = e.target.closest(".certf-image-wrapper");
+        const galleryItem = e.target.closest(".gallery-item");
         const badgeItem = e.target.closest(".badge-item");
         
         if (certWrapper) {
@@ -399,6 +404,11 @@ window.addEventListener("resize", updateTimelineAnimations);
             const img = certWrapper.querySelector("img");
             if (!img) return;
             openLightbox(img.src, img.alt || "Certificate");
+        } else if (galleryItem) {
+            e.preventDefault();
+            const img = galleryItem.querySelector("img");
+            if (!img) return;
+            openLightbox(img.src, img.alt || "Project");
         } else if (badgeItem) {
             e.preventDefault();
             const img = badgeItem.querySelector("img");
