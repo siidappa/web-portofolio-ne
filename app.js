@@ -68,11 +68,21 @@ function openExperienceModal(experienceId) {
 
     // Responsibilities
     const responsibilitiesList = document.getElementById('modal-experience-responsibilities');
-    responsibilitiesList.innerHTML = exp.responsibilities.map(r => `<li>${r}</li>`).join('');
+    responsibilitiesList.innerHTML = exp.responsibilities.map(r => `
+        <li>
+            <ion-icon name="checkmark-circle-outline" aria-hidden="true"></ion-icon>
+            ${r}
+        </li>
+    `).join('');
 
     // Achievements
     const achievementsList = document.getElementById('modal-experience-achievements');
-    achievementsList.innerHTML = exp.achievements.map(a => `<li>${a}</li>`).join('');
+    achievementsList.innerHTML = exp.achievements.map(a => `
+        <li>
+            <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
+            ${a}
+        </li>
+    `).join('');
 
     // Skills
     const skillsGrid = document.getElementById('modal-experience-skills');
@@ -89,7 +99,20 @@ function openExperienceModal(experienceId) {
         </div>
     `).join('');
 
-    // Lightbox listeners will be added globally later
+    // Trigger ionicons to re-scan for new icons
+    setTimeout(() => {
+        // For ionicons v7+
+        if (typeof customElements !== 'undefined' && customElements.get('ion-icon')) {
+            const allIcons = document.querySelectorAll('ion-icon');
+            allIcons.forEach(icon => {
+                if (icon.requestUpdate) {
+                    icon.requestUpdate();
+                } else if (icon.connectedCallback) {
+                    icon.connectedCallback();
+                }
+            });
+        }
+    }, 50);
 
     // Show modal
     const modal = document.getElementById('experienceModal');
@@ -201,16 +224,62 @@ function updateCertificates(selectedPage) {
         tab.classList.toggle("active", tab.dataset.certPage === selectedPage);
     });
     certPages.forEach((page) => {
-        page.classList.toggle("certf-page--active", page.dataset.page === selectedPage);
+        page.classList.remove("certf-page--active");
     });
+    const selectedCertPage = document.querySelector(`.certf-page[data-page="${selectedPage}"]`);
+    if (selectedCertPage) {
+        // Reset animasi AOS pada card
+        const cards = selectedCertPage.querySelectorAll('.certf-card');
+        cards.forEach((card) => {
+            card.classList.remove('aos-animate', 'aos-init');
+            // Reset dengan menghapus dan menambahkan kembali attribute untuk memicu AOS
+            const aosAttr = card.getAttribute('data-aos');
+            card.removeAttribute('data-aos');
+            setTimeout(() => {
+                card.setAttribute('data-aos', aosAttr);
+            }, 10);
+        });
+        setTimeout(() => {
+            selectedCertPage.classList.add("certf-page--active");
+            setTimeout(() => {
+                // Panggil refresh AOS untuk memicu animasi
+                if (typeof AOS !== 'undefined') {
+                    AOS.refreshHard();
+                }
+            }, 100);
+        }, 200);
+    }
 }
 function updateProjects(selectedPage) {
     projectTabs.forEach((tab) => {
         tab.classList.toggle("active", tab.dataset.projectPage === selectedPage);
     });
     projectPages.forEach((page) => {
-        page.classList.toggle("project-page--active", page.dataset.page === selectedPage);
+        page.classList.remove("project-page--active");
     });
+    const selectedProjectPage = document.querySelector(`.project-page[data-page="${selectedPage}"]`);
+    if (selectedProjectPage) {
+        // Reset animasi AOS pada card
+        const cards = selectedProjectPage.querySelectorAll('.project-card');
+        cards.forEach((card) => {
+            card.classList.remove('aos-animate', 'aos-init');
+            // Reset dengan menghapus dan menambahkan kembali attribute untuk memicu AOS
+            const aosAttr = card.getAttribute('data-aos');
+            card.removeAttribute('data-aos');
+            setTimeout(() => {
+                card.setAttribute('data-aos', aosAttr);
+            }, 10);
+        });
+        setTimeout(() => {
+            selectedProjectPage.classList.add("project-page--active");
+            setTimeout(() => {
+                // Panggil refresh AOS untuk memicu animasi
+                if (typeof AOS !== 'undefined') {
+                    AOS.refreshHard();
+                }
+            }, 100);
+        }, 200);
+    }
 }
 if (certTabs.length && certPages.length) {
     certTabs.forEach((tab) => {
@@ -251,6 +320,84 @@ document.addEventListener("DOMContentLoaded", function () {
     const yearMobile = document.getElementById('currentYearMobile');
     if (yearDesktop) yearDesktop.textContent = currentYear;
     if (yearMobile) yearMobile.textContent = currentYear;
+
+    // Atur tinggi container certificate agar tetap konstan
+    function adjustCertContainerHeight() {
+        const certContainer = document.querySelector('.container-certf');
+        const certPages = document.querySelectorAll('.certf-page');
+        let maxHeight = 0;
+        
+        // Tampilkan semua halaman untuk mengukur tinggi
+        certPages.forEach(page => {
+            page.style.position = 'relative';
+            page.style.visibility = 'visible';
+            page.style.opacity = '0';
+            page.style.pointerEvents = 'none';
+        });
+        
+        // Hitung tinggi maksimal
+        certPages.forEach(page => {
+            const height = page.offsetHeight;
+            if (height > maxHeight) {
+                maxHeight = height;
+            }
+        });
+        
+        // Kembalikan ke styling semula dan atur tinggi container
+        certPages.forEach(page => {
+            page.style.position = '';
+            page.style.visibility = '';
+            page.style.opacity = '';
+            page.style.pointerEvents = '';
+        });
+        
+        if (certContainer) {
+            certContainer.style.minHeight = `${maxHeight}px`;
+        }
+    }
+    
+    // Atur tinggi container project agar tetap konstan
+    function adjustProjectContainerHeight() {
+        const projectContainer = document.querySelector('.container-project');
+        const projectPages = document.querySelectorAll('.project-page');
+        let maxHeight = 0;
+        
+        // Tampilkan semua halaman untuk mengukur tinggi
+        projectPages.forEach(page => {
+            page.style.position = 'relative';
+            page.style.visibility = 'visible';
+            page.style.opacity = '0';
+            page.style.pointerEvents = 'none';
+        });
+        
+        // Hitung tinggi maksimal
+        projectPages.forEach(page => {
+            const height = page.offsetHeight;
+            if (height > maxHeight) {
+                maxHeight = height;
+            }
+        });
+        
+        // Kembalikan ke styling semula dan atur tinggi container
+        projectPages.forEach(page => {
+            page.style.position = '';
+            page.style.visibility = '';
+            page.style.opacity = '';
+            page.style.pointerEvents = '';
+        });
+        
+        if (projectContainer) {
+            projectContainer.style.minHeight = `${maxHeight}px`;
+        }
+    }
+    
+    // Panggil fungsi saat pertama kali load dan saat resize
+    adjustCertContainerHeight();
+    adjustProjectContainerHeight();
+    window.addEventListener('resize', () => {
+        adjustCertContainerHeight();
+        adjustProjectContainerHeight();
+    });
     
     // Handle view experience details buttons
     const viewDetailButtons = document.querySelectorAll('.view-experience-details');
