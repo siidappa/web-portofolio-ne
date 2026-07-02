@@ -79,9 +79,8 @@
         <div class="navbar-container">
             <a class="nav-logo" href="#myhome">KaryaDaffa</a>
             <button class="nav-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
+                <ion-icon name="menu-outline" class="menu-icon"></ion-icon>
+                <ion-icon name="close-outline" class="close-icon"></ion-icon>
             </button>
             <nav class="nav-menu" id="nav-menu">
                 <ul class="nav-links">
@@ -105,6 +104,7 @@
                             <li><a href="#project" data-project-tab="web">Web Projects</a></li>
                         </ul>
                     </li>
+                    <li><a href="#social-media">Social</a></li>
                     <li><a href="#form-message">Contact</a></li>
                 </ul>
             </nav>
@@ -155,10 +155,6 @@
         <section id="about-me">
             <div class="container-about">
                 <div class="about-wrapper">
-                    <!-- Decorative Elements -->
-                    <!-- <div class="about-decoration decoration-2"></div> -->
-                    <!-- <div class="about-decoration decoration-3"></div> -->
-                    
                     <!-- Left Column - Image -->
                     <div class="about-left" data-aos="fade-right" data-aos-offset="0" data-aos-once="true">
                         <div class="about-image-container">
@@ -216,30 +212,47 @@
             </div>
         </section>
         <section id="skills">
-            <div class="information-skills">
+            <div class="information-skills" data-aos="fade-down" data-aos-offset="0" data-aos-once="true">
+                <span class="skills-tag">Expertise</span>
                 <h2>Core Skills</h2>
                 <p># I want to be expert #</p>
             </div>
             <div class="container-skills">
-                <div class="skills-content" data-aos="fade-down"  data-aos-duration="1000">
-                    <img loading="lazy" src="/image/Skills/mikrotik.webp" alt="Mikrotik">
+                <div class="skill-card" data-aos="fade-up" data-aos-duration="800" data-aos-offset="0" data-aos-once="true">
+                    <div class="skill-icon">
+                        <img loading="lazy" src="/image/Skills/mikrotik.webp" alt="Mikrotik">
+                    </div>
+                    <h3 class="skill-name">Mikrotik</h3>
                 </div>
-                <div class="skills-content" data-aos="fade-down"  data-aos-delay="50" data-aos-duration="1000">
-                    <img loading="lazy" src="/image/Skills/cisco1.webp" alt="Logo Cisco">
+                <div class="skill-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100" data-aos-offset="0" data-aos-once="true">
+                    <div class="skill-icon">
+                        <img loading="lazy" src="/image/Skills/cisco1.webp" alt="Cisco">
+                    </div>
+                    <h3 class="skill-name">Cisco</h3>
                 </div>
-                <div class="skills-content" data-aos="fade-down"  data-aos-delay="50" data-aos-duration="1000">
-                    <img loading="lazy" src="/image/Skills/tp-link.webp" alt="Logo TP-Link">
+                <div class="skill-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200" data-aos-offset="0" data-aos-once="true">
+                    <div class="skill-icon">
+                        <img loading="lazy" src="/image/Skills/tp-link.webp" alt="TP-Link">
+                    </div>
+                    <h3 class="skill-name">TP-Link</h3>
                 </div>
-                <div class="skills-content" data-aos="fade-down"  data-aos-delay="50" data-aos-duration="1000">
-                    <img loading="lazy" src="/image/Skills/wordpress.webp" alt="WordPress">
+                <div class="skill-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300" data-aos-offset="0" data-aos-once="true">
+                    <div class="skill-icon">
+                        <img loading="lazy" src="/image/Skills/wordpress.webp" alt="WordPress">
+                    </div>
+                    <h3 class="skill-name">WordPress</h3>
                 </div>
-                <div class="skills-content" data-aos="fade-down"  data-aos-delay="50" data-aos-duration="1000">
-                    <img loading="lazy" src="/image/Skills/MySQL.webp" alt="MySQL">
+                <div class="skill-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" data-aos-offset="0" data-aos-once="true">
+                    <div class="skill-icon">
+                        <img loading="lazy" src="/image/Skills/MySQL.webp" alt="MySQL">
+                    </div>
+                    <h3 class="skill-name">MySQL</h3>
                 </div>
             </div>
         </section>
         <section id="experience">
-            <div class="information-experience">
+            <div class="information-experience" data-aos="fade-down" data-aos-offset="0" data-aos-once="true">
+                <span class="skills-tag">Experience</span>
                 <h2>Work Experience</h2>
                 <p># Professional Journey #</p>
             </div>
@@ -307,7 +320,8 @@
             </div>
         </section>
         <section id="certf">
-            <div class="information-certf">
+            <div class="information-certf" data-aos="fade-down" data-aos-offset="0" data-aos-once="true">
+                <span class="skills-tag">Credentials</span>
                 <h2>My Certifications</h2>
                 <p># Professional Recognition #</p>
             </div>
@@ -566,7 +580,8 @@
             </div>
         </section>
         <section id="project">
-            <div class="information-project">
+            <div class="information-project" data-aos="fade-down" data-aos-offset="0" data-aos-once="true">
+                <span class="skills-tag">Portfolio</span>
                 <h2>Featured Projects</h2>
                 <p># What I've Built #</p>
             </div>
@@ -795,8 +810,139 @@
                 </div>
             </div>
         </section>
+        <section id="social-media">
+            <div class="information-social" data-aos="fade-down" data-aos-offset="0" data-aos-once="true">
+                <span class="skills-tag">Social Media</span>
+                <h2>Let's Connect</h2>
+                <p># Follow Me on Social Media #</p>
+            </div>
+            <div class="container-social">
+                <div class="social-wrapper">
+                    <!-- Social Media Logos (Left Side) -->
+                    <div class="social-logos">
+                        <div class="social-logo-item active" data-social="linkedin">
+                            <div class="logo-container">
+                                <ion-icon name="logo-linkedin" aria-hidden="true"></ion-icon>
+                            </div>
+                            <span>LinkedIn</span>
+                        </div>
+                        <div class="social-logo-item" data-social="tiktok">
+                            <div class="logo-container">
+                                <ion-icon name="logo-tiktok" aria-hidden="true"></ion-icon>
+                            </div>
+                            <span>TikTok</span>
+                        </div>
+                        <div class="social-logo-item" data-social="instagram">
+                            <div class="logo-container">
+                                <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
+                            </div>
+                            <span>Instagram</span>
+                        </div>
+                    </div>
+                    <!-- Social Media Details (Right Side) -->
+                    <div class="social-details">
+                        <div class="detail-content active" data-detail="linkedin">
+                            <div class="detail-header">
+                                <div class="detail-icon linkedin">
+                                    <ion-icon name="logo-linkedin" aria-hidden="true"></ion-icon>
+                                </div>
+                                <div class="detail-title">
+                                    <h3>LinkedIn</h3>
+                                    <p class="username">Daffa Naufal Fachrezi</p>
+                                </div>
+                            </div>
+                            <div class="detail-stats">
+                                <div class="stat-item">
+                                    <div class="stat-value">500+</div>
+                                    <div class="stat-label">Connections</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">799</div>
+                                    <div class="stat-label">Followers</div>
+                                </div>
+                            </div>
+                            <div class="detail-bio">
+                                <h4>About</h4>
+                                <p>Connect with me on LinkedIn to see my professional journey, network with me, and stay updated on my career achievements.</p>
+                            </div>
+                            <a href="https://linkedin.com/in/daffanaufal09" target="_blank" class="visit-btn">
+                                <ion-icon name="open-outline" aria-hidden="true"></ion-icon>
+                                Visit Profile
+                            </a>
+                        </div>
+                        <div class="detail-content" data-detail="tiktok">
+                            <div class="detail-header">
+                                <div class="detail-icon tiktok">
+                                    <ion-icon name="logo-tiktok" aria-hidden="true"></ion-icon>
+                                </div>
+                                <div class="detail-title">
+                                    <h3>TikTok</h3>
+                                    <p class="username">@lookingfordapp</p>
+                                </div>
+                            </div>
+                            <div class="detail-stats">
+                                <div class="stat-item">
+                                    <div class="stat-value">16</div>
+                                    <div class="stat-label">Videos</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">981</div>
+                                    <div class="stat-label">Followers</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">62,8k</div>
+                                    <div class="stat-label">Likes</div>
+                                </div>
+                            </div>
+                            <div class="detail-bio">
+                                <h4>About</h4>
+                                <p>Check out my TikTok for creative content, tech tips, and fun videos! Follow me for daily updates and engaging content.</p>
+                            </div>
+                            <a href="https://tiktok.com/@lookingfordapp" target="_blank" class="visit-btn">
+                                <ion-icon name="open-outline" aria-hidden="true"></ion-icon>
+                                Visit Profile
+                            </a>
+                        </div>
+                        <div class="detail-content" data-detail="instagram">
+                            <div class="detail-header">
+                                <div class="detail-icon instagram">
+                                    <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
+                                </div>
+                                <div class="detail-title">
+                                    <h3>Instagram</h3>
+                                    <p class="username">@theonlydappp</p>
+                                </div>
+                            </div>
+                            <div class="detail-stats">
+                                <div class="stat-item">
+                                    <div class="stat-value">18</div>
+                                    <div class="stat-label">Posts</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">342</div>
+                                    <div class="stat-label">Followers</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">13,6k</div>
+                                    <div class="stat-label">Screening</div>
+                                </div>
+                            </div>
+                            <div class="detail-bio">
+                                <h4>About</h4>
+                                <p>Follow my Instagram for behind-the-scenes, personal updates, and visual storytelling about my life and projects.</p>
+                            </div>
+                            <a href="https://instagram.com/theonlydappp" target="_blank" class="visit-btn">
+                                <ion-icon name="open-outline" aria-hidden="true"></ion-icon>
+                                Visit Profile
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section id="form-message">
-            <div class="information-contact">
+            <div class="information-contact" data-aos="fade-down" data-aos-offset="0" data-aos-once="true">
+                <span class="skills-tag">Connect</span>
                 <h2>Get In Touch</h2>
                 <p># Let's Connect and Collaborate #</p>
             </div>
@@ -823,7 +969,7 @@
                                 <p>Bekasi, Indonesia</p>
                             </div>
                         </div>
-                        <div class="info-card">
+                        <!-- <div class="info-card">
                             <div class="info-icon">
                                 <ion-icon name="chatbubbles-outline" aria-hidden="true"></ion-icon>
                             </div>
@@ -835,11 +981,11 @@
                                     <a href="https://linkedin.com/in/daffanaufal09" target="_blank" aria-label="LinkedIn"><ion-icon name="logo-linkedin" aria-hidden="true"></ion-icon></a>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
 
                     <!-- Form Side -->
-                    <div class="contact-form-container">
+                    <div class="contact-form-container" data-aos="fade-up">
                         <form id="form" class="modern-form" onsubmit="sendMail(); return false;">
                         <div class="form-group">
                             <label for="name">Nama Kamu</label>
@@ -861,7 +1007,6 @@
                         </div>
                         <button type="submit" class="btn-send" aria-label="Kirim pesan">
                             <span>Kirim Pesan</span>
-                            <ion-icon name="paper-plane-outline" aria-hidden="true"></ion-icon>
                         </button>
                     </form>
                     </div>
@@ -991,8 +1136,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="app.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
     <script>
         window.addEventListener('load', function() {
             // Logika Popup Selamat Datang
