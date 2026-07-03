@@ -481,36 +481,50 @@ window.addEventListener("resize", updateTimelineAnimations);
   const imgEl = overlay.querySelector(".lightbox-img");
   const captionEl = overlay.querySelector(".lightbox-caption");
   const closeBtn = overlay.querySelector(".lightbox-close");
+  let autoCloseTimeout;
 
   function openLightbox(src, alt) {
     imgEl.src = src;
     imgEl.alt = alt || "";
     captionEl.textContent = alt || "";
     overlay.classList.add("show");
-    document.body.style.overflow = "hidden"
+    document.body.style.overflow = "hidden";
+    
+    // Clear any existing timeout first
+    if (autoCloseTimeout) {
+      clearTimeout(autoCloseTimeout);
+    }
+    // Auto close after 4 seconds
+    autoCloseTimeout = setTimeout(() => {
+      closeLightbox();
+    }, 4000);
   }
 
   function closeLightbox() {
     overlay.classList.remove("show");
     document.body.style.overflow = "";
+    if (autoCloseTimeout) {
+      clearTimeout(autoCloseTimeout);
+      autoCloseTimeout = null;
+    }
     setTimeout(() => {
       imgEl.src = "";
       imgEl.alt = "";
       captionEl.textContent = ""
     }, 300)
   }
-  overlay.addEventListener("click", function(e) {
+
+  // Use pointer events instead of separate click and touchstart to avoid double firing
+  overlay.addEventListener("pointerdown", function(e) {
     if (e.target === overlay) closeLightbox();
   });
-  overlay.addEventListener("touchstart", function(e) {
-    if (e.target === overlay) closeLightbox();
-  });
-  closeBtn.addEventListener("click", closeLightbox);
-  closeBtn.addEventListener("touchstart", closeLightbox);
+  closeBtn.addEventListener("pointerdown", closeLightbox);
   document.addEventListener("keydown", function(e) {
     if (e.key === "Escape" && overlay.classList.contains("show")) closeLightbox();
   });
-  document.addEventListener("click", function(e) {
+
+  // Handle opening the lightbox
+  function handleLightboxOpen(e) {
     const galleryItem = e.target.closest(".gallery-item");
     const badgeItem = e.target.closest(".badge-item");
     const projectLink = e.target.closest(".view-project-image");
@@ -541,39 +555,9 @@ window.addEventListener("resize", updateTimelineAnimations);
       if (!img) return;
       openLightbox(img.src, img.alt || "Certificate")
     }
-  });
-  document.addEventListener("touchstart", function(e) {
-    const galleryItem = e.target.closest(".gallery-item");
-    const badgeItem = e.target.closest(".badge-item");
-    const projectLink = e.target.closest(".view-project-image");
-    const certLink = e.target.closest(".view-cert-image");
-    
-    if (galleryItem) {
-      e.preventDefault();
-      const img = galleryItem.querySelector("img");
-      if (!img) return;
-      openLightbox(img.src, img.alt || "Project")
-    } else if (badgeItem) {
-      e.preventDefault();
-      const img = badgeItem.querySelector("img");
-      if (!img) return;
-      openLightbox(img.src, img.alt || "Badge")
-    } else if (projectLink) {
-      e.preventDefault();
-      const projectCard = projectLink.closest(".project-card-inner");
-      if (!projectCard) return;
-      const img = projectCard.querySelector("img");
-      if (!img) return;
-      openLightbox(img.src, img.alt || "Project")
-    } else if (certLink) {
-      e.preventDefault();
-      const certCard = certLink.closest(".certf-card-inner");
-      if (!certCard) return;
-      const img = certCard.querySelector("img");
-      if (!img) return;
-      openLightbox(img.src, img.alt || "Certificate")
-    }
-  });
+  }
+
+  document.addEventListener("pointerdown", handleLightboxOpen);
 })();
 document.addEventListener("DOMContentLoaded", function() {
   const socialLogoItems = document.querySelectorAll(".social-logo-item");
