@@ -118,7 +118,41 @@ function closeExperienceModal() {
   const modal = document.getElementById('experienceModal');
   modal.classList.remove('show');
   document.body.style.overflow = ''
-}(function initEmailJS() {
+}
+
+// Custom Notification Function
+function showNotification(type, title, text) {
+  const container = document.getElementById('notificationContainer');
+  
+  // Create notification element
+  const notification = document.createElement('div');
+  notification.className = `notification ${type}`;
+  
+  // Icon based on type
+  const icon = type === 'success' 
+    ? '<ion-icon name="checkmark-circle" class="notification-icon"></ion-icon>'
+    : '<ion-icon name="alert-circle" class="notification-icon"></ion-icon>';
+  
+  notification.innerHTML = `
+    ${icon}
+    <div class="notification-content">
+      <div class="notification-title">${title}</div>
+      <div class="notification-text">${text}</div>
+    </div>
+  `;
+  
+  container.appendChild(notification);
+  
+  // Auto remove after 3.5 seconds
+  setTimeout(() => {
+    notification.classList.add('hide');
+    setTimeout(() => {
+      notification.remove();
+    }, 300);
+  }, 3500);
+}
+
+(function initEmailJS() {
   if (typeof emailjs !== 'undefined') {
     emailjs.init({
       publicKey: "4lzUcZNbb01M2PW9S",
@@ -128,47 +162,50 @@ function closeExperienceModal() {
   }
 })();
 
-function sendMail() {
+function sendMail(e) {
+  if (e) e.preventDefault();
+  
   if (typeof emailjs === 'undefined') {
-    Swal.fire({
-      icon: "error",
-      title: "ERROR",
-      text: "Layanan email belum siap, coba lagi sebentar!",
-      showConfirmButton: !1,
-      timer: 1400,
-    });
+    showNotification('error', 'Error', 'Layanan email belum siap, coba lagi sebentar!');
     return
   }
+  
+  const nama = document.getElementById("nama").value;
+  const emailFrom = document.getElementById("emailFrom").value;
+  const alamat = document.getElementById("alamat").value;
+  const noTelp = document.getElementById("noTelp").value;
+  const pesan = document.getElementById("pesan").value;
+  
   var params = {
-    name: document.getElementById("name").value,
-    city: document.getElementById("whereyourform").value,
-    message: document.getElementById("yourmessage").value,
+    name: nama,
+    emailFrom: emailFrom,
+    city: alamat,
+    phone: noTelp,
+    message: pesan,
   };
+  
   const serviceId = "service_tq5n9ae";
   const tempId = "template_bjaeiac";
   emailjs.send(serviceId, tempId, params).then((res) => {
-    document.getElementById("name").value = "";
-    document.getElementById("whereyourform").value = "";
-    document.getElementById("yourmessage").value = "";
+    document.getElementById("nama").value = "";
+    document.getElementById("emailFrom").value = "";
+    document.getElementById("alamat").value = "";
+    document.getElementById("noTelp").value = "";
+    document.getElementById("pesan").value = "";
     console.log(res);
-    Swal.fire({
-      icon: "success",
-      title: "Success !!",
-      text: "Pesan kamu berhasil terkirim ke Daffa 🥳",
-      showConfirmButton: !1,
-      timer: 1500,
-    })
+    showNotification('success', 'Berhasil!', 'Pesan kamu berhasil terkirim ke Daffa 🥳');
   }).catch((err) => {
     console.log(err);
-    Swal.fire({
-      icon: "error",
-      title: "ERRORRRR",
-      text: "Pesan kamu gagal ke kirim 😭",
-      showConfirmButton: !1,
-      timer: 1400,
-    })
+    showNotification('error', 'Gagal!', 'Pesan kamu gagal terkirim 😭');
   })
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', sendMail);
+  }
+});
 const navbar = document.querySelector(".navbar");
 const navToggle = document.querySelector(".nav-toggle");
 const navMenu = document.getElementById("nav-menu");
@@ -474,38 +511,12 @@ window.addEventListener("resize", updateTimelineAnimations);
     if (e.key === "Escape" && overlay.classList.contains("show")) closeLightbox();
   });
   document.addEventListener("click", function(e) {
-    const certWrapper = e.target.closest(".certf-image-wrapper");
-    const galleryItem = e.target.closest(".gallery-item");
-    if (certWrapper) {
-      e.preventDefault();
-      const img = certWrapper.querySelector("img");
-      if (!img) return;
-      openLightbox(img.src, img.alt || "Certificate")
-    } else if (galleryItem) {
-      e.preventDefault();
-      const img = galleryItem.querySelector("img");
-      if (!img) return;
-      openLightbox(img.src, img.alt || "Project")
-    }
-  });
-  document.addEventListener("click", function(e) {
-    const badgeItem = e.target.closest(".badge-item");
-    if (!badgeItem) return;
-    e.preventDefault();
-    const img = badgeItem.querySelector("img");
-    if (!img) return;
-    openLightbox(img.src, img.alt || "Badge")
-  });
-  document.addEventListener("touchstart", function(e) {
-    const certWrapper = e.target.closest(".certf-image-wrapper");
     const galleryItem = e.target.closest(".gallery-item");
     const badgeItem = e.target.closest(".badge-item");
-    if (certWrapper) {
-      e.preventDefault();
-      const img = certWrapper.querySelector("img");
-      if (!img) return;
-      openLightbox(img.src, img.alt || "Certificate")
-    } else if (galleryItem) {
+    const projectLink = e.target.closest(".view-project-image");
+    const certLink = e.target.closest(".view-cert-image");
+    
+    if (galleryItem) {
       e.preventDefault();
       const img = galleryItem.querySelector("img");
       if (!img) return;
@@ -515,28 +526,54 @@ window.addEventListener("resize", updateTimelineAnimations);
       const img = badgeItem.querySelector("img");
       if (!img) return;
       openLightbox(img.src, img.alt || "Badge")
+    } else if (projectLink) {
+      e.preventDefault();
+      const projectCard = projectLink.closest(".project-card-inner");
+      if (!projectCard) return;
+      const img = projectCard.querySelector("img");
+      if (!img) return;
+      openLightbox(img.src, img.alt || "Project")
+    } else if (certLink) {
+      e.preventDefault();
+      const certCard = certLink.closest(".certf-card-inner");
+      if (!certCard) return;
+      const img = certCard.querySelector("img");
+      if (!img) return;
+      openLightbox(img.src, img.alt || "Certificate")
     }
   });
-  document.addEventListener("click", function(e) {
-    const projectLink = e.target.closest(".view-project-image");
-    if (!projectLink) return;
-    e.preventDefault();
-    const projectCard = projectLink.closest(".project-card-inner");
-    if (!projectCard) return;
-    const img = projectCard.querySelector("img");
-    if (!img) return;
-    openLightbox(img.src, img.alt || "Project")
-  });
   document.addEventListener("touchstart", function(e) {
+    const galleryItem = e.target.closest(".gallery-item");
+    const badgeItem = e.target.closest(".badge-item");
     const projectLink = e.target.closest(".view-project-image");
-    if (!projectLink) return;
-    e.preventDefault();
-    const projectCard = projectLink.closest(".project-card-inner");
-    if (!projectCard) return;
-    const img = projectCard.querySelector("img");
-    if (!img) return;
-    openLightbox(img.src, img.alt || "Project")
-  })
+    const certLink = e.target.closest(".view-cert-image");
+    
+    if (galleryItem) {
+      e.preventDefault();
+      const img = galleryItem.querySelector("img");
+      if (!img) return;
+      openLightbox(img.src, img.alt || "Project")
+    } else if (badgeItem) {
+      e.preventDefault();
+      const img = badgeItem.querySelector("img");
+      if (!img) return;
+      openLightbox(img.src, img.alt || "Badge")
+    } else if (projectLink) {
+      e.preventDefault();
+      const projectCard = projectLink.closest(".project-card-inner");
+      if (!projectCard) return;
+      const img = projectCard.querySelector("img");
+      if (!img) return;
+      openLightbox(img.src, img.alt || "Project")
+    } else if (certLink) {
+      e.preventDefault();
+      const certCard = certLink.closest(".certf-card-inner");
+      if (!certCard) return;
+      const img = certCard.querySelector("img");
+      if (!img) return;
+      openLightbox(img.src, img.alt || "Certificate")
+    }
+  });
 })();
 document.addEventListener("DOMContentLoaded", function() {
   const socialLogoItems = document.querySelectorAll(".social-logo-item");
