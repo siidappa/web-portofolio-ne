@@ -155,7 +155,7 @@ function showNotification(type, title, text) {
 (function initEmailJS() {
   if (typeof emailjs !== 'undefined') {
     emailjs.init({
-      publicKey: "4lzUcZNbb01M2PW9S",
+      publicKey: "O-OQx9GHIM2CprrBj",
     })
   } else {
     setTimeout(initEmailJS, 100)
@@ -184,8 +184,8 @@ function sendMail(e) {
     message: pesan,
   };
   
-  const serviceId = "service_tq5n9ae";
-  const tempId = "template_bjaeiac";
+  const serviceId = "service_karyadaffa.my.id";
+  const tempId = "template_zopwcje";
   emailjs.send(serviceId, tempId, params).then((res) => {
     document.getElementById("nama").value = "";
     document.getElementById("emailFrom").value = "";
