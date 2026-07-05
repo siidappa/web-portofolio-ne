@@ -222,15 +222,33 @@ if (navToggle && navMenu) {
   navToggle.addEventListener("click", () => {
     navToggle.classList.toggle("open");
     navMenu.classList.toggle("open");
-    navbar.classList.toggle("menu-open")
+    navbar.classList.toggle("menu-open");
   });
+
+  const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
+  dropdownToggles.forEach((toggle) => {
+    const parentDropdown = toggle.closest(".dropdown");
+    const dropdownMenu = parentDropdown ? parentDropdown.querySelector(".dropdown-menu") : null;
+
+    toggle.addEventListener("click", (event) => {
+      if (window.innerWidth <= 820 && dropdownMenu) {
+        event.preventDefault();
+        dropdownMenu.classList.toggle("show");
+        parentDropdown.classList.toggle("show");
+      }
+    });
+  });
+
   document.querySelectorAll(".nav-links a").forEach((link) => {
     link.addEventListener("click", () => {
       navToggle.classList.remove("open");
       navMenu.classList.remove("open");
-      navbar.classList.remove("menu-open")
-    })
-  })
+      navbar.classList.remove("menu-open");
+      document.querySelectorAll(".dropdown-menu.show").forEach((menu) => {
+        menu.classList.remove("show");
+      });
+    });
+  });
 }
 const certTabs = document.querySelectorAll(".certf-tab");
 const certPages = document.querySelectorAll(".certf-page");
