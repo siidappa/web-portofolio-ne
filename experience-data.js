@@ -51,9 +51,9 @@ const experienceData = {
     logo: "./image/Experience/PTHCI/PTHCI.webp",
     description: "Bekerja di lingkungan ritel dengan tanggung jawab utama mengelola stok barang, melayani pelanggan, dan mengoperasikan sistem kasir. Berpengalaman dalam memberikan layanan pelanggan yang prima dan manajemen inventory yang efisien.",
     aboutCompany: "PT Home Credit Indonesia adalah perusahaan pembiayaan berbasis teknologi berizin OJK yang sejak 2013 telah melayani 6,8 juta pelanggan di 271 kota. Sebagai bagian dari MUFG di bawah konglomerasi Bank Danamon sejak 2026, Home Credit menyediakan pembiayaan barang, tunai, dan proteksi yang inklusif melalui sinergi kekuatan global dan lokal.",
-    responsibilities: ["Melayani pelanggan dengan ramah dan profesional, membantu menemukan produk yang dibutuhkan", "Mengelola stok barang, melakukan inventory check secara berkala, dan restock barang", "Mengoperasikan sistem kasir dan menangani transaksi pembayaran dengan akurat", "Merapikan display produk dan memastikan kebersihan area toko"],
-    achievements: ["Meningkatkan kepuasan pelanggan dengan memberikan layanan yang cepat dan tepat", "Membuat sistem pencatatan stok sederhana yang mengurangi kesalahan inventory sebesar 30%", "Berhasil menjadi staff terbaik bulanan selama 4 kali berturut-turut"],
-    skills: ["Customer Service", "Communication", "Time Management", "Problem Solving"],
+    responsibilities: ["Melayani pelanggan dengan ramah dan profesional, membantu menemukan produk yang dibutuhkan", "Merapikan display produk dan memastikan kebersihan area toko", "Melakukan pendekatan yang intensif kepada pelanggan untuk menawarkan produk dan promo menarik seputar pembiayaan credit", "Menawarkan promo dan diskon yang menarik seputar pembiayaan produk melalui aplikasi My Home Credit"],
+    achievements: ["Meningkatkan pelayanan pelanggan dan membuat sales toko meningkat", "Achive Target yang diberikan oleh atasan pada setiap bulannya", "Menjaga Risk dengan melakukan screening sesuai SOP yang diberikan oleh perusahaan untuk mengurangi resiko Fraud dan MS (Mistery Shopper)"],
+    skills: ["Customer Service", "Communication", "Problem Solving", "Sales", "Marketing", "Management Risk"],
     gallery: [{
       src: "./image/Experience/PTHCI/Me1.jpeg",
       alt: "Daffa"

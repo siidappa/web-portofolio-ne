@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <meta name="description" content="Website Portofolio Daffa akan segera hadir! Launching pada tanggal 20 Juli 2026">
+    <meta name="description" content="Website Portofolio Daffa akan segera hadir! Launching pada tanggal 10 Juli 2026">
     <meta name="author" content="Daffa Naufal Fachrezi">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -95,26 +95,56 @@
         }
         
         .countdown-item {
-            background: #fff;
+            background: linear-gradient(135deg, #ffffff, #f8fafc);
             border-radius: 20px;
             padding: 1.5rem 2rem;
-            box-shadow: 0 10px 30px rgb(0 0 0 / 0.05);
-            border: 1px solid rgb(0 0 0 / 0.05);
+            box-shadow: 
+                0 10px 30px rgb(0 0 0 / 0.05),
+                0 0 0 1px rgb(0 99 136 / 0.08);
+            border: none;
             min-width: 120px;
             transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .countdown-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary), var(--primary));
+            background-size: 200% 100%;
+            animation: gradientMove 2s linear infinite;
         }
         
         .countdown-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgb(0 0 0 / 0.1);
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 
+                0 20px 45px rgb(0 99 136 / 0.15),
+                0 0 0 1px rgb(0 99 136 / 0.12);
         }
         
         .countdown-number {
             font-family: var(--ssn);
             font-size: 3rem;
-            color: var(--primary);
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             font-weight: 800;
             line-height: 1;
+        }
+        
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 200% 50%;
+            }
         }
         
         .countdown-label {
@@ -220,6 +250,65 @@
             bottom: -50px;
             left: -50px;
             animation: float 8s ease-in-out infinite reverse;
+        }
+        
+        .speed-lines {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+        
+        .speed-line {
+            position: absolute;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
+            opacity: 0.4;
+            animation: speedLine 3s linear infinite;
+        }
+        
+        .speed-line:nth-child(1) {
+            top: 20%;
+            width: 200px;
+            left: -250px;
+            animation-duration: 4s;
+        }
+        
+        .speed-line:nth-child(2) {
+            top: 40%;
+            width: 150px;
+            left: -200px;
+            animation-duration: 3.5s;
+            animation-delay: 0.5s;
+        }
+        
+        .speed-line:nth-child(3) {
+            top: 60%;
+            width: 180px;
+            left: -230px;
+            animation-duration: 4.5s;
+            animation-delay: 1s;
+        }
+        
+        .speed-line:nth-child(4) {
+            top: 80%;
+            width: 160px;
+            left: -210px;
+            animation-duration: 3.8s;
+            animation-delay: 1.5s;
+        }
+        
+        @keyframes speedLine {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(100vw + 300px));
+            }
         }
         
         @keyframes float {
@@ -479,17 +568,23 @@
 <body>
     <div class="decorative-circle circle-1"></div>
     <div class="decorative-circle circle-2"></div>
+    <div class="speed-lines">
+        <div class="speed-line"></div>
+        <div class="speed-line"></div>
+        <div class="speed-line"></div>
+        <div class="speed-line"></div>
+    </div>
     
     <div class="container">
         <div class="logo">KaryaDaffa</div>
         
-        <div class="coming-soon-badge">Coming Soon</div>
+        <div class="coming-soon-badge">🔥 Almost There</div>
         
-        <h1>Website Portofolio<br>Sedang Dalam Persiapan</h1>
+        <h1>Website Portofolio<br>Akan Launching</h1>
         
         <p class="subtitle">
-            Sabar yaaaa. Daffa lagi mempersiapkan website nya biar kamu bisa menjelajahi portofolio profesional nya,
-            Ditunggu yaaaa 🤩
+            Bersiaplah! Website portofolio profesional Daffa akan segera hadir dengan desain modern dan pengalaman menarik.
+            Tunggu tanggalnya dan jangan sampai ketinggalan! 🚀
         </p>
         
         <div class="countdown">
@@ -515,7 +610,7 @@
             <div class="launch-icon">🚀</div>
             <div class="launch-text">
                 <span>Tanggal Launching</span>
-                <strong>20 Juli 2026</strong>
+                <strong>10 Juli 2026</strong>
             </div>
         </div>
         
@@ -534,7 +629,7 @@
     
     <script>
         function updateCountdown() {
-            const launchDate = new Date('July 20, 2026 09:00:00').getTime();
+            const launchDate = new Date('July 10, 2026 09:00:00').getTime();
             const now = new Date().getTime();
             const distance = launchDate - now;
             
