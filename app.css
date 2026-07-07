@@ -5874,4 +5874,14 @@ section#social-media .information-social {
   .project-card-inner:hover {
     filter: none;
   }
+
+  /* Hide scrollbar on experience modal but keep scrolling */
+  .experience-modal-content {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .experience-modal-content::-webkit-scrollbar {
+    display: none;
+  }
 }
