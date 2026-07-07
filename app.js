@@ -24,8 +24,9 @@ const experienceData = {
     role: "IT Head of Project Manager",
     company: "PT Multiusaha Prioritas Bersama",
     period: "Desember 2023 - April 2024",
-    logo: "/image/Experience/logo.webp",
+    logo: "/image/Experience/PTMPB/PTMPB.webp",
     description: "Sebagai IT Head of Project Manager, saya mendapatkan peran penting bagi kelancaran Tim Development untuk membuat, merancang, dan mengimplementasi proyek IT. Saya bertanggung jawab atas seluruh siklus hidup proyek dari perencanaan hingga delivery.",
+    aboutCompany: "PT Multiusaha Prioritas Bersama (MPB Group) adalah perusahaan induk yang mengelola dan mengembangkan berbagai unit usaha strategis, investasi bisnis, dan pemberdayaan ekonomi kreatif di Indonesia.",
     responsibilities: ["Memimpin dan mengkoordinasi tim development dalam pengembangan proyek IT", "Menganalisis kebutuhan perusahaan, memastikan seluruh personel memiliki performa kerja yang unggul dan kompeten", "Merancang konsep flowchart dan logic dari website perusahaan dan anak perusahaan serta merancang kerangka kerja backend untuk sistem payment", "Menguji layanan pada sistem sesuai dengan konsep dan logic yang sudah dibuat serta memastikan layanan dapat terpenuhi dan berjalan dengan lancar di sisi client", ],
     achievements: ["Berhasil menyelesaikan 3 project website utama", "Berhasil membuat project berupa website Company Profile dan anak usaha/brand dengan tim menggunakan teknologi React JS dan MySQL sebagai database yang digunakan", "Berhasil membuat project berupa website E-Recruitment dengan tim menggunakan teknologi PHP dan MySQL sebagai database yang digunakan", "Berhasil melakukan integrasi payment gateway pada website anak usaha untuk menerima pembayaran dari user"],
     skills: ["Project Management", "Team Leadership", "System Integration", "Communication", "Problem Solving", "Risk Management", "Web Development"],
@@ -45,8 +46,9 @@ const experienceData = {
     role: "IT Support Specialist",
     company: "PT Gamila Buana Nusantara",
     period: "April 2024 - Sekarang",
-    logo: "/image/Experience/Logo_Gamila-removebg-preview.png",
+    logo: "/image/Experience/PTGBN/PTGBN.png",
     description: "Memberikan dukungan teknis komprehensif untuk infrastruktur jaringan dan sistem IT. Menangani troubleshooting, maintenance, user support, dan dokumentasi teknis untuk memastikan kelancaran operasional perusahaan.",
+    aboutCompany: "PT Gamila Buana Nusantara adalah perusahaan solusi industrial terintegrasi yang melayani sektor pengeboran dan konstruksi. Kami memadukan penyediaan alat berat berkualitas dengan dukungan Logistik yang efisien dan Konsultasi IT yang inovatif",
     responsibilities: ["Menganalisis kebutuhan jaringan perusahaan, merancang infrastruktur jaringan kantor pada perusahan dan melakukan troubleshooting pada jaringan", "Melakukan Maintenance dan Troubleshooting pada perangkat keras seperti Laptop,Komputer, Device Jaringan, Printer", "Melakukan Cabling Management pada ruangan-ruangan pada headoffice", "Memantau kinerja jaringan dan sistem untuk mengidentifikasi potensi masalah"],
     achievements: ["Berhasil membuat project website perusahaan dan anak usaha menggunakan Wordpress dan membuat skema database pada MySQL", "Berhasil melakukan integrasi payment gateway pada website anak usaha untuk mempermudah transaksi pembayaran", "Berhasil melakukan managemen kabel dan jaringan untuk memastikan kestabilan jaringan dan koneksi"],
     skills: ["IT Support", "Troubleshooting", "User Support", "System Administration", "Web Development", "Wordpress", "Technical Support"],
@@ -60,6 +62,22 @@ const experienceData = {
       src: "./image/Project/Work_Experience/PTGBN/JMM Store.webp",
       alt: "JMM Store"
     }]
+  },
+  3: {
+    id: 3,
+    role: "Sales Associate",
+    company: "PT Home Credit Indonesia",
+    period: "Oktober 2025 - Januari 2026",
+    logo: "./image/Experience/PTHCI/PTHCI.webp",
+    description: "Bekerja di lingkungan ritel dengan tanggung jawab utama mengelola stok barang, melayani pelanggan, dan mengoperasikan sistem kasir. Berpengalaman dalam memberikan layanan pelanggan yang prima dan manajemen inventory yang efisien.",
+    aboutCompany: "PT Home Credit Indonesia adalah perusahaan pembiayaan berbasis teknologi berizin OJK yang sejak 2013 telah melayani 6,8 juta pelanggan di 271 kota. Sebagai bagian dari MUFG di bawah konglomerasi Bank Danamon sejak 2026, Home Credit menyediakan pembiayaan barang, tunai, dan proteksi yang inklusif melalui sinergi kekuatan global dan lokal.",
+    responsibilities: ["Melayani pelanggan dengan ramah dan profesional, membantu menemukan produk yang dibutuhkan", "Mengelola stok barang, melakukan inventory check secara berkala, dan restock barang", "Mengoperasikan sistem kasir dan menangani transaksi pembayaran dengan akurat", "Merapikan display produk dan memastikan kebersihan area toko"],
+    achievements: ["Meningkatkan kepuasan pelanggan dengan memberikan layanan yang cepat dan tepat", "Membuat sistem pencatatan stok sederhana yang mengurangi kesalahan inventory sebesar 30%", "Berhasil menjadi staff terbaik bulanan selama 4 kali berturut-turut"],
+    skills: ["Customer Service", "Communication", "Time Management", "Problem Solving"],
+    gallery: [{
+      src: "./image/Experience/PTHCI/Me1.jpeg",
+      alt: "Daffa"
+    }]
   }
 };
 
@@ -71,6 +89,7 @@ function openExperienceModal(experienceId) {
   document.getElementById('modal-experience-role').textContent = exp.role;
   document.getElementById('modal-experience-company').textContent = exp.company;
   document.getElementById('modal-experience-period').textContent = exp.period;
+  document.getElementById('modal-experience-about-company').textContent = exp.aboutCompany;
   document.getElementById('modal-experience-description').textContent = exp.description;
   const responsibilitiesList = document.getElementById('modal-experience-responsibilities');
   responsibilitiesList.innerHTML = exp.responsibilities.map(r => `
@@ -240,27 +259,48 @@ if (navToggle && navMenu) {
   });
 
   document.querySelectorAll(".nav-links a").forEach((link) => {
-    link.addEventListener("click", () => {
+    link.addEventListener("click", (e) => {
       navToggle.classList.remove("open");
       navMenu.classList.remove("open");
       navbar.classList.remove("menu-open");
       document.querySelectorAll(".dropdown-menu.show").forEach((menu) => {
         menu.classList.remove("show");
       });
+      // Manually scroll to the target after a small delay to let menu close
+      const targetId = link.getAttribute("href");
+      if (targetId && targetId.startsWith("#")) {
+        setTimeout(() => {
+          const targetSection = document.querySelector(targetId);
+          if (targetSection) {
+            targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        }, 100);
+      }
     });
   });
 }
 const certTabs = document.querySelectorAll(".certf-tab");
 const certPages = document.querySelectorAll(".certf-page");
+const certSlider = document.querySelector(".certf-tab-slider");
 const projectTabs = document.querySelectorAll(".project-tab");
 const projectPages = document.querySelectorAll(".project-page");
+const projectSlider = document.querySelector(".project-tab-slider");
 const certDropdownLinks = document.querySelectorAll(".dropdown-menu [data-cert-tab]");
 const projectDropdownLinks = document.querySelectorAll(".dropdown-menu [data-project-tab]");
 
 function updateCertificates(selectedPage) {
   certTabs.forEach((tab) => {
-    tab.classList.toggle("active", tab.dataset.certPage === selectedPage)
+    tab.classList.remove("certf-tab--active", "active");
+    if (tab.dataset.certPage === selectedPage) {
+      tab.classList.add("certf-tab--active", "active");
+    }
   });
+  // Move slider
+  const activeCertTab = Array.from(certTabs).find(tab => tab.dataset.certPage === selectedPage);
+  if (certSlider && activeCertTab) {
+    certSlider.style.left = `${activeCertTab.offsetLeft}px`;
+    certSlider.style.width = `${activeCertTab.offsetWidth}px`;
+  }
   certPages.forEach((page) => {
     page.classList.remove("certf-page--active")
   });
@@ -288,8 +328,17 @@ function updateCertificates(selectedPage) {
 
 function updateProjects(selectedPage) {
   projectTabs.forEach((tab) => {
-    tab.classList.toggle("active", tab.dataset.projectPage === selectedPage)
+    tab.classList.remove("project-tab--active", "active");
+    if (tab.dataset.projectPage === selectedPage) {
+      tab.classList.add("project-tab--active", "active");
+    }
   });
+  // Move slider
+  const activeProjectTab = Array.from(projectTabs).find(tab => tab.dataset.projectPage === selectedPage);
+  if (projectSlider && activeProjectTab) {
+    projectSlider.style.left = `${activeProjectTab.offsetLeft}px`;
+    projectSlider.style.width = `${activeProjectTab.offsetWidth}px`;
+  }
   projectPages.forEach((page) => {
     page.classList.remove("project-page--active")
   });
@@ -314,37 +363,215 @@ function updateProjects(selectedPage) {
     }, 200)
   }
 }
+
 if (certTabs.length && certPages.length) {
   certTabs.forEach((tab) => {
     tab.addEventListener("click", () => {
       const selectedPage = tab.dataset.certPage;
       updateCertificates(selectedPage)
     })
-  })
+  });
+  
+  // Initialize certf slider
+  const initCertSlider = () => {
+    const activeCertTab = Array.from(certTabs).find(tab => tab.classList.contains("active") || tab.classList.contains("certf-tab--active"));
+    if (certSlider && activeCertTab) {
+      certSlider.style.left = `${activeCertTab.offsetLeft}px`;
+      certSlider.style.width = `${activeCertTab.offsetWidth}px`;
+    }
+  };
+  window.addEventListener('load', initCertSlider);
+  document.addEventListener('DOMContentLoaded', initCertSlider);
+  window.addEventListener('resize', initCertSlider);
 }
+
 if (certDropdownLinks.length) {
   certDropdownLinks.forEach((link) => {
     link.addEventListener("click", (e) => {
+      e.preventDefault(); // Prevent default to avoid double scroll
       const selectedPage = link.dataset.certTab;
-      updateCertificates(selectedPage)
+      updateCertificates(selectedPage);
+      // Close mobile menu if open
+      if (navToggle && navMenu) {
+        navToggle.classList.remove("open");
+        navMenu.classList.remove("open");
+        navbar.classList.remove("menu-open");
+      }
+      // Close any open dropdowns
+      document.querySelectorAll(".dropdown-menu.show").forEach((menu) => {
+        menu.classList.remove("show");
+      });
+      // Manually scroll to #certf
+      setTimeout(() => {
+        const targetSection = document.querySelector("#certf");
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 100);
     })
   })
 }
+
 if (projectTabs.length && projectPages.length) {
   projectTabs.forEach((tab) => {
     tab.addEventListener("click", () => {
       const selectedPage = tab.dataset.projectPage;
       updateProjects(selectedPage)
     })
-  })
+  });
+  
+  // Initialize project slider
+  const initProjectSlider = () => {
+    const activeProjectTab = Array.from(projectTabs).find(tab => tab.classList.contains("active") || tab.classList.contains("project-tab--active"));
+    if (projectSlider && activeProjectTab) {
+      projectSlider.style.left = `${activeProjectTab.offsetLeft}px`;
+      projectSlider.style.width = `${activeProjectTab.offsetWidth}px`;
+    }
+  };
+  window.addEventListener('load', initProjectSlider);
+  document.addEventListener('DOMContentLoaded', initProjectSlider);
+  window.addEventListener('resize', initProjectSlider);
 }
+
 if (projectDropdownLinks.length) {
   projectDropdownLinks.forEach((link) => {
     link.addEventListener("click", (e) => {
+      e.preventDefault(); // Prevent default to avoid double scroll
       const selectedPage = link.dataset.projectTab;
-      updateProjects(selectedPage)
+      updateProjects(selectedPage);
+      // Close mobile menu if open
+      if (navToggle && navMenu) {
+        navToggle.classList.remove("open");
+        navMenu.classList.remove("open");
+        navbar.classList.remove("menu-open");
+      }
+      // Close any open dropdowns
+      document.querySelectorAll(".dropdown-menu.show").forEach((menu) => {
+        menu.classList.remove("show");
+      });
+      // Manually scroll to #project
+      setTimeout(() => {
+        const targetSection = document.querySelector("#project");
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 100);
     })
   })
+}
+
+// Experience Tabs
+const experiencePages = document.querySelectorAll('.experience-page');
+const experienceTabs = document.querySelectorAll('.experience-tab');
+const experienceSlider = document.querySelector('.experience-tab-slider');
+const experienceContainer = document.querySelector('.container-experience');
+
+function setContainerMaxHeight() {
+  if (!experienceContainer || experiencePages.length === 0) return;
+  
+  // Temporarily show both pages to get the max height
+  experiencePages.forEach(page => {
+    page.style.display = 'block';
+  });
+  
+  // Calculate the maximum height between the two pages
+  let maxHeight = 0;
+  experiencePages.forEach(page => {
+    const height = page.offsetHeight;
+    if (height > maxHeight) {
+      maxHeight = height;
+    }
+  });
+  
+  // Set container min height to max height so timeline stays consistent
+  experienceContainer.style.minHeight = `${maxHeight}px`;
+  
+  // Reset to only active page visible
+  experiencePages.forEach(page => {
+    page.style.display = page.classList.contains('experience-page--active') ? 'block' : 'none';
+  });
+}
+
+function updateExperienceTab(tabId) {
+  const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+  
+  experienceTabs.forEach((tab) => {
+    tab.classList.toggle('experience-tab--active', tab.dataset.tab === tabId);
+  });
+  
+  // Move slider
+  const activeTab = Array.from(experienceTabs).find(tab => tab.dataset.tab === tabId);
+  if (experienceSlider && activeTab) {
+    experienceSlider.style.left = `${activeTab.offsetLeft}px`;
+    experienceSlider.style.width = `${activeTab.offsetWidth}px`;
+  }
+  
+  // Update all pages: remove active class and set display to none
+  experiencePages.forEach((page) => {
+    page.classList.remove('experience-page--active');
+    page.style.display = 'none';
+  });
+  
+  const selectedExperiencePage = document.querySelector(`.experience-page[data-tab="${tabId}"]`);
+  if (selectedExperiencePage) {
+    const cards = selectedExperiencePage.querySelectorAll('.timeline-item');
+    cards.forEach((card) => {
+      card.classList.remove('aos-animate', 'aos-init');
+      const aosAttr = card.getAttribute('data-aos');
+      card.removeAttribute('data-aos');
+      setTimeout(() => {
+        card.setAttribute('data-aos', aosAttr)
+      }, 10)
+    });
+    setTimeout(() => {
+      selectedExperiencePage.classList.add('experience-page--active');
+      selectedExperiencePage.style.display = 'block';
+      // Restore scroll position
+      window.scrollTo({
+        top: currentScrollPosition,
+        behavior: 'instant'
+      });
+      setTimeout(() => {
+        if (typeof AOS !== 'undefined') {
+          AOS.refreshHard()
+        }
+      }, 100)
+    }, 200)
+  }
+}
+
+if (experienceTabs.length > 0) {
+  // Tab click handlers
+  experienceTabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      updateExperienceTab(tab.dataset.tab);
+    });
+  });
+  
+  // Initialize everything
+  const initExperienceTabs = () => {
+    setContainerMaxHeight();
+    
+    const activeTab = Array.from(experienceTabs).find(tab => tab.classList.contains('experience-tab--active'));
+    if (experienceSlider && activeTab) {
+      experienceSlider.style.left = `${activeTab.offsetLeft}px`;
+      experienceSlider.style.width = `${activeTab.offsetWidth}px`;
+    }
+  };
+  
+  window.addEventListener('load', initExperienceTabs);
+  document.addEventListener('DOMContentLoaded', initExperienceTabs);
+  
+  // Update on window resize
+  window.addEventListener('resize', () => {
+    setContainerMaxHeight();
+    
+    const activeTab = Array.from(experienceTabs).find(tab => tab.classList.contains('experience-tab--active'));
+    if (experienceSlider && activeTab) {
+      experienceSlider.style.left = `${activeTab.offsetLeft}px`;
+      experienceSlider.style.width = `${activeTab.offsetWidth}px`;
+    }
+  });
 }
 document.addEventListener("DOMContentLoaded", function() {
   const currentYear = new Date().getFullYear();

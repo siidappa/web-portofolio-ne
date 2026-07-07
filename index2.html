@@ -257,66 +257,93 @@
                 <h2>Work Experience</h2>
                 <p># Professional Journey #</p>
             </div>
+            <!-- Experience Tabs -->
+            <div class="experience-tabs">
+                <div class="experience-tab-slider"></div>
+                <button class="experience-tab experience-tab--active" type="button" data-tab="it" aria-label="Show IT experience">IT</button>
+                <button class="experience-tab" type="button" data-tab="retail" aria-label="Show Retail experience">Multifinance</button>
+            </div>
             <div class="container-experience">
-                <!-- Timeline Item 1 - Kiri -->
-                <div class="timeline-item timeline-left" data-aos="fade-up" data-aos-duration="1000">
-                    <div class="timeline-content">
-                        <div class="timeline-card" data-experience-id="1">
-                            <div class="experience-header">
-                                <div class="experience-title">
-                                    <h3>IT Head of Project Manager</h3>
-                                    <p class="company-name">PT Multiusaha Prioritas Bersama</p>
-                                    <p class="work-period">Desember 2023 - April 2024</p>
+                <!-- Experience Page 1 (IT) -->
+                <div class="experience-page experience-page--active" data-tab="it">
+                    <!-- Timeline Item 1 - Kiri -->
+                    <div class="timeline-item timeline-left" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="timeline-content">
+                            <div class="timeline-card" data-experience-id="1">
+                                <div class="experience-header">
+                                    <div class="experience-title">
+                                        <h3>IT Head of Project Manager</h3>
+                                        <p class="company-name">PT Multiusaha Prioritas Bersama</p>
+                                        <p class="work-period">Desember 2023 - April 2024</p>
+                                    </div>
+                                    <div class="experience-badge">
+                                        <img loading="lazy" src="/image/Experience/PTMPB/PTMPB.webp" alt="PT Multiusaha Prioritas Bersama Logo">
+                                    </div>
                                 </div>
-                                <div class="experience-badge">
-                                    <img loading="lazy" src="/image/Experience/logo.webp" alt="PT Multiusaha Prioritas Bersama Logo">
-                                </div>
+                                <p class="experience-description">
+                                    Sebagai IT Head of Project Manager, saya mendapatkan peran penting bagi kelancaran Tim Development untuk membuat, merancang, dan mengimplementasi proyek IT.
+                                </p>
+                                <button class="view-experience-details" type="button" aria-label="View experience details">
+                                    <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                                    View Details
+                                </button>
                             </div>
-                            <p class="experience-description">
-                                Sebagai IT Head of Project Manager, saya mendapatkan peran penting bagi kelancaran Tim Development untuk membuat, merancang, dan mengimplementasi proyek IT.
-                            </p>
-                            <div class="experience-skills">
-                                <span class="skill-tag">Project Management</span>
-                                <span class="skill-tag">Team Leadership</span>
-                                <span class="skill-tag">System Integration</span>
-                            </div>
-                            <button class="view-experience-details" type="button" aria-label="View experience details">
-                                <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
-                                View Details
-                            </button>
                         </div>
+                        <div class="timeline-dot"></div>
                     </div>
-                    <div class="timeline-dot"></div>
+                    <!-- Timeline Item 2 - Kanan -->
+                    <div class="timeline-item timeline-right" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                        <div class="timeline-content">
+                            <div class="timeline-card" data-experience-id="2">
+                                <div class="experience-header">
+                                    <div class="experience-title">
+                                        <h3>IT Support Specialist</h3>
+                                        <p class="company-name">PT Gamila Buana Nusantara</p>
+                                        <p class="work-period">April 2024 - Sekarang</p>
+                                    </div>
+                                    <div class="experience-badge">
+                                        <img loading="lazy" src="/image/Experience/PTGBN/PTGBN.png" alt="PT Gamila Buana Nusantara Logo">
+                                    </div>
+                                </div>
+                                <p class="experience-description">
+                                    Memberikan dukungan teknis komprehensif untuk infrastruktur jaringan dan sistem IT. Menangani troubleshooting, maintenance, user support, dan dokumentasi teknis.
+                                </p>
+                                <button class="view-experience-details" type="button" aria-label="View experience details">
+                                    <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="timeline-dot"></div>
+                    </div>
                 </div>
-                <!-- Timeline Item 2 - Kanan -->
-                <div class="timeline-item timeline-right" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                    <div class="timeline-content">
-                        <div class="timeline-card" data-experience-id="2">
-                            <div class="experience-header">
-                                <div class="experience-title">
-                                    <h3>IT Support Specialist</h3>
-                                    <p class="company-name">PT Gamila Buana Nusantara</p>
-                                    <p class="work-period">April 2024 - Sekarang</p>
+                <!-- Experience Page 2 (Retail) -->
+                <div class="experience-page" data-tab="retail">
+                    <!-- Timeline Item 3 - Kiri (Retail) -->
+                    <div class="timeline-item timeline-left" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="timeline-content">
+                            <div class="timeline-card" data-experience-id="3">
+                                <div class="experience-header">
+                                    <div class="experience-title">
+                                        <h3>Sales Associate</h3>
+                                        <p class="company-name">PT Home Credit Indonesia (HCI)</p>
+                                        <p class="work-period">Oktober 2025 - Januari 2026</p>
+                                    </div>
+                                    <div class="experience-badge">
+                                        <img loading="lazy" src="./image/Experience/PTHCI/PTHCI.webp" alt="PT Home Credit Indonesia">
+                                    </div>
                                 </div>
-                                <div class="experience-badge">
-                                    <img loading="lazy" src="/image/Experience/Logo_Gamila-removebg-preview.png" alt="PT Gamila Buana Nusantara Logo">
-                                </div>
+                                <p class="experience-description">
+                                    Bekerja di lingkungan ritel dengan tanggung jawab mengelola stok barang, melayani pelanggan, dan mengoperasikan sistem kasir. Berpengalaman dalam customer service dan manajemen inventory.
+                                </p>
+                                <button class="view-experience-details" type="button" aria-label="View experience details">
+                                    <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                                    View Details
+                                </button>
                             </div>
-                            <p class="experience-description">
-                                Memberikan dukungan teknis komprehensif untuk infrastruktur jaringan dan sistem IT. Menangani troubleshooting, maintenance, user support, dan dokumentasi teknis.
-                            </p>
-                            <div class="experience-skills">
-                                <span class="skill-tag">Network Support</span>
-                                <span class="skill-tag">Troubleshooting</span>
-                                <span class="skill-tag">User Support</span>
-                            </div>
-                            <button class="view-experience-details" type="button" aria-label="View experience details">
-                                <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
-                                View Details
-                            </button>
                         </div>
+                        <div class="timeline-dot"></div>
                     </div>
-                    <div class="timeline-dot"></div>
                 </div>
             </div>
         </section>
@@ -327,7 +354,8 @@
                 <p># Professional Recognition #</p>
             </div>
             <div class="certf-tabs">
-                <button class="certf-tab active" type="button" data-cert-page="all" aria-label="Show all certificates">All</button>
+                <div class="certf-tab-slider"></div>
+                <button class="certf-tab certf-tab--active" type="button" data-cert-page="all" aria-label="Show all certificates">All</button>
                 <button class="certf-tab" type="button" data-cert-page="1" aria-label="Show MikroTik certificates">MikroTik</button>
                 <button class="certf-tab" type="button" data-cert-page="2" aria-label="Show Cisco certificates">Cisco</button>
             </div>
@@ -598,9 +626,10 @@
             </div>
             
             <div class="project-tabs">
-                <button class="project-tab active" type="button" data-project-page="all" aria-label="Show all projects">All</button>
+                <div class="project-tab-slider"></div>
+                <button class="project-tab project-tab--active" type="button" data-project-page="all" aria-label="Show all projects">All</button>
                 <button class="project-tab" type="button" data-project-page="network" aria-label="Show networking projects">Networking</button>
-                <button class="project-tab" type="button" data-project-page="web" aria-label="Show web development projects">Web Dev</button>
+                <button class="project-tab" type="button" data-project-page="web" aria-label="Show web development projects">Web</button>
             </div>
 
             <div class="container-project">
@@ -1144,6 +1173,14 @@
                     <div class="experience-detail-sections">
                         <section class="detail-section">
                             <h2>
+                                <ion-icon name="business-outline"></ion-icon>
+                                About the Company
+                            </h2>
+                            <p id="modal-experience-about-company"></p>
+                        </section>
+                        
+                        <section class="detail-section">
+                            <h2>
                                 <ion-icon name="information-circle-outline"></ion-icon>
                                 About This Role
                             </h2>
@@ -1177,7 +1214,7 @@
                         <section class="detail-section">
                             <h2>
                                 <ion-icon name="images-outline"></ion-icon>
-                                Project Gallery
+                                Experience Gallery
                             </h2>
                             <div id="modal-experience-gallery" class="gallery-grid"></div>
                         </section>
