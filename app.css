@@ -4925,25 +4925,9 @@ footer::before {
   border: 1px solid #f1f5f9;
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   position: relative;
-}
-
-.detail-section::before {
-  content: '';
-  position: absolute;
-  top: 1.75rem;
-  left: 1.75rem;
-  width: 4px;
-  height: 32px;
-  border-radius: 999px;
-  background: linear-gradient(180deg, var(--primary), var(--secondary));
-  opacity: 0.9;
-
-}
-
-.detail-section:hover {
-  border-color: #e2e8f0;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
 }
+
 
 .detail-section h2 {
   font-size: 1.25rem;
@@ -4954,7 +4938,7 @@ footer::before {
   gap: 0.8rem;
   font-family: var(--ssn);
   font-weight: 700;
-  padding-left: 1.5rem;
+  padding-left: 0;
 }
 
 .detail-section h2 ion-icon {
@@ -4975,7 +4959,7 @@ footer::before {
 }
 
 .detail-section ul li {
-  padding: 0.65rem 0;
+  padding: 0.60rem 0;
   color: #475569;
   line-height: 1.65;
   display: flex;
@@ -5853,5 +5837,41 @@ section#social-media .information-social {
   
   .notification-icon {
     font-size: 1.75rem;
+  }
+}
+
+/* Mobile & Tablet Animation Optimizations (Max Width 992px) */
+@media (max-width: 992px) {
+  /* Use GPU acceleration for animated elements */
+  [data-aos],
+  .skill-card,
+  .timeline-card,
+  .cert-card-inner,
+  .project-card-inner,
+  .countdown-item,
+  .experience-modal,
+  .welcome-popup {
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+  }
+
+  /* Reduce animation duration for smoother feel */
+  .skill-card,
+  .timeline-card,
+  .cert-card-inner,
+  .project-card-inner,
+  .countdown-item {
+    transition-duration: 0.2s;
+  }
+
+  /* Disable heavy filters/effects on mobile if needed */
+  .skill-card:hover,
+  .timeline-card:hover,
+  .cert-card-inner:hover,
+  .project-card-inner:hover {
+    filter: none;
   }
 }
