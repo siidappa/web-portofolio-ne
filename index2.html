@@ -48,9 +48,9 @@
     
     <title>Daffa | Network Engineer & IT Support Specialist</title>
     
-    <!-- Critical CSS - Tetap render-blocking karena dibutuhkan segera -->
-    <!-- <link rel="stylesheet" href="./Minify/app-minify.css"> -->
-    <link rel="stylesheet" href="app.css">
+    <!-- Critical CSS - Tetap render-blocking karena dibutuhkan segera -->     
+    <link rel="stylesheet" href="./Minify/app-minify.css">
+    <!-- <link rel="stylesheet" href="app.css"> -->
     
     <!-- Non-critical CSS - AOS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" media="print" onload="this.media='all'">
@@ -283,7 +283,7 @@
                                     </div>
                                 </div>
                                 <p class="experience-description">
-                                    Sebagai IT Head of Project Manager, saya mendapatkan peran penting bagi kelancaran Tim Development untuk membuat, merancang, dan mengimplementasi proyek IT.
+                                   PT Multiusaha Prioritas Bersama (MPB Group) adalah perusahaan induk yang mengelola berbagai unit usaha strategis, investasi, dan ekonomi kreatif di Indonesia.
                                 </p>
                                 <button class="view-experience-details" type="button" aria-label="View experience details">
                                     <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
@@ -308,7 +308,7 @@
                                     </div>
                                 </div>
                                 <p class="experience-description">
-                                    Memberikan dukungan teknis komprehensif untuk infrastruktur jaringan dan sistem IT. Menangani troubleshooting, maintenance, user support, dan dokumentasi teknis.
+                                   PT Gamila Buana Nusantara adalah perusahaan solusi industrial terintegrasi yang melayani sektor pengeboran dan konstruksi
                                 </p>
                                 <button class="view-experience-details" type="button" aria-label="View experience details">
                                     <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
@@ -336,7 +336,7 @@
                                     </div>
                                 </div>
                                 <p class="experience-description">
-                                    Bekerja di lingkungan ritel dengan tanggung jawab mengelola stok barang, melayani pelanggan, dan mengoperasikan sistem kasir. Berpengalaman dalam customer service dan manajemen inventory.
+                                   PT Home Credit Indonesia adalah perusahaan pembiayaan berbasis teknologi berizin OJK
                                 </p>
                                 <button class="view-experience-details" type="button" aria-label="View experience details">
                                     <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
@@ -1063,7 +1063,7 @@
                             </div>
                             </div>
                             <div class="form-group">
-                            <label for="email">Email</label>
+                            <label for="emailFrom">Email</label>
                             <div class="input-wrapper">
                                 <ion-icon name="mail-outline"></ion-icon>
                                 <input type="email" id="emailFrom" name="emailFrom" placeholder="Masukkan email kamu" required>
@@ -1227,7 +1227,6 @@
     </div>
 
     <!-- Scripts yang dipindahkan ke bagian bawah agar tidak render-blocking -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="./Minify/app-minify.js"></script>
@@ -1249,7 +1248,7 @@
                 if (typeof AOS !== 'undefined') {
                     AOS.init({
                         once: true,
-                        offset: 50,
+                        offset: 0,
                         duration: 800,
                         easing: 'ease-out-cubic',
                         startEvent: 'DOMContentLoaded'
