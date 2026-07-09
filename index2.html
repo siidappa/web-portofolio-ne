@@ -49,8 +49,8 @@
     <title>Daffa | Network Engineer & IT Support Specialist</title>
     
     <!-- Critical CSS - Tetap render-blocking karena dibutuhkan segera -->     
-    <link rel="stylesheet" href="Minify/app-minify.css">
     <!-- <link rel="stylesheet" href="app.css"> -->
+    <link rel="stylesheet" href="app.css">
     
     <!-- Non-critical CSS - AOS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" media="print" onload="this.media='all'">
@@ -87,6 +87,7 @@
                 <ul class="nav-links">
                     <li><a href="#myhome">Home</a></li>
                     <li><a href="#about-me">About</a></li>
+                    <li><a href="#education">Education</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li class="dropdown">
@@ -131,7 +132,7 @@
                         Lulusan SMK TKJ bersertifikasi Cisco yang bersemangat menjadi Network Engineer. Berpengalaman mengelola perangkat jaringan MikroTik, Cisco, dan TP-Link
                     </p>
                     <div class="home-buttons">
-                        <a href="./docs/Curriculum Vitae Daffa Naufal Fachrezi.pdf" class="btn-download-cv" aria-label="Download CV">
+                        <a href="https://drive.google.com/file/d/17X-fNH2VL32KBvG_S51KrhMwmmXYHUwZ/view?usp=sharing" class="btn-download-cv" aria-label="Download CV" target="_blank">
                             <ion-icon name="download-outline" aria-hidden="true"></ion-icon>
                             Download CV
                         </a>
@@ -164,7 +165,7 @@
                             <div class="about-decoration decoration-1"></div>
                             <div class="about-decoration decoration-3"></div>
                             <div class="about-image-bg"></div>
-                            <img src="./image/me/About.webp" alt="Daffa Naufal Fachrezi" loading="lazy" width="430" height="430">
+                            <img src="./image/me/About.webp" alt="Daffa Naufal Fachrezi" loading="lazy">
                         </div>
                     </div>
                     <!-- Right Column - Content -->
@@ -189,29 +190,78 @@
                             <span class="about-text-line"></span>
                         </div>
                     </div>
-                    <div class="about-badges-section">
-                        <div class="about-badges">
-                            <div class="badge-item" title="Cisco CCNA: Routing, Switching, and Wireless Essentials" data-aos="fade-up" data-aos-duration="500">
-                                <img loading="lazy" src="./image/Certifications/CCNASRWE__1_.webp" alt="CCNA: Switching, Routing and Wireless Essentials Badge" width="600" height="600">
-                                <div class="badge-overlay">
-                                    <ion-icon name="eye-outline"></ion-icon>
-                                </div>
-                            </div>
-                            <div class="badge-item" title="Cisco CCNA: Enterprise Networking, Security, and Automation" data-aos="fade-up" data-aos-duration="700">
-                                <img loading="lazy" src="./image/Certifications/CCNAENSA__1_.webp" alt="CCNA: Enterprise Networking, Security, and Automation Badge" width="600" height="600">
-                                <div class="badge-overlay">
-                                    <ion-icon name="eye-outline"></ion-icon>
-                                </div>
-                            </div>
-                            <div class="badge-item" title="Cisco CCNP: Enterprise Core Networking" data-aos="fade-up" data-aos-duration="900">
-                                <img loading="lazy" src="./image/Certifications/CCNPENCOR__1_.webp" alt="CCNP Enterprise: Core Networking Badge" width="600" height="600">
-                                <div class="badge-overlay">
-                                    <ion-icon name="eye-outline"></ion-icon>
-                                </div>
-                            </div>
-                        </div>
+                </div>
+            </div>
+        </section>
+        <section id="education">
+            <div class="information-education" data-aos="fade-down" data-aos-offset="0" data-aos-once="true">
+                <span class="skills-tag">Education</span>
+                <h2>Education Journey</h2>
+                <p># Learning & Growing #</p>
+            </div>
+            <div class="container-education">
+                <!-- Education Entry 1 - SMK -->
+                <div class="education-entry" data-aos="fade-up" data-aos-duration="1000">
+            <div class="entry-logo-wrapper">
+              <div class="entry-logo">
+                <img src="./image/Education/SMK.webp" alt="SMK Gelora Bekasi">
+              </div>
+              <div class="entry-year">2022 - 2025</div>
+            </div>
+            <div class="entry-content">
+              <h3 class="entry-school">SMK Gelora Bekasi</h3>
+              <p class="entry-major">Teknik Komputer dan Jaringan (TKJ)</p>
+              <p class="entry-desc">
+                Selama 3 tahun bersekolah di SMK jurusan TKJ, saya mempelajari dasar-dasar jaringan komputer, konfigurasi perangkat jaringan (MikroTik, Cisco, TP-Link), dan pengembangan web dasar. Saya aktif berpartisipasi dalam berbagai kompetisi dan kegiatan ekstrakurikuler di bidang networking.
+              </p>
+              <div class="entry-achievements">
+                <a href="https://drive.google.com/file/d/1jbFR9oeCwRC0OjXF49bkPffFTBlzf00M/view?usp=sharing" class="achievement-badge" aria-label="Buka sertifikat Olimpiade Jaringan MikroTik">
+                  <ion-icon name="ribbon"></ion-icon>
+                  <span>Olimpieade Jaringan MikroTik 2024</span>
+                </a>
+                <a href="#" class="achievement-badge" aria-label="Buka sertifikat UKK">
+                  <ion-icon name="ribbon"></ion-icon>
+                  <span>Sertifikat Uji Kompetensi - Sangat Kompeten</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+            <!-- Divider -->
+            <!-- <div class="education-divider"></div> -->
+
+            <!-- Education Entry 2 - SMP -->
+            <div class="education-entry" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <div class="entry-logo-wrapper">
+                    <div class="entry-logo entry-logo-placeholder">
+                        <img src="./image/Education/NetAcad.webp" alt="Cisco Networking Academy">
+                    </div>
+                    <div class="entry-year">2025 &ndash; 2026</div>
+                </div>
+                <div class="entry-content">
+                    <h3 class="entry-school">Cisco Networking Academy</h3>
+                    <p class="entry-major">CCNA: Routing, Switching and Wireless Essentials (SRWE)</p>
+                    <p class="entry-major">CCNA: Enterprise Networking, Security, and Automation (ENSA)</p>
+                    <p class="entry-major">CCNP Enterprise: Core Networking (CORNET)</p>
+                    <p class="entry-desc">
+                        Selama bersekolah di SMP, saya mempelajari dasar-dasar ilmu pengetahuan dan mulai mengembangkan minat di bidang teknologi dan komputer.
+                    </p>
+                    <div class="entry-achievements">
+                        <a href="" class="achievement-badge" aria-label="Buka sertifikat Olimpiade Jaringan MikroTik">
+                        <ion-icon name="ribbon"></ion-icon>
+                        <span>Sertifikat - CCNA SRWE</span>
+                        </a>
+                        <a href="#" class="achievement-badge" aria-label="Buka sertifikat UKK">
+                        <ion-icon name="ribbon"></ion-icon>
+                        <span>Sertifikat - CCNA ENSA</span>
+                        </a>
+                        <a href="#" class="achievement-badge" aria-label="Buka sertifikat UKK">
+                        <ion-icon name="ribbon"></ion-icon>
+                        <span>Sertifikat - CCNP CORNET</span>
+                        </a>
                     </div>
                 </div>
+            </div>
             </div>
         </section>
         <section id="skills">
