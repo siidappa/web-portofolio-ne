@@ -1,1376 +1,658 @@
 <!DOCTYPE html>
-<html lang="id" >
+<html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Daffa Naufal Fachrezi - Network Engineer profesional dengan pengalaman mengelola infrastruktur jaringan. Portofolio, sertifikat Cisco & MikroTik, dan proyek jaringan.">
-    <meta name="keywords" content="Network Engineer, Daffa Naufal Fachrezi, Cisco, MikroTik, Jaringan Komputer, IT Support">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="Website Portofolio Daffa akan segera hadir! Launching pada tanggal 10 Juli 2026">
     <meta name="author" content="Daffa Naufal Fachrezi">
-    <meta name="robots" content="index, follow">
     
-    <!-- Preconnect & DNS Prefetch for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="dns-prefetch" href="https://unpkg.com">
-    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Stack+Sans+Notch:wght@200..700&display=swap">
     
-    <!-- Google Fonts (Optimized) -->
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Playwrite+IN&family=Stack+Sans+Notch:wght@200..700&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Playwrite+IN&family=Stack+Sans+Notch:wght@200..700&display=swap" media="print" onload="this.media='all'">
-    <noscript>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Playwrite+IN&family=Stack+Sans+Notch:wght@200..700&display=swap">
-    </noscript>
-    
-    <!-- Favicon & PWA -->
     <link rel="icon" type="image/png" href="./image/me/Favicon.png">
-    <link rel="apple-touch-icon" href="./image/me/Logo.png">
-    <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#006388">
     
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://karyadaffa.my.id/">
-    <meta property="og:title" content="Daffa Naufal Fachrezi | Network Engineer & IT Support Specialist">
-    <meta property="og:description" content="Portfolio Daffa Naufal Fachrezi - Network Engineer profesional dengan pengalaman mengelola infrastruktur jaringan, sertifikat Cisco & MikroTik, dan proyek jaringan.">
-    <meta property="og:image" content="https://karyadaffa.my.id/image/me/Me.webp">
-    <meta property="og:site_name" content="Daffa Naufal Fachrezi Portfolio">
-    <meta property="og:locale" content="id_ID">
+    <title>Coming Soon - Daffa Naufal Fachrezi</title>
     
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://karyadaffa.my.id/">
-    <meta property="twitter:title" content="Daffa Naufal Fachrezi | Network Engineer & IT Support Specialist">
-    <meta property="twitter:description" content="Portfolio Daffa Naufal Fachrezi - Network Engineer profesional dengan pengalaman mengelola infrastruktur jaringan, sertifikat Cisco & MikroTik, dan proyek jaringan.">
-    <meta property="twitter:image" content="https://karyadaffa.my.id/image/me/Me.webp">
-    
-    <!-- Canonical Link -->
-    <link rel="canonical" href="https://karyadaffa.my.id/">
-    
-    <title>Daffa | Network Engineer & IT Support Specialist</title>
-    
-    <!-- Critical CSS - Tetap render-blocking karena dibutuhkan segera -->     
-    <link rel="stylesheet" href="Minify/app-minify.css">
-    <!-- <link rel="stylesheet" href="app.css"> -->
-    
-    <!-- Non-critical CSS - AOS -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" media="print" onload="this.media='all'">
-    <noscript>
-        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
-    </noscript>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #006388;
+            --secondary: #00abd9;
+            --poppins: "Poppins", serif;
+            --ssn: "Stack Sans Notch", sans-serif;
+        }
+        
+        body {
+            min-height: 100vh;
+            background-color: #fbfbfb;
+            background-image: linear-gradient(90deg, rgb(0 0 0 / 0.03) 1px, transparent 1px),
+                              linear-gradient(rgb(0 0 0 / 0.03) 1px, transparent 1px);
+            background-size: 1.5rem 1.5rem;
+            background-position: center center;
+            font-family: var(--poppins);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+        
+        .container {
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .logo {
+            font-family: var(--ssn);
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 2rem;
+            font-weight: 800;
+        }
+        
+        .coming-soon-badge {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #fff;
+            border-radius: 999px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        
+        h1 {
+            font-family: var(--ssn);
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            color: #222;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 3rem;
+            line-height: 1.7;
+            text-align: center;
+        }
+        
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .countdown-item {
+            background: linear-gradient(135deg, #ffffff, #f8fafc);
+            border-radius: 20px;
+            padding: 1.5rem 2rem;
+            box-shadow: 
+                0 10px 30px rgb(0 0 0 / 0.05),
+                0 0 0 1px rgb(0 99 136 / 0.08);
+            border: none;
+            min-width: 120px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .countdown-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary), var(--primary));
+            background-size: 200% 100%;
+            animation: gradientMove 2s linear infinite;
+        }
+        
+        .countdown-item:hover {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 
+                0 20px 45px rgb(0 99 136 / 0.15),
+                0 0 0 1px rgb(0 99 136 / 0.12);
+        }
+        
+        .countdown-number {
+            font-family: var(--ssn);
+            font-size: 3rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
+            line-height: 1;
+        }
+        
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 200% 50%;
+            }
+        }
+        
+        .countdown-label {
+            font-size: 0.9rem;
+            color: #888;
+            margin-top: 0.5rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .launch-date {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 1rem 2rem;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgb(0 0 0 / 0.05);
+            border: 1px solid rgb(0 0 0 / 0.05);
+            margin-bottom: 2rem;
+        }
+        
+        .launch-icon {
+            font-size: 1.8rem;
+        }
+        
+        .launch-text {
+            text-align: left;
+        }
+        
+        .launch-text span {
+            display: block;
+            font-size: 0.8rem;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .launch-text strong {
+            font-size: 1.2rem;
+            color: var(--primary);
+            font-family: var(--ssn);
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            width: 50px;
+            height: 50px;
+            border-radius: 14px;
+            background: #fff;
+            border: 2px solid rgb(0 0 0 / 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #444;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgb(0 0 0 / 0.05);
+        }
+        
+        .social-links a:hover,
+        .social-links a:active,
+        .social-links a:focus-visible {
+            background: var(--primary);
+            color: #fff;
+            transform: translateY(-5px) rotate(5deg);
+            box-shadow: 0 10px 25px rgb(0 99 136 / 0.35);
+        }
+        
+        .social-links a:active {
+            transform: translateY(-2px) rotate(2deg);
+        }
+        
+        .decorative-circle {
+            position: fixed;
+            border-radius: 50%;
+            opacity: 0.1;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .circle-1 {
+            width: 300px;
+            height: 300px;
+            background: var(--primary);
+            top: -100px;
+            right: -100px;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .circle-2 {
+            width: 200px;
+            height: 200px;
+            background: var(--secondary);
+            bottom: -50px;
+            left: -50px;
+            animation: float 8s ease-in-out infinite reverse;
+        }
+        
+        .speed-lines {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+        
+        .speed-line {
+            position: absolute;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
+            opacity: 0.4;
+            animation: speedLine 3s linear infinite;
+        }
+        
+        .speed-line:nth-child(1) {
+            top: 20%;
+            width: 200px;
+            left: -250px;
+            animation-duration: 4s;
+        }
+        
+        .speed-line:nth-child(2) {
+            top: 40%;
+            width: 150px;
+            left: -200px;
+            animation-duration: 3.5s;
+            animation-delay: 0.5s;
+        }
+        
+        .speed-line:nth-child(3) {
+            top: 60%;
+            width: 180px;
+            left: -230px;
+            animation-duration: 4.5s;
+            animation-delay: 1s;
+        }
+        
+        .speed-line:nth-child(4) {
+            top: 80%;
+            width: 160px;
+            left: -210px;
+            animation-duration: 3.8s;
+            animation-delay: 1.5s;
+        }
+        
+        @keyframes speedLine {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(100vw + 300px));
+            }
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(30px);
+            }
+        }
+        
+        /* Tablet (768px - 991px) */
+        @media (max-width: 991px) {
+            .container {
+                max-width: 600px;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .subtitle {
+                font-size: 1.05rem;
+            }
+            
+            .countdown {
+                gap: 1.2rem;
+            }
+            
+            .countdown-item {
+                min-width: 100px;
+                padding: 1.3rem 1.6rem;
+            }
+            
+            .countdown-number {
+                font-size: 2.6rem;
+            }
+            
+            .countdown-label {
+                font-size: 0.85rem;
+            }
+        }
+        
+        /* Small Tablet (576px - 767px) */
+        @media (max-width: 767px) {
+            body {
+                padding: 1.5rem;
+            }
+            
+            .container {
+                max-width: 100%;
+            }
+            
+            .logo {
+                font-size: 2.2rem;
+                margin-bottom: 1.5rem;
+            }
+            
+            .coming-soon-badge {
+                font-size: 0.8rem;
+                padding: 0.4rem 1.2rem;
+                letter-spacing: 1.5px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+                margin-bottom: 0.8rem;
+            }
+            
+            .subtitle {
+                font-size: 0.95rem;
+                margin-bottom: 2.5rem;
+                text-align: left;
+            }
+            
+            .countdown {
+                gap: 0.9rem;
+                margin-bottom: 2.5rem;
+            }
+            
+            .countdown-item {
+                min-width: 85px;
+                padding: 1.1rem 1.3rem;
+                border-radius: 16px;
+            }
+            
+            .countdown-number {
+                font-size: 2.2rem;
+            }
+            
+            .countdown-label {
+                font-size: 0.75rem;
+                letter-spacing: 0.5px;
+            }
+            
+            .launch-date {
+                padding: 0.9rem 1.6rem;
+                border-radius: 12px;
+                margin-bottom: 1.8rem;
+            }
+            
+            .launch-icon {
+                font-size: 1.5rem;
+            }
+            
+            .launch-text strong {
+                font-size: 1.1rem;
+            }
+            
+            .social-links a {
+                width: 46px;
+                height: 46px;
+                font-size: 1.4rem;
+                border-radius: 12px;
+            }
+            
+            .circle-1 {
+                width: 250px;
+                height: 250px;
+                top: -80px;
+                right: -80px;
+            }
+            
+            .circle-2 {
+                width: 180px;
+                height: 180px;
+                bottom: -40px;
+                left: -40px;
+            }
+        }
+        
+        /* Mobile (320px - 575px) */
+        @media (max-width: 575px) {
+            body {
+                padding: 1.2rem;
+            }
+            
+            .logo {
+                font-size: 2rem;
+                margin-bottom: 1.2rem;
+            }
+            
+            .coming-soon-badge {
+                font-size: 0.75rem;
+                padding: 0.35rem 1rem;
+                margin-bottom: 1.2rem;
+            }
+            
+            h1 {
+                font-size: 1.7rem;
+                line-height: 1.25;
+            }
+            
+            .subtitle {
+                font-size: 0.9rem;
+                line-height: 1.6;
+                margin-bottom: 2rem;
+                text-align: center;
+            }
+            
+            .countdown {
+                gap: 0.7rem;
+                margin-bottom: 2rem;
+            }
+            
+            .countdown-item {
+                min-width: 72px;
+                padding: 0.9rem 1rem;
+                border-radius: 14px;
+            }
+            
+            .countdown-number {
+                font-size: 1.9rem;
+            }
+            
+            .countdown-label {
+                font-size: 0.7rem;
+                margin-top: 0.3rem;
+            }
+            
+            .launch-date {
+                padding: 0.8rem 1.3rem;
+                gap: 0.6rem;
+            }
+            
+            .launch-icon {
+                font-size: 1.4rem;
+            }
+            
+            .launch-text span {
+                font-size: 0.7rem;
+            }
+            
+            .launch-text strong {
+                font-size: 1rem;
+            }
+            
+            .social-links {
+                gap: 0.8rem;
+            }
+            
+            .social-links a {
+                width: 42px;
+                height: 42px;
+                font-size: 1.3rem;
+                border-radius: 10px;
+            }
+            
+            .circle-1 {
+                width: 200px;
+                height: 200px;
+                top: -60px;
+                right: -60px;
+            }
+            
+            .circle-2 {
+                width: 150px;
+                height: 150px;
+                bottom: -30px;
+                left: -30px;
+            }
+        }
+        
+        /* Extra Small Mobile (up to 360px) */
+        @media (max-width: 360px) {
+            body {
+                padding: 1rem;
+            }
+            
+            .logo {
+                font-size: 1.8rem;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            .subtitle {
+                font-size: 0.85rem;
+            }
+            
+            .countdown-item {
+                min-width: 65px;
+                padding: 0.8rem 0.9rem;
+            }
+            
+            .countdown-number {
+                font-size: 1.7rem;
+            }
+            
+            .countdown-label {
+                font-size: 0.65rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Popup Selamat Datang -->
-    <div class="welcome-popup-overlay" id="welcomePopup">
-        <div class="welcome-popup">
-            <div class="welcome-popup-ornament ornament-1"></div>
-            <div class="welcome-popup-ornament ornament-2"></div>
-            <div class="welcome-popup-ornament ornament-3"></div>
-            <div class="welcome-popup-ornament ornament-4"></div>
-            <div class="welcome-popup-content">
-                <div class="welcome-icon">👋</div>
-                <h2 class="welcome-title">Selamat Datang Di</h2>
-                <p class="welcome-subtitle">Website Portolio ku</p>
-                <p class="welcome-text">Enjoy your visit! 🤗🤩</p>
-            </div>
-        </div>
+    <div class="decorative-circle circle-1"></div>
+    <div class="decorative-circle circle-2"></div>
+    <div class="speed-lines">
+        <div class="speed-line"></div>
+        <div class="speed-line"></div>
+        <div class="speed-line"></div>
+        <div class="speed-line"></div>
     </div>
-    <!-- Akhir Popup Selamat Datang -->
-
-    <header class="navbar" data-aos="fade-down" data-aos-duration="800" data-aos-offset="0" data-aos-anchor-placement="top-bottom" data-aos-once="true">
-        <div class="navbar-container">
-            <a class="nav-logo" href="#myhome">KaryaDaffa</a>
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <ion-icon name="menu-outline" class="menu-icon"></ion-icon>
-                <ion-icon name="close-outline" class="close-icon"></ion-icon>
-            </button>
-            <nav class="nav-menu" id="nav-menu">
-                <ul class="nav-links">
-                    <li><a href="#myhome">Home</a></li>
-                    <li><a href="#about-me">About</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li class="dropdown">
-                        <a href="#certf" class="dropdown-toggle">Certificate</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#certf" data-cert-tab="all">All Certificates</a></li>
-                            <li><a href="#certf" data-cert-tab="1">MikroTik Certificates</a></li>
-                            <li><a href="#certf" data-cert-tab="2">Cisco Certificates</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#project" class="dropdown-toggle">Project</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#project" data-project-tab="all">All Projects</a></li>
-                            <li><a href="#project" data-project-tab="network">Network Projects</a></li>
-                            <li><a href="#project" data-project-tab="web">Web Projects</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#social-media">Social</a></li>
-                    <li><a href="#form-message">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <main>
-
-        
-        <section id="myhome">
-            <div class="container-home">
-                <div class="home-left" data-aos="fade-right" data-aos-duration="800" data-aos-offset="0" data-aos-anchor-placement="top-bottom" data-aos-once="true">
-                    <p class="home-greeting">👋 Halo, saya</p>
-                    <h1 class="home-name">Daffa Naufal Fachrezi</h1>
-                    <h3 class="subtitle">
-                        <span class="subtitle-prefix">I am the</span>
-                        <span class="animated-text-wrapper">
-                            <span class="animated-text active">IT Head of PM</span>
-                            <span class="animated-text">IT Network Specialist</span>
-                            <span class="animated-text">IT Support Specialist</span>
-                        </span>
-                    </h3>
-                    <p class="home-description">
-                        Lulusan SMK TKJ bersertifikasi Cisco yang bersemangat menjadi Network Engineer. Berpengalaman mengelola perangkat jaringan MikroTik, Cisco, dan TP-Link
-                    </p>
-                    <div class="home-buttons">
-                        <a href="https://drive.google.com/file/d/17X-fNH2VL32KBvG_S51KrhMwmmXYHUwZ/view?usp=sharing" class="btn-download-cv" aria-label="Download CV" target="_blank">
-                            <ion-icon name="download-outline" aria-hidden="true"></ion-icon>
-                            Download CV
-                        </a>
-                    </div>
-                    <div class="home-socials">
-                        <a href="https://instagram.com/theonlydappp" target="_blank" aria-label="Instagram">
-                            <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
-                        </a>
-                        <a href="https://github.com/siidappa" target="_blank" aria-label="GitHub">
-                            <ion-icon name="logo-github" aria-hidden="true"></ion-icon>
-                        </a>
-                        <a href="https://www.tiktok.com/@lookingfordapp" target="_blank" aria-label="TikTok">
-                            <ion-icon name="logo-tiktok" aria-hidden="true"></ion-icon>
-                        </a>
-                    </div>
-                </div>
-                <div class="home-right" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200" data-aos-offset="0" data-aos-anchor-placement="top-bottom" data-aos-once="true">
-                    <div class="home-image-wrapper">
-                        <img src="./image/me/Me.avif" alt="Daffa Naufal Fachrezi" loading="eager" fetchpriority="high" width="380" height="380">
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="about-me">
-            <div class="container-about">
-                <div class="about-wrapper">
-                    <!-- Left Column - Image -->
-                    <div class="about-left" data-aos="fade-right" data-aos-offset="0" data-aos-once="true">
-                        <div class="about-image-container">
-                            <div class="about-decoration decoration-1"></div>
-                            <div class="about-decoration decoration-3"></div>
-                            <div class="about-image-bg"></div>
-                            <img src="./image/me/About.webp" alt="Daffa Naufal Fachrezi" loading="lazy">
-                        </div>
-                    </div>
-                    <!-- Right Column - Content -->
-                    <div class="about-right" data-aos="fade-left" data-aos-offset="0" data-aos-once="true">
-                        <div class="about-header">
-                            <span class="about-tag">Tentang Saya</span>
-                            <h2 class="about-title">Daffa Naufal Fachrezi</h2>
-                            <p class="about-subtitle">Network Engineer & IT Support Specialist</p>
-                        </div>
-                    <div class="about-text-container" data-aos="fade-up" data-aos-duration="700">
-                        <div class="about-text-decoration top-left"></div>
-                        <div class="about-text-decoration top-right"></div>
-                        <div class="about-text-decoration bottom-left"></div>
-                        <div class="about-text-decoration bottom-right"></div>
-                        
-                        <p class="about-text">
-                            Saya lulusan SMK jurusan TKJ dengan keahlian di bidang IT Networking, mampu mengelola dan mengonfigurasi perangkat jaringan berbagai vendor seperti Mikrotik, Cisco, dan TP-Link. Berpengalaman merancang dan membangun jaringan dari LAN hingga MAN dengan manajemen yang efisien.
-                        </p>
-                        
-                        <div class="about-text-footer">
-                            <span class="about-text-dot"></span>
-                            <span class="about-text-line"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="education">
-            <div class="information-education" data-aos="fade-down" data-aos-offset="0" data-aos-once="true">
-                <span class="skills-tag">Education</span>
-                <h2>Education Journey</h2>
-                <p># Learning & Growing #</p>
-            </div>
-            <div class="container-education">
-                <!-- Education Entry 1 - SMK -->
-                <div class="education-entry" data-aos="fade-up" data-aos-duration="1000">
-            <div class="entry-logo-wrapper">
-              <div class="entry-logo">
-                <img src="./image/Education/SMK.webp" alt="SMK Gelora Bekasi">
-              </div>
-              <div class="entry-year">2022 - 2025</div>
-            </div>
-            <div class="entry-content">
-              <h3 class="entry-school">SMK Gelora Bekasi</h3>
-              <div class="entry-gpa">
-                <ion-icon name="school"></ion-icon>
-                <span>Nilai Rata-Rata: <strong>87.93</strong></span>
-              </div>
-              <p class="entry-major">Teknik Komputer Jaringan dan Telekomunikasi (TKJT)</p>
-              <p class="entry-desc">
-                Selama 3 tahun bersekolah di SMK jurusan TKJ, saya mempelajari dasar-dasar jaringan komputer, konfigurasi perangkat jaringan (MikroTik, Cisco, TP-Link), dan pengembangan web dasar. Saya aktif berpartisipasi dalam berbagai kompetisi dan kegiatan ekstrakurikuler di bidang networking.
-              </p>
-              <div class="entry-achievements">
-                <a href="https://drive.google.com/file/d/1jbFR9oeCwRC0OjXF49bkPffFTBlzf00M/view?usp=sharing" class="achievement-badge" aria-label="Olimpiade Jaringan MikroTik" target="_blank">
-                  <ion-icon name="ribbon"></ion-icon>
-                  <span>Olimpieade Jaringan MikroTik 2024</span>
-                </a>
-                <a href="#" class="achievement-badge" aria-label="Sertifikat Uji Kompetensi - Sangat Kompeten" target="_blank">
-                  <ion-icon name="ribbon"></ion-icon>
-                  <span>Sertifikat Uji Kompetensi - Sangat Kompeten</span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-            <!-- Divider -->
-            <!-- <div class="education-divider"></div> -->
-
-            <!-- Education Entry 2 - SMP -->
-            <div class="education-entry" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                <div class="entry-logo-wrapper">
-                    <div class="entry-logo entry-logo-placeholder">
-                        <img src="./image/Education/NetAcad.webp" alt="Cisco Networking Academy">
-                    </div>
-                    <div class="entry-year">2025 &ndash; 2026</div>
-                </div>
-                <div class="entry-content">
-                    <h3 class="entry-school">Cisco Networking Academy</h3>
-                    <div class="entry-gpa">
-                        <ion-icon name="school"></ion-icon>
-                        <span>Status: <strong>PASS</strong></span>
-                    </div>
-                    <p class="entry-major">CCNA: Routing, Switching and Wireless Essentials (SRWE)</p>
-                    <p class="entry-major">CCNA: Enterprise Networking, Security, and Automation (ENSA)</p>
-                    <p class="entry-major">CCNP Enterprise: Core Networking (CORNET)</p>
-                    <p class="entry-desc">
-                        Menuntaskan pelatihan jaringan profesional dengan status Lulus (PASS) untuk tiga program utama: CCNA (SRWE & ENSA) dan CCNP Enterprise (CORNET). Memiliki kompetensi kuat dalam routing, switching, keamanan, otomatisasi, hingga pengelolaan infrastruktur jaringan skala enterprise.
-                    </p>
-                    <div class="entry-achievements">
-                        <a href="https://drive.google.com/file/d/1tSA3jYoIVN7msXYW3NMDugPbknGZGl91/view?usp=sharing" class="achievement-badge" aria-label="Sertifikat - CCNA SRWE" target="_blank">
-                        <ion-icon name="ribbon"></ion-icon>
-                        <span>Sertifikat - CCNA SRWE</span>
-                        </a>
-                        <a href="https://drive.google.com/file/d/107loxk0Y0BrDKpEKwM9IL5i3j7c5j-jP/view?usp=sharing" class="achievement-badge" aria-label="Sertifikat - CCNA ENSA" target="_blank">
-                        <ion-icon name="ribbon"></ion-icon>
-                        <span>Sertifikat - CCNA ENSA</span>
-                        </a>
-                        <a href="https://drive.google.com/file/d/1V3kKsRYhdAqeqYtisbMQyXMSNse6Ilw3/view?usp=sharing" class="achievement-badge" aria-label="Sertifikat - CCNP CORNET" target="_blank">
-                        <ion-icon name="ribbon"></ion-icon>
-                        <span>Sertifikat - CCNP CORNET</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </section>
-        <section id="skills">
-            <div class="information-skills" data-aos="fade-down" data-aos-offset="0" data-aos-once="true">
-                <span class="skills-tag">Expertise</span>
-                <h2>Core Skills</h2>
-                <p># I want to be expert #</p>
-            </div>
-            <div class="container-skills">
-                <div class="skill-card" data-aos="fade-up" data-aos-duration="800" data-aos-offset="0" data-aos-once="true">
-                    <div class="skill-icon">
-                        <img loading="lazy" src="/image/Skills/mikrotik.webp" alt="Mikrotik" width="120" height="120">
-                    </div>
-                    <h3 class="skill-name">Mikrotik</h3>
-                </div>
-                <div class="skill-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100" data-aos-offset="0" data-aos-once="true">
-                    <div class="skill-icon">
-                        <img loading="lazy" src="/image/Skills/cisco1.webp" alt="Cisco" width="120" height="120">
-                    </div>
-                    <h3 class="skill-name">Cisco</h3>
-                </div>
-                <div class="skill-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200" data-aos-offset="0" data-aos-once="true">
-                    <div class="skill-icon">
-                        <img loading="lazy" src="/image/Skills/tp-link.webp" alt="TP-Link" width="120" height="120">
-                    </div>
-                    <h3 class="skill-name">TP-Link</h3>
-                </div>
-                <div class="skill-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300" data-aos-offset="0" data-aos-once="true">
-                    <div class="skill-icon">
-                        <img loading="lazy" src="/image/Skills/wordpress.webp" alt="WordPress" width="120" height="120">
-                    </div>
-                    <h3 class="skill-name">WordPress</h3>
-                </div>
-                <div class="skill-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" data-aos-offset="0" data-aos-once="true">
-                    <div class="skill-icon">
-                        <img loading="lazy" src="/image/Skills/MySQL.webp" alt="MySQL" width="120" height="120">
-                    </div>
-                    <h3 class="skill-name">MySQL</h3>
-                </div>
-            </div>
-        </section>
-        <section id="experience">
-            <div class="information-experience" data-aos="fade-down" data-aos-offset="0" data-aos-once="true">
-                <span class="skills-tag">Experience</span>
-                <h2>Work Experience</h2>
-                <p># Professional Journey #</p>
-            </div>
-            <!-- Experience Tabs -->
-            <div class="experience-tabs">
-                <div class="experience-tab-slider"></div>
-                <button class="experience-tab experience-tab--active" type="button" data-tab="it" aria-label="Show IT experience">IT</button>
-                <button class="experience-tab" type="button" data-tab="retail" aria-label="Show Retail experience">Multifinance</button>
-            </div>
-            <div class="container-experience">
-                <!-- Experience Page 1 (IT) -->
-                <div class="experience-page experience-page--active" data-tab="it">
-                    <!-- Timeline Item 1 - Kiri -->
-                    <div class="timeline-item timeline-left" data-aos="fade-up" data-aos-duration="1000">
-                        <div class="timeline-content">
-                            <div class="timeline-card" data-experience-id="1">
-                                <div class="experience-header">
-                                    <div class="experience-title">
-                                        <h3>IT Head of Project Manager</h3>
-                                        <p class="company-name">PT Multiusaha Prioritas Bersama</p>
-                                        <p class="work-period">Desember 2023 - April 2024</p>
-                                    </div>
-                                    <div class="experience-badge">
-                                        <img loading="lazy" src="/image/Experience/PTMPB/PTMPB.webp" alt="PT Multiusaha Prioritas Bersama Logo" width="80" height="80">
-                                    </div>
-                                </div>
-                                <p class="experience-description">
-                                   PT Multiusaha Prioritas Bersama (MPB Group) adalah perusahaan induk yang mengelola berbagai unit usaha strategis, investasi, dan ekonomi kreatif di Indonesia.
-                                </p>
-                                <button class="view-experience-details" type="button" aria-label="View experience details">
-                                    <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
-                                    View Details
-                                </button>
-                            </div>
-                        </div>
-                        <div class="timeline-dot"></div>
-                    </div>
-                    <!-- Timeline Item 2 - Kanan -->
-                    <div class="timeline-item timeline-right" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                        <div class="timeline-content">
-                            <div class="timeline-card" data-experience-id="2">
-                                <div class="experience-header">
-                                    <div class="experience-title">
-                                        <h3>IT Support Specialist</h3>
-                                        <p class="company-name">PT Gamila Buana Nusantara</p>
-                                        <p class="work-period">April 2024 - Sekarang</p>
-                                    </div>
-                                    <div class="experience-badge">
-                                        <img loading="lazy" src="/image/Experience/PTGBN/PTGBN.png" alt="PT Gamila Buana Nusantara Logo" width="80" height="80">
-                                    </div>
-                                </div>
-                                <p class="experience-description">
-                                   PT Gamila Buana Nusantara adalah perusahaan solusi industrial terintegrasi yang melayani sektor pengeboran dan konstruksi
-                                </p>
-                                <button class="view-experience-details" type="button" aria-label="View experience details">
-                                    <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
-                                    View Details
-                                </button>
-                            </div>
-                        </div>
-                        <div class="timeline-dot"></div>
-                    </div>
-                </div>
-                <!-- Experience Page 2 (Retail) -->
-                <div class="experience-page" data-tab="retail">
-                    <!-- Timeline Item 3 - Kiri (Retail) -->
-                    <div class="timeline-item timeline-left" data-aos="fade-up" data-aos-duration="1000">
-                        <div class="timeline-content">
-                            <div class="timeline-card" data-experience-id="3">
-                                <div class="experience-header">
-                                    <div class="experience-title">
-                                        <h3>Sales Associate</h3>
-                                        <p class="company-name">PT Home Credit Indonesia (HCI)</p>
-                                        <p class="work-period">Oktober 2025 - Januari 2026</p>
-                                    </div>
-                                    <div class="experience-badge">
-                                        <img loading="lazy" src="./image/Experience/PTHCI/PTHCI.webp" alt="PT Home Credit Indonesia" width="80" height="80">
-                                    </div>
-                                </div>
-                                <p class="experience-description">
-                                   PT Home Credit Indonesia adalah perusahaan pembiayaan berbasis teknologi berizin OJK
-                                </p>
-                                <button class="view-experience-details" type="button" aria-label="View experience details">
-                                    <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
-                                    View Details
-                                </button>
-                            </div>
-                        </div>
-                        <div class="timeline-dot"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="certf">
-            <div class="information-certf" data-aos="fade-down" data-aos-offset="0" data-aos-once="true">
-                <span class="skills-tag">Credentials</span>
-                <h2>My Certifications</h2>
-                <p># Professional Recognition #</p>
-            </div>
-            <div class="certf-tabs">
-                <div class="certf-tab-slider"></div>
-                <button class="certf-tab certf-tab--active" type="button" data-cert-page="all" aria-label="Show all certificates">All</button>
-                <button class="certf-tab" type="button" data-cert-page="2" aria-label="Show Cisco certificates">Cisco</button>
-                <button class="certf-tab" type="button" data-cert-page="1" aria-label="Show MikroTik certificates">MikroTik</button>
-            </div>
-            <div class="container-certf">
-                <!-- MIKROTIK PAGE -->
-                <div class="certf-page" data-page="1">
-                    <div class="certf-card" data-aos="fade-up">
-                        <div class="certf-card-inner">
-                            <div class="certf-image-wrapper">
-                                <img loading="lazy" src="/image/Certifications/Mikrotik Adm.webp" alt="Mikrotik Administration" width="1280" height="729">
-
-                            </div>
-                            <div class="certf-info">
-                                <h3>Mikrotik Administration</h3>
-                                <div class="certf-links">
-                                    <a href="#" class="view-cert-image" aria-label="View certificate image"><ion-icon name="eye-outline" aria-hidden="true"></ion-icon></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="certf-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="certf-card-inner">
-                            <div class="certf-image-wrapper">
-                                <img loading="lazy" src="/image/Certifications/Bootcamp MikroTik.webp" alt="Bootcamp MikroTik" width="1280" height="729">
-                            </div>
-                            <div class="certf-info">
-                                <h3>Bootcamp MikroTik by IDN</h3>
-                                <div class="certf-links">
-                                    <a href="#" class="view-cert-image" aria-label="View certificate image"><ion-icon name="eye-outline" aria-hidden="true"></ion-icon></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ALL CERTIFICATES PAGE -->
-                <div class="certf-page certf-page--active" data-page="all">
-                    <div class="certf-card" data-aos="fade-up">
-                        <div class="certf-card-inner">
-                            <div class="certf-image-wrapper">
-                                <img loading="lazy" src="/image/Certifications/Network Fundamental.webp" alt="Network Fundamental" width="1280" height="729">
-                            </div>
-                            <div class="certf-info">
-                                <h3>Network Fundamental</h3>
-                                <div class="certf-links">
-                                    <a href="#" class="view-cert-image" aria-label="View certificate image"><ion-icon name="eye-outline" aria-hidden="true"></ion-icon></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="certf-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="certf-card-inner">
-                            <div class="certf-image-wrapper">
-                                <img loading="lazy" src="/image/Certifications/Mikrotik Adm.webp" alt="Mikrotik Administration" width="1280" height="729">
-
-                            </div>
-                            <div class="certf-info">
-                                <h3>Mikrotik Administration</h3>
-                                <div class="certf-links">
-                                    <a href="#" class="view-cert-image" aria-label="View certificate image"><ion-icon name="eye-outline" aria-hidden="true"></ion-icon></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="certf-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="certf-card-inner">
-                            <div class="certf-image-wrapper">
-                                <img loading="lazy" src="/image/Certifications/CCNA.webp" alt="Cisco CCNA 200-301" width="1280" height="729">
-                            </div>
-                            <div class="certf-info">
-                                <h3>Cisco CCNA 200-301</h3>
-                                <div class="certf-links">
-                                    <a href="#" class="view-cert-image" aria-label="View certificate image"><ion-icon name="eye-outline" aria-hidden="true"></ion-icon></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="certf-card" data-aos="fade-up" data-aos-delay="150">
-                        <div class="certf-card-inner">
-                            <div class="certf-image-wrapper">
-                                <img loading="lazy" src="/image/Certifications/Routing Advance EIGRP, OSPF, IS-IS.webp" alt="Cisco Routing EIGRP, OSPF, IS-IS" width="1280" height="729">
-                            </div>
-                            <div class="certf-info">
-                                <h3>Cisco Routing EIGRP, OSPF, IS-IS</h3>
-                                <div class="certf-links">
-                                    <a href="#" class="view-cert-image" aria-label="View certificate image"><ion-icon name="eye-outline" aria-hidden="true"></ion-icon></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="certf-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="certf-card-inner">
-                            <div class="certf-image-wrapper">
-                                <img loading="lazy" src="/image/Certifications/Bootcamp MikroTik.webp" alt="Bootcamp MikroTik" width="1280" height="729">
-                            </div>
-                            <div class="certf-info">
-                                <h3>Bootcamp MikroTik by ID Networkers</h3>
-                                <div class="certf-links">
-                                    <a href="#" class="view-cert-image" aria-label="View certificate image"><ion-icon name="eye-outline" aria-hidden="true"></ion-icon></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="certf-card" data-aos="fade-up" data-aos-delay="250">
-                        <div class="certf-card-inner">
-                            <div class="certf-image-wrapper">
-                                <img loading="lazy" src="/image/Certifications/Network Security.webp" alt="Network Security" width="1280" height="729">
-                            </div>
-                            <div class="certf-info">
-                                <h3>Network Security</h3>
-                                <div class="certf-links">
-                                    <a href="#" class="view-cert-image" aria-label="View certificate image"><ion-icon name="eye-outline" aria-hidden="true"></ion-icon></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="certf-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="certf-card-inner">
-                            <div class="certf-image-wrapper">
-                                <img loading="lazy" src="/image/Certifications/Fortiget Certification.webp" alt="Fortigate Administrator" width="1280" height="729">
-
-                            </div>
-                            <div class="certf-info">
-                                <h3>Fortigate Administrator</h3>
-                                <div class="certf-links">
-                                    <a href="#" class="view-cert-image" aria-label="View certificate image"><ion-icon name="eye-outline" aria-hidden="true"></ion-icon></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="certf-card" data-aos="fade-up" data-aos-delay="350">
-                        <div class="certf-card-inner">
-                            <div class="certf-image-wrapper">
-                                <img loading="lazy" src="/image/Certifications/CCNA SRWE.webp" alt="CCNA SRWE" width="1280" height="729">
- 
-                            </div>
-                            <div class="certf-info">
-                                <h3>Cisco CCNA: Routing, Switching, and Wireless Essentials</h3>
-                                <div class="certf-links">
-                                    <a href="#" class="view-cert-image" aria-label="View certificate image"><ion-icon name="eye-outline" aria-hidden="true"></ion-icon></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="certf-card" data-aos="fade-up" data-aos-delay="400">
-                        <div class="certf-card-inner">
-                            <div class="certf-image-wrapper">
-                                <img loading="lazy" src="/image/Certifications/CCNA ENSA.webp" alt="CCNA ENSA" width="1280" height="729">
-
-                            </div>
-                            <div class="certf-info">
-                                <h3>Cisco CCNA: Enterprise Networking, Security, and Automation</h3>
-                                <div class="certf-links">
-                                    <a href="#" class="view-cert-image" aria-label="View certificate image"><ion-icon name="eye-outline" aria-hidden="true"></ion-icon></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="certf-card" data-aos="fade-up" data-aos-delay="450">
-                        <div class="certf-card-inner">
-                            <div class="certf-image-wrapper">
-                                <img loading="lazy" src="/image/Certifications/Cisco CCNP Enterprise Core Networking.webp" alt="CCNP Core" width="1280" height="729">
-
-                            </div>
-                            <div class="certf-info">
-                                <h3>Cisco CCNP Enterprise: Core Networking</h3>
-                                <div class="certf-links">
-                                    <a href="#" class="view-cert-image" aria-label="View certificate image"><ion-icon name="eye-outline" aria-hidden="true"></ion-icon></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CISCO PAGE -->
-                <div class="certf-page" data-page="2">
-                    <div class="certf-card" data-aos="fade-up">
-                        <div class="certf-card-inner">
-                            <div class="certf-image-wrapper">
-                                <img loading="lazy" src="/image/Certifications/CCNA.webp" alt="Cisco CCNA 200-301" width="1280" height="729">
-
-                            </div>
-                            <div class="certf-info">
-                                <h3>Cisco CCNA 200-301</h3>
-                                <div class="certf-links">
-                                    <a href="#" class="view-cert-image" aria-label="View certificate image"><ion-icon name="eye-outline" aria-hidden="true"></ion-icon></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="certf-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="certf-card-inner">
-                            <div class="certf-image-wrapper">
-                                <img loading="lazy" src="/image/Certifications/Routing Advance EIGRP, OSPF, IS-IS.webp" alt="Cisco Routing EIGRP, OSPF, IS-IS" width="1280" height="729">
-
-                            </div>
-                            <div class="certf-info">
-                                <h3>Cisco Routing EIGRP, OSPF, IS-IS</h3>
-                                <div class="certf-links">
-                                    <a href="#" class="view-cert-image" aria-label="View certificate image"><ion-icon name="eye-outline" aria-hidden="true"></ion-icon></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="certf-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="certf-card-inner">
-                            <div class="certf-image-wrapper">
-                                <img loading="lazy" src="/image/Certifications/Network Security.webp" alt="Network Security" width="1280" height="729">
-                            </div>
-                            <div class="certf-info">
-                                <h3>Network Security</h3>
-                                <div class="certf-links">
-                                    <a href="#" class="view-cert-image" aria-label="View certificate image"><ion-icon name="eye-outline" aria-hidden="true"></ion-icon></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="certf-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="certf-card-inner">
-                            <div class="certf-image-wrapper">
-                                <img loading="lazy" src="/image/Certifications/CCNA SRWE.webp" alt="CCNA SRWE" width="1280" height="729">
-                            </div>
-                            <div class="certf-info">
-                                <h3>Cisco CCNA: Routing, Switching, and Wireless Essentials</h3>
-                                <div class="certf-links">
-                                    <a href="#" class="view-cert-image" aria-label="View certificate image"><ion-icon name="eye-outline" aria-hidden="true"></ion-icon></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="certf-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="certf-card-inner">
-                            <div class="certf-image-wrapper">
-                                <img loading="lazy" src="/image/Certifications/CCNA ENSA.webp" alt="CCNA ENSA" width="1280" height="729">
-
-                            </div>
-                            <div class="certf-info">
-                                <h3>Cisco CCNA: Enterprise Networking, Security, and Automation</h3>
-                                <div class="certf-links">
-                                    <a href="#" class="view-cert-image" aria-label="View certificate image"><ion-icon name="eye-outline" aria-hidden="true"></ion-icon></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="certf-card" data-aos="fade-up" data-aos-delay="400">
-                        <div class="certf-card-inner">
-                            <div class="certf-image-wrapper">
-                                <img loading="lazy" src="/image/Certifications/Cisco CCNP Enterprise Core Networking.webp" alt="CCNP Core" width="1280" height="729">
-
-                            </div>
-                            <div class="certf-info">
-                                <h3>Cisco CCNP Enterprise: Core Networking</h3>
-                                <div class="certf-links">
-                                    <a href="#" class="view-cert-image" aria-label="View certificate image"><ion-icon name="eye-outline" aria-hidden="true"></ion-icon></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="project">
-            <div class="information-project" data-aos="fade-down" data-aos-offset="0" data-aos-once="true">
-                <span class="skills-tag">Portfolio</span>
-                <h2>Featured Projects</h2>
-                <p># What I've Built #</p>
-            </div>
-            
-            <div class="project-tabs">
-                <div class="project-tab-slider"></div>
-                <button class="project-tab project-tab--active" type="button" data-project-page="all" aria-label="Show all projects">All</button>
-                <button class="project-tab" type="button" data-project-page="network" aria-label="Show networking projects">Networking</button>
-                <button class="project-tab" type="button" data-project-page="web" aria-label="Show web development projects">Web</button>
-            </div>
-
-            <div class="container-project">
-                <!-- ALL PROJECTS -->
-                <div class="project-page project-page--active" data-page="all">
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="project-card-inner">
-                            <div class="project-image-wrapper">
-                                <img loading="lazy" src="./image/Project/WebProv1.webp" alt="Website Portofolio v1" width="1280" height="720">
-                            </div>
-                            <div class="project-info">
-                                <h3>Website Portofolio v1</h3>
-                                <div class="project-links">
-                            <a href="https://sipalingwebsite.netlify.app/" aria-label="View project details"><ion-icon name="eye-outline" aria-hidden="true"></ion-icon></a>
-                        </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="project-card-inner">
-                            <div class="project-image-wrapper">
-                                <img loading="lazy" src="./image/Project/Ta Sekolah.webp" alt="TA Website Sekolah" width="1280" height="720">
-                            </div>
-                            <div class="project-info">
-                                <h3>TA Website Sekolah</h3>
-                                <div class="project-links">
-                                    <a href="https://web-tugas-akhir.netlify.app/" title="View Details"><ion-icon name="eye-outline"></ion-icon></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="project-card-inner">
-                            <div class="project-image-wrapper">
-                                <img loading="lazy" src="./image/Project/Dappa Note.webp" alt="Dappa Note" width="1280" height="720">
-                            </div>
-                            <div class="project-info">
-                                <h3>Dappa Note</h3>
-                                <div class="project-links">
-                            <a href="https://aplikasi-catatan.vercel.app/" aria-label="View project details"><ion-icon name="eye-outline" aria-hidden="true"></ion-icon></a>
-                            <a href="https://github.com/siidappa/aplikasi-catatan" aria-label="View source code on GitHub"><ion-icon name="logo-github" aria-hidden="true"></ion-icon></a>
-                        </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="project-card-inner">
-                            <div class="project-image-wrapper">
-                                <img loading="lazy" src="./image/Project/MariCoding.webp" alt="MariCoding" width="1280" height="720">
-                            </div>
-                            <div class="project-info">
-                                <h3>MariCoding.com</h3>
-                                <div class="project-links">
-                                    <a href="https://siidappa.github.io/IDCAMP/" title="View Details"><ion-icon name="eye-outline"></ion-icon></a>
-                                    <a href="https://github.com/siidappa/IDCAMP" title="View Code"><ion-icon name="logo-github"></ion-icon></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="project-card-inner">
-                            <div class="project-image-wrapper">
-                                <img loading="lazy" src="./image/Project/Pengelolaan Buku.webp" alt="Pengelolaan Buku" width="1280" height="720">
-                            </div>
-                            <div class="project-info">
-                                <h3>Pengelolaan Buku</h3>
-                                <div class="project-links">
-                                    <a href="https://pengelolaan-buku.vercel.app/" title="View Details"><ion-icon name="eye-outline"></ion-icon></a>
-                                    <a href="https://github.com/siidappa/pengelolaan-buku" title="View Code"><ion-icon name="logo-github"></ion-icon></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="project-card-inner">
-                            <div class="project-image-wrapper">
-                                <img loading="lazy" src="./image/Project/BGP & Static Routing.webp" alt="BGP & Static Routing" width="1280" height="720">
-                            </div>
-                            <div class="project-info">
-                                <h3>BGP & Static Routing</h3>
-                                <div class="project-links">
-                                    <a href="#" class="view-project-image" aria-label="View project image"><ion-icon name="eye-outline" aria-hidden="true"></ion-icon></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="project-card-inner">
-                            <div class="project-image-wrapper">
-                                <img loading="lazy" src="./image/Project/OSPF-IA.webp" alt="OSPF-IA" width="1280" height="720">
-                            </div>
-                            <div class="project-info">
-                                <h3>OSPF Inter-Area</h3>
-                                <div class="project-links">
-                                    <a href="#" class="view-project-image" aria-label="View project image"><ion-icon name="eye-outline" aria-hidden="true"></ion-icon></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="project-card-inner">
-                            <div class="project-image-wrapper">
-                                <img loading="lazy" src="./image/Project/Redistribute.webp" alt="Redistribute" width="1280" height="720">
-                            </div>
-                            <div class="project-info">
-                                <h3>Route Redistribution</h3>
-                                <div class="project-links">
-                                    <a href="#" class="view-project-image" aria-label="View project image"><ion-icon name="eye-outline" aria-hidden="true"></ion-icon></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="project-card-inner">
-                            <div class="project-image-wrapper">
-                                <img loading="lazy" src="./image/Project/Routing-dan-Switching.webp" alt="Routing & Switching" width="1280" height="720">
-                            </div>
-                            <div class="project-info">
-                                <h3>Enterprise Routing & Switching</h3>
-                                <div class="project-links">
-                                    <a href="#" class="view-project-image" aria-label="View project image"><ion-icon name="eye-outline" aria-hidden="true"></ion-icon></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- NETWORK PROJECTS -->
-                <div class="project-page" data-page="network">
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="project-card-inner">    
-                            <div class="project-image-wrapper">
-                                <img loading="lazy" src="./image/Project/BGP & Static Routing.webp" alt="BGP & Static Routing" width="1280" height="720">
-                            </div>
-                            <div class="project-info">
-                                <h3>BGP & Static Routing</h3>
-                                <div class="project-links">
-                                    <a href="#" class="view-project-image" aria-label="View project image"><ion-icon name="eye-outline" aria-hidden="true"></ion-icon></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="project-card-inner">
-                            <div class="project-image-wrapper">
-                                <img loading="lazy" src="./image/Project/OSPF-IA.webp" alt="OSPF-IA" width="1280" height="720">
-                            </div>
-                            <div class="project-info">
-                                <h3>OSPF Inter-Area</h3>
-                                <div class="project-links">
-                                    <a href="#" class="view-project-image" aria-label="View project image"><ion-icon name="eye-outline" aria-hidden="true"></ion-icon></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="project-card-inner">
-                            <div class="project-image-wrapper">
-                                <img loading="lazy" src="./image/Project/Redistribute.webp"  alt="Redistribute">
-                            </div>
-                            <div class="project-info">
-                                <h3>Route Redistribution</h3>
-                                <div class="project-links">
-                                    <a href="#" class="view-project-image" aria-label="View project image"><ion-icon name="eye-outline" aria-hidden="true"></ion-icon></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="project-card-inner">
-                            <div class="project-image-wrapper">
-                                <img loading="lazy" src="./image/Project/Routing-dan-Switching.webp" alt="Routing & Switching" width="1280" height="720">
-                            </div>
-                            <div class="project-info">
-                                <h3>Enterprise Routing & Switching</h3>
-                                <div class="project-links">
-                                    <a href="#" class="view-project-image" aria-label="View project image"><ion-icon name="eye-outline" aria-hidden="true"></ion-icon></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- WEB PROJECTS -->
-                <div class="project-page" data-page="web">
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="project-card-inner">
-                            <div class="project-image-wrapper">
-                                <img loading="lazy" src="./image/Project/WebProv1.webp" alt="Website Portofolio v1" width="1280" height="720">
-                            </div>
-                            <div class="project-info">
-                                <h3>Website Portofolio v1</h3>
-                                <div class="project-links">
-                            <a href="https://sipalingwebsite.netlify.app/" aria-label="View project details"><ion-icon name="eye-outline" aria-hidden="true"></ion-icon></a>
-                        </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="project-card-inner">
-                            <div class="project-image-wrapper">
-                                <img loading="lazy" src="./image/Project/Ta Sekolah.webp" alt="TA Website Sekolah" width="1280" height="720">
-                            </div>
-                            <div class="project-info">
-                                <h3>TA Website Sekolah</h3>
-                                <div class="project-links">
-                                    <a href="https://web-tugas-akhir.netlify.app/" title="View Details"><ion-icon name="eye-outline"></ion-icon></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="project-card-inner">
-                            <div class="project-image-wrapper">
-                                <img loading="lazy" src="./image/Project/Dappa Note.webp" alt="Dappa Note" width="1280" height="720">
-                            </div>
-                            <div class="project-info">
-                                <h3>Dappa Note</h3>
-                                <div class="project-links">
-                            <a href="https://aplikasi-catatan.vercel.app/" aria-label="View project details"><ion-icon name="eye-outline" aria-hidden="true"></ion-icon></a>
-                            <a href="https://github.com/siidappa/aplikasi-catatan" aria-label="View source code on GitHub"><ion-icon name="logo-github" aria-hidden="true"></ion-icon></a>
-                        </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="project-card-inner">
-                            <div class="project-image-wrapper">
-                                <img loading="lazy" src="./image/Project/MariCoding.webp" alt="MariCoding" width="1280" height="720">
-                            </div>
-                            <div class="project-info">
-                                <h3>MariCoding.com</h3>
-                                <div class="project-links">
-                                    <a href="https://siidappa.github.io/IDCAMP/" title="View Details"><ion-icon name="eye-outline"></ion-icon></a>
-                                    <a href="https://github.com/siidappa/IDCAMP" title="View Code"><ion-icon name="logo-github"></ion-icon></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="project-card-inner">
-                            <div class="project-image-wrapper">
-                                <img loading="lazy" src="./image/Project/Pengelolaan Buku.webp" alt="Pengelolaan Buku" width="1280" height="720">
-                            </div>
-                            <div class="project-info">
-                                <h3>Pengelolaan Buku</h3>
-                                <div class="project-links">
-                                    <a href="https://pengelolaan-buku.vercel.app/" title="View Details"><ion-icon name="eye-outline"></ion-icon></a>
-                                    <a href="https://github.com/siidappa/pengelolaan-buku" title="View Code"><ion-icon name="logo-github"></ion-icon></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="social-media">
-            <div class="information-social" data-aos="fade-down" data-aos-offset="0" data-aos-once="true">
-                <span class="skills-tag">Social Media</span>
-                <h2>Let's Connect</h2>
-                <p># Follow Me on Social Media #</p>
-            </div>
-            <div class="container-social">
-                <div class="social-wrapper">
-                    <!-- Social Media Logos (Left Side) -->
-                    <div class="social-logos">
-                        <div class="social-logo-item active" data-social="linkedin">
-                            <div class="logo-container">
-                                <ion-icon name="logo-linkedin" aria-hidden="true"></ion-icon>
-                            </div>
-                            <span>LinkedIn</span>
-                        </div>
-                        <div class="social-logo-item" data-social="tiktok">
-                            <div class="logo-container">
-                                <ion-icon name="logo-tiktok" aria-hidden="true"></ion-icon>
-                            </div>
-                            <span>TikTok</span>
-                        </div>
-                        <div class="social-logo-item" data-social="instagram">
-                            <div class="logo-container">
-                                <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
-                            </div>
-                            <span>Instagram</span>
-                        </div>
-                    </div>
-                    <!-- Social Media Details (Right Side) -->
-                    <div class="social-details">
-                        <div class="detail-content active" data-detail="linkedin">
-                            <div class="detail-header">
-                                <div class="detail-icon linkedin">
-                                    <ion-icon name="logo-linkedin" aria-hidden="true"></ion-icon>
-                                </div>
-                                <div class="detail-title">
-                                    <h3>LinkedIn</h3>
-                                    <p class="username">Daffa Naufal Fachrezi</p>
-                                </div>
-                            </div>
-                            <div class="detail-stats">
-                                <div class="stat-item">
-                                    <div class="stat-value">500+</div>
-                                    <div class="stat-label">Connections</div>
-                                </div>
-                                <div class="stat-item">
-                                    <div class="stat-value">799</div>
-                                    <div class="stat-label">Followers</div>
-                                </div>
-                            </div>
-                            <div class="detail-bio">
-                                <h4>About</h4>
-                                <p>Mari terhubung di LinkedIn untuk memperluas jaringan profesional dan peluang kolaborasi bersama</p>
-                            </div>
-                            <a href="https://linkedin.com/in/daffanaufal09" target="_blank" class="visit-btn">
-                                <ion-icon name="open-outline" aria-hidden="true"></ion-icon>
-                                Visit Profile
-                            </a>
-                        </div>
-                        <div class="detail-content" data-detail="tiktok">
-                            <div class="detail-header">
-                                <div class="detail-icon tiktok">
-                                    <ion-icon name="logo-tiktok" aria-hidden="true"></ion-icon>
-                                </div>
-                                <div class="detail-title">
-                                    <h3>TikTok</h3>
-                                    <p class="username">@lookingfordapp</p>
-                                </div>
-                            </div>
-                            <div class="detail-stats">
-                                <div class="stat-item">
-                                    <div class="stat-value">16</div>
-                                    <div class="stat-label">Videos</div>
-                                </div>
-                                <div class="stat-item">
-                                    <div class="stat-value">981</div>
-                                    <div class="stat-label">Followers</div>
-                                </div>
-                                <div class="stat-item">
-                                    <div class="stat-value">62,8k</div>
-                                    <div class="stat-label">Likes</div>
-                                </div>
-                            </div>
-                            <div class="detail-bio">
-                                <h4>About</h4>
-                                <p>Mampir ke TikTok saya juga ya untuk eksplorasi berbagai konten kreatif seputar Information Technology</p>
-                            </div>
-                            <a href="https://tiktok.com/@lookingfordapp" target="_blank" class="visit-btn">
-                                <ion-icon name="open-outline" aria-hidden="true"></ion-icon>
-                                Visit Profile
-                            </a>
-                        </div>
-                        <div class="detail-content" data-detail="instagram">
-                            <div class="detail-header">
-                                <div class="detail-icon instagram">
-                                    <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
-                                </div>
-                                <div class="detail-title">
-                                    <h3>Instagram</h3>
-                                    <p class="username">@theonlydappp</p>
-                                </div>
-                            </div>
-                            <div class="detail-stats">
-                                <div class="stat-item">
-                                    <div class="stat-value">18</div>
-                                    <div class="stat-label">Posts</div>
-                                </div>
-                                <div class="stat-item">
-                                    <div class="stat-value">351</div>
-                                    <div class="stat-label">Followers</div>
-                                </div>
-                                <div class="stat-item">
-                                    <div class="stat-value">13,6k</div>
-                                    <div class="stat-label">Screening</div>
-                                </div>
-                            </div>
-                            <div class="detail-bio">
-                                <h4>About</h4>
-                                <p>Yuk, mutual-an di Instagram buat daily updates, dan cerita di balik layar project saya</p>
-                            </div>
-                            <a href="https://instagram.com/theonlydappp" target="_blank" class="visit-btn">
-                                <ion-icon name="open-outline" aria-hidden="true"></ion-icon>
-                                Visit Profile
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="form-message">
-            <div class="information-contact" data-aos="fade-down" data-aos-offset="0" data-aos-once="true">
-                <span class="skills-tag">Connect</span>
-                <h2>Get In Touch</h2>
-                <p># Let's Connect and Collaborate #</p>
-            </div>
-            
-            <div class="container-contact">
-                <div class="contact-wrapper">
-                    <!-- Contact Info Side -->
-                    <div class="contact-info" data-aos="fade-up" data-aos-offset="0" data-aos-once="true">
-                        <div class="info-card">
-                            <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
-                            <div class="info-text">
-                                <h4>Email</h4>
-                                <a href="mailto:contact.daffanaufal@gmail.com">contact.daffanaufal@gmail.com</a>
-                            </div>
-                        </div>
-                        <div class="info-card">
-                            <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
-                            <div class="info-text">
-                                <h4>Lokasi</h4>
-                                <p>Bekasi, Indonesia</p>
-                            </div>
-                        </div>
-                        <div class="info-card">
-                            <ion-icon name="logo-linkedin" aria-hidden="true"></ion-icon>
-                            <div class="info-text">
-                                <h4>LinkedIn</h4>
-                                <a href="#">Daffa Naufal Fachrezi</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Form Side -->
-                    <div class="contact-form-container" data-aos="fade-up" data-aos-offset="0" data-aos-once="true">
-                        <form id="contactForm" class="contact-form">
-                            <div class="form-group">
-                            <label for="nama">Nama Lengkap</label>
-                            <div class="input-wrapper">
-                                <ion-icon name="person-outline"></ion-icon>
-                                <input type="text" id="nama" name="nama" placeholder="Masukkan nama kamu" required>
-                            </div>
-                            </div>
-                            <div class="form-group">
-                            <label for="emailFrom">Email</label>
-                            <div class="input-wrapper">
-                                <ion-icon name="mail-outline"></ion-icon>
-                                <input type="email" id="emailFrom" name="emailFrom" placeholder="Masukkan email kamu" required>
-                            </div>
-                            </div>
-                            <div class="form-group">
-                            <label for="alamat">Alamat</label>
-                            <div class="input-wrapper">
-                                <ion-icon name="location-outline"></ion-icon>
-                                <input type="text" id="alamat" name="alamat" placeholder="Masukkan alamat kamu" required>
-                            </div>
-                            </div>
-                            <div class="form-group">
-                            <label for="noTelp">No Telepon / WhatsApp</label>
-                            <div class="input-wrapper">
-                                <ion-icon name="call-outline"></ion-icon>
-                                <input type="tel" id="noTelp" name="noTelp" placeholder="Masukkan nomor telepon kamu" required>
-                            </div>
-                            </div>
-                            <div class="form-group">
-                            <label for="pesan">Pesan</label>
-                            <div class="input-wrapper textarea-wrapper">
-                                <ion-icon name="chatbox-ellipses-outline"></ion-icon>
-                                <textarea id="pesan" name="pesan" placeholder="Tulis pesan kamu..." required rows="5"></textarea>
-                            </div>
-                            </div>
-                            <button type="submit" class="submit-btn">
-                                Kirim Pesan
-                                <ion-icon name="send-outline"></ion-icon>
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
     
-    <footer>
-        <div class="footer-container">
-            <div class="footer-content">
-                <!-- About Section -->
-                <div class="footer-section footer-about">
-                    <h3>Daffa Naufal Fachrezi</h3>
-                    <p>Network Engineer berpengalaman dengan passion dalam network design dan architecture. Terus belajar dan berinovasi untuk mencapai excellence.</p>
-                </div>
-
-                <!-- Quick Links -->
-                <div class="footer-section">
-                    <h4>Navigasi</h4>
-                    <ul class="footer-links">
-                        <li><a href="#myhome">Beranda</a></li>
-                        <li><a href="#about-me">Tentang Saya</a></li>
-                        <li><a href="#skills">Keahlian</a></li>
-                        <li><a href="#experience">Pengalaman</a></li>
-                        <li><a href="#certf">Sertifikat</a></li>
-                        <li><a href="#project">Proyek</a></li>
-                    </ul>
-                </div>
-                
-                <div class="social-links">
-                        <a href="https://instagram.com/theonlydappp" target="_blank" aria-label="Instagram" class="social-icon">
-                            <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
-                        </a>
-                        <a href="https://github.com/siidappa" target="_blank" aria-label="GitHub" class="social-icon">
-                            <ion-icon name="logo-github" aria-hidden="true"></ion-icon>
-                        </a>
-                        <a href="https://www.tiktok.com/@lookingfordapp" target="_blank" aria-label="TikTok" class="social-icon">
-                            <ion-icon name="logo-tiktok" aria-hidden="true"></ion-icon>
-                        </a>
-                    </div>
+    <div class="container">
+        <div class="logo">KaryaDaffa</div>
+        
+        <div class="coming-soon-badge">🔥 Almost There</div>
+        
+        <h1>Website Portofolio<br>Akan Launching</h1>
+        
+        <p class="subtitle">
+            Bersiaplah! Website portofolio profesional Daffa akan segera hadir dengan desain modern dan pengalaman menarik.
+            Tunggu tanggalnya dan jangan sampai ketinggalan! 🚀
+        </p>
+        
+        <div class="countdown">
+            <div class="countdown-item">
+                <div class="countdown-number" id="days">00</div>
+                <div class="countdown-label">Hari</div>
             </div>
-
-            <!-- Copyright Bar -->
-            <div class="footer-bottom">
-                <p class="copyright-text">
-                    <span class="desktop-only">&copy; <span id="currentYearDesktop"></span> Daffa Naufal Fachrezi | Network Engineer | Created with <span class="heart">❤️</span> by Daffa</span>
-                    <span class="mobile-only">&copy; <span id="currentYearMobile"></span> | Created with <span class="heart">❤️</span> | Daffa</span>
-                </p>
+            <div class="countdown-item">
+                <div class="countdown-number" id="hours">00</div>
+                <div class="countdown-label">Jam</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="minutes">00</div>
+                <div class="countdown-label">Menit</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="seconds">00</div>
+                <div class="countdown-label">Detik</div>
             </div>
         </div>
-    </footer>
-
-    <button id="backToTop" class="btn-back-to-top" name="backToTop" aria-label="Back to top">
-        <ion-icon name="arrow-up-circle-outline" aria-hidden="true"></ion-icon>
-    </button>
-
-    <!-- Custom Notification Popups -->
-    <div id="notificationContainer" class="notification-container"></div>
-
-    <!-- Experience Detail Modal -->
-    <div class="experience-modal-overlay" id="experienceModal">
-        <div class="experience-modal">
-            <button class="experience-modal-close" id="closeExperienceModal" aria-label="Close">
-                <ion-icon name="close-outline"></ion-icon>
-            </button>
-            <div class="experience-modal-content">
-                <div class="experience-modal-content-inner">
-                    <div class="experience-detail-header">
-                        <div class="experience-logo-wrapper">
-                            <img id="modal-experience-logo" src="" alt="Company Logo">
-                        </div>
-                        <div class="experience-header-info">
-                            <h2 id="modal-experience-role"></h2>
-                            <p id="modal-experience-company" class="company-name"></p>
-                            <p id="modal-experience-period" class="work-period"></p>
-                        </div>
-                    </div>
-
-                    <div class="experience-detail-sections">
-                        <section class="detail-section">
-                            <h2>
-                                <ion-icon name="business-outline"></ion-icon>
-                                About the Company
-                            </h2>
-                            <p id="modal-experience-about-company"></p>
-                        </section>
-                        
-                        <section class="detail-section">
-                            <h2>
-                                <ion-icon name="information-circle-outline"></ion-icon>
-                                About This Role
-                            </h2>
-                            <p id="modal-experience-description"></p>
-                        </section>
-
-                        <section class="detail-section">
-                            <h2>
-                                <ion-icon name="briefcase-outline"></ion-icon>
-                                Job Description & Responsibilities
-                            </h2>
-                            <ul id="modal-experience-responsibilities"></ul>
-                        </section>
-
-                        <section class="detail-section">
-                            <h2>
-                                <ion-icon name="trophy-outline"></ion-icon>
-                                Key Achievements
-                            </h2>
-                            <ul id="modal-experience-achievements"></ul>
-                        </section>
-
-                        <section class="detail-section">
-                            <h2>
-                                <ion-icon name="code-slash-outline"></ion-icon>
-                                Skills Used
-                            </h2>
-                            <div id="modal-experience-skills" class="skills-grid"></div>
-                        </section>
-
-                        <section class="detail-section">
-                            <h2>
-                                <ion-icon name="images-outline"></ion-icon>
-                                Experience Gallery
-                            </h2>
-                            <div id="modal-experience-gallery" class="gallery-grid"></div>
-                        </section>
-                    </div>
-                </div>
+        
+        <div class="launch-date">
+            <div class="launch-icon">🚀</div>
+            <div class="launch-text">
+                <span>Tanggal Launching</span>
+                <strong>10 Juli 2026</strong>
             </div>
+        </div>
+        
+        <div class="social-links">
+            <a href="https://instagram.com/theonlydappp" target="_blank" aria-label="Instagram" style="text-decoration: none;">
+                <span>📷</span>
+            </a>
+            <a href="https://github.com/siidappa" target="_blank" aria-label="GitHub" style="text-decoration: none;">
+                <span>💻</span>
+            </a>
+            <a href="https://www.tiktok.com/@lookingfordapp" target="_blank" aria-label="TikTok" style="text-decoration: none;">
+                <span>🎵</span>
+            </a>
         </div>
     </div>
-
-    <!-- Scripts yang dipindahkan ke bagian bawah agar tidak render-blocking -->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="./Minify/app-minify.js"></script>
-    <script src="experience-data.js"></script>
-    <!-- <script src="app.js"></script> -->
-    <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
+    
     <script>
-        window.addEventListener('load', function() {
-            // Logika Popup Selamat Datang
-            const welcomePopup = document.getElementById('welcomePopup');
-            setTimeout(() => {
-                welcomePopup.classList.add('hide');
-                // Reset class AOS terlebih dahulu
-                document.querySelectorAll('[data-aos]').forEach(el => {
-                    el.classList.remove('aos-animate', 'aos-init');
-                });
-                // Inisialisasi AOS SETELAH popup selesai agar menghitung posisi elemen dengan benar
-                if (typeof AOS !== 'undefined') {
-                    AOS.init({
-                        once: true,
-                        offset: 0,
-                        duration: 800,
-                        easing: 'ease-out-cubic',
-                        startEvent: 'DOMContentLoaded'
-                    });
-                    AOS.refreshHard();
-                }
+        function updateCountdown() {
+            const launchDate = new Date('July 10, 2026 09:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = launchDate - now;
+            
+            if (distance > 0) {
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
                 
-                // Panggil animasi mengetik setelah popup selesai
-                if (typeof typeWriter === 'function') {
-                    typeWriter();
-                }
-                
-                // Opsional: Hapus dari DOM setelah animasi selesai
-                setTimeout(() => {
-                    welcomePopup.remove();
-                }, 600);
-            }, 1900);
-        });
-    </script>
-    <!-- Structured Data / Schema.org -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Daffa Naufal Fachrezi",
-      "givenName": "Daffa",
-      "familyName": "Naufal Fachrezi",
-      "jobTitle": ["Network Engineer", "IT Support Specialist", "IT Head of Project Manager"],
-      "url": "https://karyadaffa.my.id/",
-      "image": "https://karyadaffa.my.id/image/me/Me.avif",
-      "sameAs": [
-        "https://instagram.com/theonlydappp",
-        "https://github.com/siidappa",
-        "https://www.tiktok.com/@lookingfordapp",
-        "https://linkedin.com/in/daffanaufal09"
-      ],
-      "description": "Daffa Naufal Fachrezi - Network Engineer profesional dengan pengalaman mengelola infrastruktur jaringan, sertifikat Cisco & MikroTik, dan portofolio proyek jaringan dan web.",
-      "email": "mailto:daffanaufalfachrezi@gmail.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Bekasi",
-        "addressRegion": "Jawa Barat",
-        "addressCountry": "ID"
-      },
-      "worksFor": [
-        {
-          "@type": "Organization",
-          "name": "PT Gamila Buana Nusantara"
-        },
-        {
-          "@type": "Organization",
-          "name": "PT Multiusaha Prioritas Bersama"
+                document.getElementById('days').textContent = String(days).padStart(2, '0');
+                document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+                document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+                document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+            } else {
+                document.getElementById('days').textContent = '00';
+                document.getElementById('hours').textContent = '00';
+                document.getElementById('minutes').textContent = '00';
+                document.getElementById('seconds').textContent = '00';
+            }
         }
-      ],
-      "knowsAbout": [
-        "Networking",
-        "Cisco",
-        "MikroTik",
-        "Routing",
-        "Switching",
-        "IT Support",
-        "Web Development"
-      ]
-    }
+        
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
     </script>
 </body>
 </html>
