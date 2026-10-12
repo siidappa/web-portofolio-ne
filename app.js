@@ -23,8 +23,17 @@ window.addEventListener('resize', () => {
 function openExperienceModal(experienceId) {
   const exp = experienceData[experienceId];
   if (!exp) return;
-  document.getElementById('modal-experience-logo').src = exp.logo;
-  document.getElementById('modal-experience-logo').alt = exp.company;
+  const logoImg = document.getElementById('modal-experience-logo');
+  const logoPlaceholder = document.getElementById('modal-experience-logo-placeholder');
+  if (exp.logo) {
+    logoImg.src = exp.logo;
+    logoImg.alt = exp.company;
+    logoImg.style.display = '';
+    logoPlaceholder.style.display = 'none';
+  } else {
+    logoImg.style.display = 'none';
+    logoPlaceholder.style.display = '';
+  }
   document.getElementById('modal-experience-role').textContent = exp.role;
   document.getElementById('modal-experience-company').textContent = exp.company;
   document.getElementById('modal-experience-period').textContent = exp.period;
@@ -410,7 +419,7 @@ function setContainerMaxHeight() {
   
   // Temporarily show both pages to get the max height
   experiencePages.forEach(page => {
-    page.style.display = 'block';
+    page.style.display = 'grid';
   });
   
   // Calculate the maximum height between the two pages
@@ -427,7 +436,7 @@ function setContainerMaxHeight() {
   
   // Reset to only active page visible
   experiencePages.forEach(page => {
-    page.style.display = page.classList.contains('experience-page--active') ? 'block' : 'none';
+    page.style.display = page.classList.contains('experience-page--active') ? 'grid' : 'none';
   });
 }
 
@@ -453,7 +462,7 @@ function updateExperienceTab(tabId) {
   
   const selectedExperiencePage = document.querySelector(`.experience-page[data-tab="${tabId}"]`);
   if (selectedExperiencePage) {
-    const cards = selectedExperiencePage.querySelectorAll('.timeline-item');
+    const cards = selectedExperiencePage.querySelectorAll('.timeline-card');
     cards.forEach((card) => {
       card.classList.remove('aos-animate', 'aos-init');
       const aosAttr = card.getAttribute('data-aos');
@@ -464,7 +473,7 @@ function updateExperienceTab(tabId) {
     });
     setTimeout(() => {
       selectedExperiencePage.classList.add('experience-page--active');
-      selectedExperiencePage.style.display = 'block';
+      selectedExperiencePage.style.display = 'grid';
       // Restore scroll position
       window.scrollTo({
         top: currentScrollPosition,
@@ -630,27 +639,6 @@ if (backToTopBtn) {
   })
 }
 
-function updateTimelineAnimations() {
-  const isMobile = window.innerWidth <= 992;
-  const firstTimelineItem = document.querySelector(".timeline-left");
-  const secondTimelineItem = document.querySelector(".timeline-right");
-  if (firstTimelineItem) {
-    if (isMobile) {
-      firstTimelineItem.setAttribute("data-aos", "fade-up")
-    } else {
-      firstTimelineItem.setAttribute("data-aos", "fade-up")
-    }
-  }
-  if (secondTimelineItem) {
-    if (isMobile) {
-      secondTimelineItem.setAttribute("data-aos", "fade-up")
-    } else {
-      secondTimelineItem.setAttribute("data-aos", "fade-up")
-    }
-  }
-}
-document.addEventListener("DOMContentLoaded", updateTimelineAnimations);
-window.addEventListener("resize", updateTimelineAnimations);
 (function() {
   const overlay = document.createElement("div");
   overlay.className = "lightbox-overlay";

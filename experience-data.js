@@ -25,7 +25,7 @@ const experienceData = {
     id: 2,
     role: "IT Support Specialist",
     company: "PT Gamila Buana Nusantara",
-    period: "April 2024 - Sekarang",
+    period: "April 2024 - Juli 2026",
     logo: "/image/Experience/PTGBN/PTGBN.png",
     description: "Memberikan dukungan teknis komprehensif untuk infrastruktur jaringan dan sistem IT. Menangani troubleshooting, maintenance, user support, dan dokumentasi teknis untuk memastikan kelancaran operasional perusahaan.",
     aboutCompany: "PT Gamila Buana Nusantara adalah perusahaan solusi industrial terintegrasi yang melayani sektor pengeboran dan konstruksi. Kami memadukan penyediaan alat berat berkualitas dengan dukungan Logistik yang efisien dan Konsultasi IT yang inovatif",
@@ -58,5 +58,31 @@ const experienceData = {
       src: "./image/Experience/PTHCI/Me1.jpeg",
       alt: "Daffa"
     }]
+  },
+  4: {
+    id: 4,
+    role: "Network Operation Center (NOC)",
+    company: "PT Wifian Solution",
+    period: "September 2026 - Sekarang",
+    logo: "./image/Experience/PTWS/wifian.png",
+    description: "Memantau dan mengelola operasional jaringan secara real-time 24/7, menangani insiden jaringan, dan memastikan ketersediaan serta performa infrastruktur jaringan tetap optimal.",
+    aboutCompany: "PT Wifian Solution adalah perusahaan penyedia solusi jaringan dan teknologi informasi yang berfokus pada layanan konektivitas, infrastruktur jaringan, dan pengelolaan operasional jaringan untuk berbagai klien enterprise.",
+    responsibilities: ["Memantau kinerja dan ketersediaan infrastruktur jaringan secara real-time 24/7 menggunakan tools monitoring seperti Zabbix", "Menangani dan menindaklanjuti insiden jaringan dengan cepat untuk meminimalkan downtime", "Melakukan troubleshooting pada perangkat jaringan seperti MikroTik, switch, dan router", "Membuat dan memelihara dokumentasi jaringan serta laporan operasional harian", "Berkolaborasi dengan tim teknis untuk resolusi masalah jaringan yang kompleks"],
+    achievements: ["Menjaga uptime jaringan klien tetap optimal dengan monitoring proaktif", "Mengurangi waktu rata-rata resolusi insiden melalui proses escalation yang terstruktur", "Berhasil mengidentifikasi dan mencegah potensi gangguan jaringan sebelum terjadi"],
+    skills: ["Network Monitoring", "Zabbix", "MikroTik", "Troubleshooting", "Incident Management", "Network Operations", "Real-time Monitoring"],
+    gallery: []
+  },
+  5: {
+    id: 5,
+    role: "Store Crew",
+    company: "Toko Mama",
+    period: "Mei 2022 - November 2023",
+    logo: "",
+    description: "Bertanggung jawab atas operasional toko sehari-hari, melayani pelanggan, mengelola stok barang, dan menjaga kebersihan serta kerapian area toko untuk menciptakan pengalaman belanja yang nyaman bagi pelanggan.",
+    aboutCompany: "Toko Mama adalah toko serba ada lokal yang menyediakan kebutuhan sehari-hari bagi masyarakat sekitar, mulai dari sembako, produk rumah tangga, hingga kebutuhan lainnya dengan pelayanan yang ramah.",
+    responsibilities: ["Melayani pelanggan dengan ramah dan membantu memenuhi kebutuhan belanja mereka", "Mengelola stok barang, melakukan stock opname, dan memastikan ketersediaan produk", "Mengoperasikan kasir dan menangani transaksi pembayaran pelanggan", "Merapikan display produk dan menjaga kebersihan area toko", "Membantu pelanggan dalam menemukan produk yang dicari"],
+    achievements: ["Meningkatkan kepuasan pelanggan melalui pelayanan yang ramah dan responsif", "Berhasil menjaga akurasi stok barang dengan sistem pencatatan yang rapi", "Membantu meningkatkan omset toko melalui penawaran produk yang tepat sasaran"],
+    skills: ["Customer Service", "Communication", "Inventory Management", "Cashier", "Merchandising", "Time Management"],
+    gallery: []
   }
 };
