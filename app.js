@@ -419,7 +419,7 @@ function setContainerMaxHeight() {
   
   // Temporarily show both pages to get the max height
   experiencePages.forEach(page => {
-    page.style.display = 'grid';
+    page.style.display = 'flex';
   });
   
   // Calculate the maximum height between the two pages
@@ -436,7 +436,7 @@ function setContainerMaxHeight() {
   
   // Reset to only active page visible
   experiencePages.forEach(page => {
-    page.style.display = page.classList.contains('experience-page--active') ? 'grid' : 'none';
+    page.style.display = page.classList.contains('experience-page--active') ? 'flex' : 'none';
   });
 }
 
@@ -473,7 +473,7 @@ function updateExperienceTab(tabId) {
     });
     setTimeout(() => {
       selectedExperiencePage.classList.add('experience-page--active');
-      selectedExperiencePage.style.display = 'grid';
+      selectedExperiencePage.style.display = 'flex';
       // Restore scroll position
       window.scrollTo({
         top: currentScrollPosition,

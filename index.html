@@ -49,8 +49,8 @@
     <title>Daffa | Network Engineer & IT Support Specialist</title>
     
     <!-- Critical CSS - Tetap render-blocking karena dibutuhkan segera -->     
-    <link rel="stylesheet" href="Minify/app-minify.css">
-    <!-- <link rel="stylesheet" href="app.css"> -->
+    <link rel="stylesheet" href="app.css">
+    <!-- <link rel="stylesheet" href="Minify/app-minify.css"> -->
     
     <!-- Non-critical CSS - AOS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" media="print" onload="this.media='all'">
@@ -62,16 +62,30 @@
     <!-- Popup Selamat Datang -->
     <div class="welcome-popup-overlay" id="welcomePopup">
         <div class="welcome-popup">
-            <div class="welcome-popup-ornament ornament-1"></div>
-            <div class="welcome-popup-ornament ornament-2"></div>
-            <div class="welcome-popup-ornament ornament-3"></div>
-            <div class="welcome-popup-ornament ornament-4"></div>
-            <div class="welcome-popup-content">
-                <div class="welcome-icon">👋</div>
-                <h2 class="welcome-title">Selamat Datang Di</h2>
-                <p class="welcome-subtitle">Website Portolio ku</p>
-                <p class="welcome-text">Enjoy your visit! 🤗🤩</p>
+            <span class="welcome-glow welcome-glow--1"></span>
+            <span class="welcome-glow welcome-glow--2"></span>
+            <span class="welcome-glow welcome-glow--3"></span>
+
+            <div class="welcome-avatar-wrap">
+                <span class="welcome-avatar-ring"></span>
+                <span class="welcome-avatar-ring welcome-avatar-ring--2"></span>
+                <div class="welcome-avatar">
+                    <img src="./image/me/Me.avif" alt="Daffa Naufal Fachrezi" width="96" height="96">
+                </div>
+                <span class="welcome-status-dot" aria-label="Available">
+                    <span class="welcome-status-ping"></span>
+                </span>
             </div>
+
+            <span class="welcome-eyebrow">PORTFOLIO</span>
+            <h2 class="welcome-title">SELAMAT DATANG</h2>
+            <p class="welcome-text">Mari menjelajahi dunia karyaku</p>
+
+            <div class="welcome-divider">
+                <span></span><i></i><span></span>
+            </div>
+
+            <p class="welcome-hint">Menyiapkan pengalaman terbaik<span class="welcome-dots"></span></p>
         </div>
     </div>
     <!-- Akhir Popup Selamat Datang -->
@@ -116,8 +130,21 @@
 
         
         <section id="myhome">
+            <!-- Decorative network grid background -->
+            <div class="home-grid-bg" aria-hidden="true">
+                <span class="home-grid-node home-grid-node--1"></span>
+                <span class="home-grid-node home-grid-node--2"></span>
+                <span class="home-grid-node home-grid-node--3"></span>
+                <span class="home-grid-node home-grid-node--4"></span>
+            </div>
+
             <div class="container-home">
                 <div class="home-left" data-aos="fade-right" data-aos-duration="800" data-aos-offset="0" data-aos-anchor-placement="top-bottom" data-aos-once="true">
+                    <div class="home-availability">
+                        <span class="availability-dot"><span class="availability-ping"></span></span>
+                        <span class="availability-text">Available for new opportunities</span>
+                    </div>
+
                     <p class="home-greeting">👋 Halo, saya</p>
                     <h1 class="home-name">Daffa Naufal Fachrezi</h1>
                     <h3 class="subtitle">
@@ -126,15 +153,36 @@
                             <span class="animated-text active">IT Head of PM</span>
                             <span class="animated-text">IT Network Specialist</span>
                             <span class="animated-text">IT Support Specialist</span>
+                            <span class="typing-cursor" aria-hidden="true"></span>
                         </span>
                     </h3>
                     <p class="home-description">
                         Lulusan SMK TKJ bersertifikasi Cisco yang bersemangat menjadi Network Engineer. Berpengalaman mengelola perangkat jaringan MikroTik, Cisco, dan TP-Link
                     </p>
+
+                    <div class="home-stats">
+                        <div class="stat-chip">
+                            <span class="stat-num">10+</span>
+                            <span class="stat-label">Sertifikasi</span>
+                        </div>
+                        <div class="stat-chip">
+                            <span class="stat-num">7+</span>
+                            <span class="stat-label">Proyek</span>
+                        </div>
+                        <div class="stat-chip">
+                            <span class="stat-num">2+</span>
+                            <span class="stat-label">Tahun Exp.</span>
+                        </div>
+                    </div>
+
                     <div class="home-buttons">
                         <a href="https://drive.google.com/file/d/17X-fNH2VL32KBvG_S51KrhMwmmXYHUwZ/view?usp=sharing" class="btn-download-cv" aria-label="Download CV" target="_blank">
                             <ion-icon name="download-outline" aria-hidden="true"></ion-icon>
                             View My CV
+                        </a>
+                        <a href="#project" class="btn-view-projects" aria-label="View projects">
+                            <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                            View Projects
                         </a>
                     </div>
                     <div class="home-socials">
@@ -150,11 +198,35 @@
                     </div>
                 </div>
                 <div class="home-right" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200" data-aos-offset="0" data-aos-anchor-placement="top-bottom" data-aos-once="true">
-                    <div class="home-image-wrapper">
-                        <img src="./image/me/Me.avif" alt="Daffa Naufal Fachrezi" loading="eager" fetchpriority="high" width="380" height="380">
+                    <div class="home-image-stage">
+                        <!-- Floating tech vendor badges -->
+                        <div class="floating-badge floating-badge--1" title="MikroTik">
+                            <img src="./image/Skills/mikrotik.webp" alt="MikroTik" width="40" height="40">
+                        </div>
+                        <div class="floating-badge floating-badge--2" title="Cisco">
+                            <img src="./image/Skills/cisco1.webp" alt="Cisco" width="40" height="40">
+                        </div>
+                        <div class="floating-badge floating-badge--3" title="TP-Link">
+                            <img src="./image/Skills/tp-link.webp" alt="TP-Link" width="40" height="40">
+                        </div>
+                        <div class="floating-badge floating-badge--4" title="Juniper">
+                            <img src="./image/Skills/juniper.webp" alt="Juniper" width="40" height="40">
+                        </div>
+                        <div class="home-image-wrapper">
+                            <!-- Decorative corner accents -->
+                            <span class="home-corner home-corner--tl"></span>
+                            <span class="home-corner home-corner--br"></span>
+                            <img src="./image/me/Me.avif" alt="Daffa Naufal Fachrezi" loading="eager" fetchpriority="high" width="380" height="380">
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Scroll down indicator -->
+            <a href="#about-me" class="home-scroll-indicator" aria-label="Scroll to about section">
+                <span class="scroll-mouse"><span class="scroll-wheel"></span></span>
+                <span class="scroll-text">Scroll</span>
+            </a>
         </section>
         <section id="about-me">
             <div class="container-about">
@@ -293,21 +365,27 @@
                 </div>
                 <div class="skill-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200" data-aos-offset="0" data-aos-once="true">
                     <div class="skill-icon">
-                        <img loading="lazy" src="/image/Skills/tp-link.webp" alt="TP-Link" width="120" height="120">
+                        <img loading="lazy" src="/image/Skills/juniper.webp" alt="Juniper" width="120" height="120">
                     </div>
-                    <h3 class="skill-name">TP-Link</h3>
+                    <h3 class="skill-name">Juniper</h3>
                 </div>
                 <div class="skill-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300" data-aos-offset="0" data-aos-once="true">
                     <div class="skill-icon">
-                        <img loading="lazy" src="/image/Skills/wordpress.webp" alt="WordPress" width="120" height="120">
+                        <img loading="lazy" src="/image/Skills/Huawei.webp" alt="Huawei" width="120" height="120">
                     </div>
-                    <h3 class="skill-name">WordPress</h3>
+                    <h3 class="skill-name">Huawei</h3>
                 </div>
                 <div class="skill-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" data-aos-offset="0" data-aos-once="true">
                     <div class="skill-icon">
-                        <img loading="lazy" src="/image/Skills/MySQL.webp" alt="MySQL" width="120" height="120">
+                        <img loading="lazy" src="/image/Skills/ZTE.webp" alt="ZTE OLT" width="120" height="120">
                     </div>
-                    <h3 class="skill-name">MySQL</h3>
+                    <h3 class="skill-name">OLT ZTE</h3>
+                </div>
+                <div class="skill-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500" data-aos-offset="0" data-aos-once="true">
+                    <div class="skill-icon">
+                        <img loading="lazy" src="/image/Skills/tp-link.webp" alt="TP-Link" width="120" height="120">
+                    </div>
+                    <h3 class="skill-name">TP-Link</h3>
                 </div>
             </div>
         </section>
@@ -317,19 +395,140 @@
                 <h2>Work Experience</h2>
                 <p># Professional Journey #</p>
             </div>
+            <!-- Experience Stats Summary -->
+            <div class="experience-stats" data-aos="fade-up" data-aos-duration="700" data-aos-offset="0" data-aos-once="true">
+                <div class="exp-stat">
+                    <span class="exp-stat-num">2+</span>
+                    <span class="exp-stat-label">Years Experience</span>
+                </div>
+                <span class="exp-stat-divider"></span>
+                <div class="exp-stat">
+                    <span class="exp-stat-num">5</span>
+                    <span class="exp-stat-label">Roles Held</span>
+                </div>
+                <span class="exp-stat-divider"></span>
+                <div class="exp-stat">
+                    <span class="exp-stat-num">2</span>
+                    <span class="exp-stat-label">Industries</span>
+                </div>
+                <span class="exp-stat-divider"></span>
+                <div class="exp-stat">
+                    <span class="exp-stat-num">1</span>
+                    <span class="exp-stat-label">Current Role</span>
+                </div>
+            </div>
             <!-- Experience Tabs -->
             <div class="experience-tabs">
                 <div class="experience-tab-slider"></div>
                 <button class="experience-tab experience-tab--active" type="button" data-tab="it" aria-label="Show IT experience">IT</button>
-                <button class="experience-tab" type="button" data-tab="retail" aria-label="Show Retail experience">Multifinance</button>
+                <button class="experience-tab" type="button" data-tab="retail" aria-label="Show Retail experience">Retail</button>
             </div>
             <div class="container-experience">
                 <!-- Experience Page 1 (IT) -->
                 <div class="experience-page experience-page--active" data-tab="it">
-                    <!-- Timeline Item 1 - Kiri -->
-                    <div class="timeline-item timeline-left" data-aos="fade-up" data-aos-duration="1000">
-                        <div class="timeline-content">
+                    <!-- PT Wifian Solution (ACTIVE) - Featured Hero Card -->
+                    <div class="experience-featured" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="timeline-card timeline-card--active" data-experience-id="4">
+                            <span class="corner-bracket corner-bracket--tl"></span>
+                            <span class="corner-bracket corner-bracket--tr"></span>
+                            <span class="corner-bracket corner-bracket--bl"></span>
+                            <span class="corner-bracket corner-bracket--br"></span>
+                            <div class="featured-ribbon">
+                                <ion-icon name="flame-outline" aria-hidden="true"></ion-icon>
+                                Current Role
+                            </div>
+                            <div class="experience-card-top">
+                                <span class="role-category-badge">
+                                    <ion-icon name="code-slash-outline" aria-hidden="true"></ion-icon>
+                                    IT
+                                </span>
+                                <span class="role-status-badge">
+                                    <span class="role-status-dot"></span>
+                                    Saat Ini
+                                </span>
+                            </div>
+                            <div class="experience-header">
+                                <div class="experience-title">
+                                    <h3>Network Operation Center (NOC)</h3>
+                                    <p class="company-name">PT Wifian Solution</p>
+                                    <p class="work-period">September 2026 - Sekarang</p>
+                                </div>
+                                <div class="experience-badge">
+                                    <img loading="lazy" src="./image/Experience/PTWS/wifian.png" alt="PT Wifian Solution Logo" width="80" height="80">
+                                </div>
+                            </div>
+                            <p class="experience-description">
+                                Memantau dan mengelola operasional jaringan secara real-time 24/7, menangani insiden jaringan, dan memastikan ketersediaan serta performa infrastruktur jaringan tetap optimal.
+                            </p>
+                            <div class="experience-skills-preview">
+                                <span class="skill-tag">Zabbix</span>
+                                <span class="skill-tag">MikroTik</span>
+                                <span class="skill-tag">Network Monitoring</span>
+                                <span class="skill-tag">+4</span>
+                            </div>
+                            <button class="view-experience-details" type="button" aria-label="View experience details">
+                                <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Timeline for past IT experiences -->
+                    <div class="experience-timeline">
+                        <div class="timeline-line"></div>
+                        <!-- PT Gamila Buana Nusantara -->
+                        <div class="timeline-item timeline-item--left" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-card" data-experience-id="2">
+                                <div class="experience-card-top">
+                                    <span class="role-category-badge">
+                                        <ion-icon name="code-slash-outline" aria-hidden="true"></ion-icon>
+                                        IT
+                                    </span>
+                                    <span class="role-status-badge role-status-badge--past">
+                                        <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
+                                        Selesai
+                                    </span>
+                                </div>
+                                <div class="experience-header">
+                                    <div class="experience-title">
+                                        <h3>IT Support Specialist</h3>
+                                        <p class="company-name">PT Gamila Buana Nusantara</p>
+                                        <p class="work-period">April 2024 - Juli 2026</p>
+                                    </div>
+                                    <div class="experience-badge">
+                                        <img loading="lazy" src="/image/Experience/PTGBN/PTGBN.png" alt="PT Gamila Buana Nusantara Logo" width="80" height="80">
+                                    </div>
+                                </div>
+                                <p class="experience-description">
+                                    Memberikan dukungan teknis komprehensif untuk infrastruktur jaringan dan sistem IT. Menangani troubleshooting, maintenance, dan user support.
+                                </p>
+                                <div class="experience-skills-preview">
+                                    <span class="skill-tag">IT Support</span>
+                                    <span class="skill-tag">Troubleshooting</span>
+                                    <span class="skill-tag">Wordpress</span>
+                                    <span class="skill-tag">+4</span>
+                                </div>
+                                <button class="view-experience-details" type="button" aria-label="View experience details">
+                                    <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+                        <!-- PT Multiusaha Prioritas Bersama -->
+                        <div class="timeline-item timeline-item--right" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                            <div class="timeline-dot"></div>
                             <div class="timeline-card" data-experience-id="1">
+                                <div class="experience-card-top">
+                                    <span class="role-category-badge">
+                                        <ion-icon name="code-slash-outline" aria-hidden="true"></ion-icon>
+                                        IT
+                                    </span>
+                                    <span class="role-status-badge role-status-badge--past">
+                                        <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
+                                        Selesai
+                                    </span>
+                                </div>
                                 <div class="experience-header">
                                     <div class="experience-title">
                                         <h3>IT Head of Project Manager</h3>
@@ -341,52 +540,45 @@
                                     </div>
                                 </div>
                                 <p class="experience-description">
-                                   PT Multiusaha Prioritas Bersama (MPB Group) adalah perusahaan induk yang mengelola berbagai unit usaha strategis, investasi, dan ekonomi kreatif di Indonesia.
+                                    Memimpin dan mengkoordinasi tim development dalam pengembangan proyek IT, dari perencanaan hingga delivery.
                                 </p>
-                                <button class="view-experience-details" type="button" aria-label="View experience details">
-                                    <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
-                                    View Details
-                                </button>
-                            </div>
-                        </div>
-                        <div class="timeline-dot"></div>
-                    </div>
-                    <!-- Timeline Item 2 - Kanan -->
-                    <div class="timeline-item timeline-right" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                        <div class="timeline-content">
-                            <div class="timeline-card" data-experience-id="2">
-                                <div class="experience-header">
-                                    <div class="experience-title">
-                                        <h3>IT Support Specialist</h3>
-                                        <p class="company-name">PT Gamila Buana Nusantara</p>
-                                        <p class="work-period">April 2024 - Sekarang</p>
-                                    </div>
-                                    <div class="experience-badge">
-                                        <img loading="lazy" src="/image/Experience/PTGBN/PTGBN.png" alt="PT Gamila Buana Nusantara Logo" width="80" height="80">
-                                    </div>
+                                <div class="experience-skills-preview">
+                                    <span class="skill-tag">Project Management</span>
+                                    <span class="skill-tag">Team Leadership</span>
+                                    <span class="skill-tag">Web Development</span>
+                                    <span class="skill-tag">+4</span>
                                 </div>
-                                <p class="experience-description">
-                                   PT Gamila Buana Nusantara adalah perusahaan solusi industrial terintegrasi yang melayani sektor pengeboran dan konstruksi
-                                </p>
                                 <button class="view-experience-details" type="button" aria-label="View experience details">
                                     <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
                                     View Details
                                 </button>
                             </div>
                         </div>
-                        <div class="timeline-dot"></div>
                     </div>
                 </div>
+
                 <!-- Experience Page 2 (Retail) -->
                 <div class="experience-page" data-tab="retail">
-                    <!-- Timeline Item 3 - Kiri (Retail) -->
-                    <div class="timeline-item timeline-left" data-aos="fade-up" data-aos-duration="1000">
-                        <div class="timeline-content">
+                    <div class="experience-timeline">
+                        <div class="timeline-line"></div>
+                        <!-- PT Home Credit Indonesia -->
+                        <div class="timeline-item timeline-item--left timeline-item--retail" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="timeline-dot"></div>
                             <div class="timeline-card" data-experience-id="3">
+                                <div class="experience-card-top">
+                                    <span class="role-category-badge role-category-badge--retail">
+                                        <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
+                                        Retail
+                                    </span>
+                                    <span class="role-status-badge role-status-badge--past">
+                                        <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
+                                        Selesai
+                                    </span>
+                                </div>
                                 <div class="experience-header">
                                     <div class="experience-title">
                                         <h3>Sales Associate</h3>
-                                        <p class="company-name">PT Home Credit Indonesia (HCI)</p>
+                                        <p class="company-name">PT Home Credit Indonesia</p>
                                         <p class="work-period">Oktober 2025 - Januari 2026</p>
                                     </div>
                                     <div class="experience-badge">
@@ -394,15 +586,59 @@
                                     </div>
                                 </div>
                                 <p class="experience-description">
-                                   PT Home Credit Indonesia adalah perusahaan pembiayaan berbasis teknologi berizin OJK
+                                    Melayani pelanggan, menawarkan produk dan promo pembiayaan, serta menjaga risk dengan screening sesuai SOP.
                                 </p>
+                                <div class="experience-skills-preview">
+                                    <span class="skill-tag">Sales</span>
+                                    <span class="skill-tag">Customer Service</span>
+                                    <span class="skill-tag">Marketing</span>
+                                    <span class="skill-tag">+3</span>
+                                </div>
                                 <button class="view-experience-details" type="button" aria-label="View experience details">
                                     <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
                                     View Details
                                 </button>
                             </div>
                         </div>
-                        <div class="timeline-dot"></div>
+                        <!-- Toko Mama -->
+                        <div class="timeline-item timeline-item--right timeline-item--retail" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-card" data-experience-id="5">
+                                <div class="experience-card-top">
+                                    <span class="role-category-badge role-category-badge--retail">
+                                        <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
+                                        Retail
+                                    </span>
+                                    <span class="role-status-badge role-status-badge--past">
+                                        <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
+                                        Selesai
+                                    </span>
+                                </div>
+                                <div class="experience-header">
+                                    <div class="experience-title">
+                                        <h3>Store Crew</h3>
+                                        <p class="company-name">Toko Mama</p>
+                                        <p class="work-period">Mei 2022 - November 2023</p>
+                                    </div>
+                                    <div class="experience-badge experience-badge--placeholder">
+                                        <ion-icon name="storefront-outline" aria-hidden="true"></ion-icon>
+                                    </div>
+                                </div>
+                                <p class="experience-description">
+                                    Bertanggung jawab atas operasional toko sehari-hari, melayani pelanggan, mengelola stok barang, dan menjaga kebersihan toko.
+                                </p>
+                                <div class="experience-skills-preview">
+                                    <span class="skill-tag">Customer Service</span>
+                                    <span class="skill-tag">Inventory Management</span>
+                                    <span class="skill-tag">Cashier</span>
+                                    <span class="skill-tag">+3</span>
+                                </div>
+                                <button class="view-experience-details" type="button" aria-label="View experience details">
+                                    <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1224,6 +1460,10 @@
                             <img id="modal-experience-logo" src="" alt="Company Logo">
                         </div>
                         <div class="experience-header-info">
+                            <div class="modal-header-badges">
+                                <span id="modal-experience-category" class="modal-category-badge"></span>
+                                <span id="modal-experience-status" class="modal-status-badge"></span>
+                            </div>
                             <h2 id="modal-experience-role"></h2>
                             <p id="modal-experience-company" class="company-name"></p>
                             <p id="modal-experience-period" class="work-period"></p>
@@ -1255,7 +1495,7 @@
                             <ul id="modal-experience-responsibilities"></ul>
                         </section>
 
-                        <section class="detail-section">
+                        <section class="detail-section detail-section--achievements">
                             <h2>
                                 <ion-icon name="trophy-outline"></ion-icon>
                                 Key Achievements
