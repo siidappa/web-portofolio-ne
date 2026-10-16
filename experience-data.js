@@ -82,7 +82,7 @@ const experienceData = {
     company: "Toko Mama",
     period: "Mei 2022 - November 2023",
     category: "Retail",
-    logo: "",
+    logo: "./image/Experience/PTSER/toko_mama_logo.jpg",
     description: "Bertanggung jawab atas operasional toko sehari-hari, melayani pelanggan, mengelola stok barang, dan menjaga kebersihan serta kerapian area toko untuk menciptakan pengalaman belanja yang nyaman bagi pelanggan.",
     aboutCompany: "Toko Mama adalah toko serba ada lokal yang menyediakan kebutuhan sehari-hari bagi masyarakat sekitar, mulai dari sembako, produk rumah tangga, hingga kebutuhan lainnya dengan pelayanan yang ramah.",
     responsibilities: ["Melayani pelanggan dengan ramah dan membantu memenuhi kebutuhan belanja mereka", "Mengelola stok barang, melakukan stock opname, dan memastikan ketersediaan produk", "Mengoperasikan kasir dan menangani transaksi pembayaran pelanggan", "Merapikan display produk dan menjaga kebersihan area toko", "Membantu pelanggan dalam menemukan produk yang dicari"],
